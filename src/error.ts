@@ -16,7 +16,7 @@ export class TaskError extends Error {
  * A collection of possible error and warning messages.
  */
 /* istanbul ignore next */
-export const ErrorMessage = {
+export const CliErrorMessage = {
   GuruMeditation() {
     return 'an impossible scenario occurred';
   },
