@@ -16,6 +16,10 @@
   "sideEffects": false,
   "type": "commonjs",
   "exports": {
+    ".": {
+      "types": "./dist/src/index.d.ts",
+      "default": "./dist/src/index.js"
+    },
     "./configure": {
       "types": "./dist/src/configure.d.ts",
       "default": "./dist/src/configure.js"
@@ -41,6 +45,9 @@
   },
   "typesVersions": {
     "*": {
+      "index": [
+        "dist/src/index.d.ts"
+      ],
       "configure": [
         "dist/src/configure.d.ts"
       ],
