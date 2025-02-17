@@ -16,17 +16,45 @@
   "sideEffects": false,
   "type": "commonjs",
   "exports": {
-    ".": {
-      "types": "./dist/src/index.d.ts",
-      "default": "./dist/src/index.js"
+    "./configure": {
+      "types": "./dist/src/configure.d.ts",
+      "default": "./dist/src/configure.js"
+    },
+    "./error": {
+      "types": "./dist/src/error.d.ts",
+      "default": "./dist/src/error.js"
+    },
+    "./extensions": {
+      "types": "./dist/src/extensions.d.ts",
+      "default": "./dist/src/extensions.js"
+    },
+    "./logging": {
+      "types": "./dist/src/logging.d.ts",
+      "default": "./dist/src/logging.js"
+    },
+    "./util": {
+      "types": "./dist/src/util.d.ts",
+      "default": "./dist/src/util.js"
     },
     "./package": "./package.json",
     "./package.json": "./package.json"
   },
   "typesVersions": {
     "*": {
-      "index": [
-        "dist/src/index.d.ts"
+      "configure": [
+        "dist/src/configure.d.ts"
+      ],
+      "error": [
+        "dist/src/error.d.ts"
+      ],
+      "extensions": [
+        "dist/src/extensions.d.ts"
+      ],
+      "logging": [
+        "dist/src/logging.d.ts"
+      ],
+      "util": [
+        "dist/src/util.d.ts"
       ],
       "package": [
         "package.json"
@@ -65,9 +93,26 @@
     "test:packages:all": "symbiote test --env NODE_NO_WARNINGS=1 --tests all-local --scope unlimited --coverage",
     "test:packages:all:unit": "symbiote test --env NODE_NO_WARNINGS=1 --tests unit --scope unlimited --coverage"
   },
-  "dependencies": {},
+  "dependencies": {
+    "@-xun/project-types": "^1.0.2",
+    "@black-flag/core": "^1.3.2",
+    "@black-flag/extensions": "^1.0.2",
+    "core-js": "^3.40.0",
+    "rejoinder": "^1.2.4"
+  },
   "devDependencies": {
-    "@-xun/symbiote": "^2.25.1"
+    "@-xun/run": "^1.0.1",
+    "@-xun/symbiote": "^2.25.1",
+    "listr2": "^8.2.5",
+    "type-fest": "^4.35.0"
+  },
+  "peerDependencies": {
+    "rejoinder-listr2": "^1.0.2"
+  },
+  "peerDependenciesMeta": {
+    "rejoinder-listr2": {
+      "optional": true
+    }
   },
   "engines": {
     "node": "^18.20.0 || ^20.18.0 || ^22.12.0 || >=23.3.0"
