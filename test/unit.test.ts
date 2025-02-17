@@ -1,3 +1,3 @@
-// * These tests ensure the exported interface under test functions as expected.
+// * These tests ensure the exported interfaces under test function as expected.
 
 test.todo('this');
