@@ -1,7 +1,7 @@
 <!-- symbiote-template-region-start 1 -->
 
 <p align="center" width="100%">
-  <img width="300" src="https://raw.githubusercontent.com/Xunnamius/cli-utils/refs/heads/main/logo.png">
+  <img width="200" src="https://raw.githubusercontent.com/Xunnamius/cli-utils/refs/heads/main/logo.png">
 </p>
 
 <p align="center" width="100%">
