@@ -8,7 +8,7 @@
 
 > **withStandardBuilder**\<`CustomCliArguments`, `CustomExecutionContext`\>(`customBuilder`?, `__namedParameters`?): `WithBuilderExtensionsReturnType`\<`CustomCliArguments`, `CustomExecutionContext`\>
 
-Defined in: [src/extensions.ts:165](https://github.com/Xunnamius/cli-utils/blob/118cc97de27374bcd26e43f836c2d837aa9f46f4/src/extensions.ts#L165)
+Defined in: [src/extensions.ts:165](https://github.com/Xunnamius/cli-utils/blob/74bfa47fc80f4ebda9a4e0fb9b2b0d112ef3baed/src/extensions.ts#L165)
 
 This function enables several options-related units of functionality
 considered standard across [Xunnamius](https://github.com/Xunnamius)'s CLI

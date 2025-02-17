@@ -8,7 +8,7 @@
 
 > **StandardExecutionContext**: `ExecutionContext` & `object` & `0` *extends* `1` & `ListrManager` ? `object` : `object`
 
-Defined in: [src/extensions.ts:40](https://github.com/Xunnamius/cli-utils/blob/118cc97de27374bcd26e43f836c2d837aa9f46f4/src/extensions.ts#L40)
+Defined in: [src/extensions.ts:40](https://github.com/Xunnamius/cli-utils/blob/74bfa47fc80f4ebda9a4e0fb9b2b0d112ef3baed/src/extensions.ts#L40)
 
 This ExecutionContext subtype contains state related to
 [standardCommonCliArguments](../variables/standardCommonCliArguments.md), both of which are required for the proper

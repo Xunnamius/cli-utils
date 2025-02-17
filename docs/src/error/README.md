@@ -12,7 +12,7 @@
 
 ## Variables
 
-- [ErrorMessage](variables/ErrorMessage.md)
+- [CliErrorMessage](variables/CliErrorMessage.md)
 
 ## Functions
 

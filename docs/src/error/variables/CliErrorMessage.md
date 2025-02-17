@@ -2,13 +2,13 @@
 
 ***
 
-[@-xun/cli](../../../README.md) / [src/error](../README.md) / ErrorMessage
+[@-xun/cli](../../../README.md) / [src/error](../README.md) / CliErrorMessage
 
-# Variable: ErrorMessage
+# Variable: CliErrorMessage
 
-> `const` **ErrorMessage**: `object`
+> `const` **CliErrorMessage**: `object`
 
-Defined in: [src/error.ts:19](https://github.com/Xunnamius/cli-utils/blob/118cc97de27374bcd26e43f836c2d837aa9f46f4/src/error.ts#L19)
+Defined in: [src/error.ts:19](https://github.com/Xunnamius/cli-utils/blob/74bfa47fc80f4ebda9a4e0fb9b2b0d112ef3baed/src/error.ts#L19)
 
 A collection of possible error and warning messages.
 
