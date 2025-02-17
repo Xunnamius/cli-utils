@@ -1,0 +1,157 @@
+[**@-xun/cli**](../../../README.md)
+
+***
+
+[@-xun/cli](../../../README.md) / [src/error](../README.md) / TaskError
+
+# Class: TaskError
+
+Defined in: [src/error.ts:9](https://github.com/Xunnamius/cli-utils/blob/118cc97de27374bcd26e43f836c2d837aa9f46f4/src/error.ts#L9)
+
+An `Error` class where the first letter of the message is capitalized.
+
+## Extends
+
+- `Error`
+
+## Constructors
+
+### new TaskError()
+
+> **new TaskError**(...`args`): [`TaskError`](TaskError.md)
+
+Defined in: [src/error.ts:10](https://github.com/Xunnamius/cli-utils/blob/118cc97de27374bcd26e43f836c2d837aa9f46f4/src/error.ts#L10)
+
+#### Parameters
+
+##### args
+
+...\[`string`, `ErrorOptions`\]
+
+#### Returns
+
+[`TaskError`](TaskError.md)
+
+#### Overrides
+
+`Error.constructor`
+
+## Properties
+
+### cause?
+
+> `optional` **cause**: `unknown`
+
+Defined in: node\_modules/typescript/lib/lib.es2022.error.d.ts:26
+
+#### Inherited from
+
+`Error.cause`
+
+***
+
+### message
+
+> **message**: `string`
+
+Defined in: node\_modules/typescript/lib/lib.es5.d.ts:1077
+
+#### Inherited from
+
+`Error.message`
+
+***
+
+### name
+
+> **name**: `string`
+
+Defined in: node\_modules/typescript/lib/lib.es5.d.ts:1076
+
+#### Inherited from
+
+`Error.name`
+
+***
+
+### stack?
+
+> `optional` **stack**: `string`
+
+Defined in: node\_modules/typescript/lib/lib.es5.d.ts:1078
+
+#### Inherited from
+
+`Error.stack`
+
+***
+
+### prepareStackTrace()?
+
+> `static` `optional` **prepareStackTrace**: (`err`, `stackTraces`) => `any`
+
+Defined in: node\_modules/@types/node/globals.d.ts:143
+
+Optional override for formatting stack traces
+
+#### Parameters
+
+##### err
+
+`Error`
+
+##### stackTraces
+
+`CallSite`[]
+
+#### Returns
+
+`any`
+
+#### See
+
+https://v8.dev/docs/stack-trace-api#customizing-stack-traces
+
+#### Inherited from
+
+`Error.prepareStackTrace`
+
+***
+
+### stackTraceLimit
+
+> `static` **stackTraceLimit**: `number`
+
+Defined in: node\_modules/@types/node/globals.d.ts:145
+
+#### Inherited from
+
+`Error.stackTraceLimit`
+
+## Methods
+
+### captureStackTrace()
+
+> `static` **captureStackTrace**(`targetObject`, `constructorOpt`?): `void`
+
+Defined in: node\_modules/@types/node/globals.d.ts:136
+
+Create .stack property on a target object
+
+#### Parameters
+
+##### targetObject
+
+`object`
+
+##### constructorOpt?
+
+`Function`
+
+#### Returns
+
+`void`
+
+#### Inherited from
+
+`Error.captureStackTrace`
