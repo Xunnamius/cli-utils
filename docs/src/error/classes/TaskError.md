@@ -6,7 +6,7 @@
 
 # Class: TaskError
 
-Defined in: [src/error.ts:9](https://github.com/Xunnamius/cli-utils/blob/74bfa47fc80f4ebda9a4e0fb9b2b0d112ef3baed/src/error.ts#L9)
+Defined in: [src/error.ts:9](https://github.com/Xunnamius/cli-utils/blob/caf1d74e366c1a64e9bac76fadfeeb54b974c17e/src/error.ts#L9)
 
 An `Error` class where the first letter of the message is capitalized.
 
@@ -20,7 +20,7 @@ An `Error` class where the first letter of the message is capitalized.
 
 > **new TaskError**(...`args`): [`TaskError`](TaskError.md)
 
-Defined in: [src/error.ts:10](https://github.com/Xunnamius/cli-utils/blob/74bfa47fc80f4ebda9a4e0fb9b2b0d112ef3baed/src/error.ts#L10)
+Defined in: [src/error.ts:10](https://github.com/Xunnamius/cli-utils/blob/caf1d74e366c1a64e9bac76fadfeeb54b974c17e/src/error.ts#L10)
 
 #### Parameters
 

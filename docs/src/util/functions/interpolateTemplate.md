@@ -8,7 +8,7 @@
 
 > **interpolateTemplate**(`template`, `context`): `string`
 
-Defined in: [src/util.ts:45](https://github.com/Xunnamius/cli-utils/blob/74bfa47fc80f4ebda9a4e0fb9b2b0d112ef3baed/src/util.ts#L45)
+Defined in: [src/util.ts:45](https://github.com/Xunnamius/cli-utils/blob/caf1d74e366c1a64e9bac76fadfeeb54b974c17e/src/util.ts#L45)
 
 Interpolate simple handlebars templates without actually using handlebars.
 

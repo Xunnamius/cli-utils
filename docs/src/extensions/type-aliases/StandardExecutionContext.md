@@ -6,11 +6,11 @@
 
 # Type Alias: StandardExecutionContext
 
-> **StandardExecutionContext**: `ExecutionContext` & `object` & `0` *extends* `1` & `ListrManager` ? `object` : `object`
+> **StandardExecutionContext**: [`ExecutionContext`](../../type-aliases/ExecutionContext.md) & `object` & `0` *extends* `1` & `ListrManager` ? `object` : `object`
 
-Defined in: [src/extensions.ts:40](https://github.com/Xunnamius/cli-utils/blob/74bfa47fc80f4ebda9a4e0fb9b2b0d112ef3baed/src/extensions.ts#L40)
+Defined in: [src/extensions.ts:40](https://github.com/Xunnamius/cli-utils/blob/caf1d74e366c1a64e9bac76fadfeeb54b974c17e/src/extensions.ts#L40)
 
-This ExecutionContext subtype contains state related to
+This [ExecutionContext](../../type-aliases/ExecutionContext.md) subtype contains state related to
 [standardCommonCliArguments](../variables/standardCommonCliArguments.md), both of which are required for the proper
 function of [withStandardBuilder](../functions/withStandardBuilder.md).
 

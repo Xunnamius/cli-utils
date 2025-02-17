@@ -6,13 +6,13 @@
 
 # Function: makeStandardConfigureErrorHandlingEpilogue()
 
-> **makeStandardConfigureErrorHandlingEpilogue**(): `ConfigureErrorHandlingEpilogue`\<[`StandardExecutionContext`](../../extensions/type-aliases/StandardExecutionContext.md)\>
+> **makeStandardConfigureErrorHandlingEpilogue**(): [`ConfigureErrorHandlingEpilogue`](../../type-aliases/ConfigureErrorHandlingEpilogue.md)\<[`StandardExecutionContext`](../../extensions/type-aliases/StandardExecutionContext.md)\>
 
-Defined in: [src/configure.ts:70](https://github.com/Xunnamius/cli-utils/blob/74bfa47fc80f4ebda9a4e0fb9b2b0d112ef3baed/src/configure.ts#L70)
+Defined in: [src/configure.ts:70](https://github.com/Xunnamius/cli-utils/blob/caf1d74e366c1a64e9bac76fadfeeb54b974c17e/src/configure.ts#L70)
 
-Returns a ConfigureErrorHandlingEpilogue instance considered standard
+Returns a [ConfigureErrorHandlingEpilogue](../../type-aliases/ConfigureErrorHandlingEpilogue.md) instance considered standard
 across [Xunnamius](https://github.com/Xunnamius)'s CLI projects.
 
 ## Returns
 
-`ConfigureErrorHandlingEpilogue`\<[`StandardExecutionContext`](../../extensions/type-aliases/StandardExecutionContext.md)\>
+[`ConfigureErrorHandlingEpilogue`](../../type-aliases/ConfigureErrorHandlingEpilogue.md)\<[`StandardExecutionContext`](../../extensions/type-aliases/StandardExecutionContext.md)\>

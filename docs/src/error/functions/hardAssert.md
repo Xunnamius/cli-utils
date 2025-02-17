@@ -10,10 +10,10 @@
 
 > **hardAssert**(`message`): `never`
 
-Defined in: [src/error.ts:84](https://github.com/Xunnamius/cli-utils/blob/74bfa47fc80f4ebda9a4e0fb9b2b0d112ef3baed/src/error.ts#L84)
+Defined in: [src/error.ts:84](https://github.com/Xunnamius/cli-utils/blob/caf1d74e366c1a64e9bac76fadfeeb54b974c17e/src/error.ts#L84)
 
 Throw a so-called "FrameworkError" with the given string message, which
-causes Black Flag to exit with the FrameworkExitCode.AssertionFailed
+causes Black Flag to exit with the [FrameworkExitCode.AssertionFailed](../../enumerations/FrameworkExitCode.md#assertionfailed)
 status code.
 
 Use this function to throw developer errors that end users can do nothing
@@ -33,11 +33,11 @@ about.
 
 > **hardAssert**(`value`, `message`): `asserts value`
 
-Defined in: [src/error.ts:93](https://github.com/Xunnamius/cli-utils/blob/74bfa47fc80f4ebda9a4e0fb9b2b0d112ef3baed/src/error.ts#L93)
+Defined in: [src/error.ts:93](https://github.com/Xunnamius/cli-utils/blob/caf1d74e366c1a64e9bac76fadfeeb54b974c17e/src/error.ts#L93)
 
 If `value` is falsy, throw a so-called "FrameworkError" with the given string
 message, which causes Black Flag to exit with the
-FrameworkExitCode.AssertionFailed status code.
+[FrameworkExitCode.AssertionFailed](../../enumerations/FrameworkExitCode.md#assertionfailed) status code.
 
 Use this function to assert developer errors that end users can do nothing
 about.

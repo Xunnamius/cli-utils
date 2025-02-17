@@ -6,6 +6,7 @@
 
 ## Modules
 
+- [src](src/README.md)
 - [src/configure](src/configure/README.md)
 - [src/constant](src/constant/README.md)
 - [src/error](src/error/README.md)

@@ -6,16 +6,16 @@
 
 # Function: withStandardBuilder()
 
-> **withStandardBuilder**\<`CustomCliArguments`, `CustomExecutionContext`\>(`customBuilder`?, `__namedParameters`?): `WithBuilderExtensionsReturnType`\<`CustomCliArguments`, `CustomExecutionContext`\>
+> **withStandardBuilder**\<`CustomCliArguments`, `CustomExecutionContext`\>(`customBuilder`?, `__namedParameters`?): [`WithBuilderExtensionsReturnType`](../../type-aliases/WithBuilderExtensionsReturnType.md)\<`CustomCliArguments`, `CustomExecutionContext`\>
 
-Defined in: [src/extensions.ts:165](https://github.com/Xunnamius/cli-utils/blob/74bfa47fc80f4ebda9a4e0fb9b2b0d112ef3baed/src/extensions.ts#L165)
+Defined in: [src/extensions.ts:165](https://github.com/Xunnamius/cli-utils/blob/caf1d74e366c1a64e9bac76fadfeeb54b974c17e/src/extensions.ts#L165)
 
 This function enables several options-related units of functionality
 considered standard across [Xunnamius](https://github.com/Xunnamius)'s CLI
 projects.
 
 This function is a relatively thin wrapper around
-withBuilderExtensions. It also disables
+[withBuilderExtensions](../../functions/withBuilderExtensions.md). It also disables
 [`duplicate-arguments-array`](https://github.com/yargs/yargs-parser?tab=readme-ov-file#duplicate-arguments-array)
 and enables
 [`strip-dashed`](https://github.com/yargs/yargs-parser?tab=readme-ov-file#strip-dashed)
@@ -40,12 +40,12 @@ values will be shallowly merged.
 
 ### customBuilder?
 
-`BfeBuilderObject`\<`CustomCliArguments`, `CustomExecutionContext`\> | (...`args`) => `void` \| `BfeBuilderObject`\<`CustomCliArguments`, `CustomExecutionContext`\>
+[`BfeBuilderObject`](../../type-aliases/BfeBuilderObject.md)\<`CustomCliArguments`, `CustomExecutionContext`\> | (...`args`) => `void` \| [`BfeBuilderObject`](../../type-aliases/BfeBuilderObject.md)\<`CustomCliArguments`, `CustomExecutionContext`\>
 
 ### \_\_namedParameters?
 
-`Omit`\<`WithBuilderExtensionsConfig`\<`CustomCliArguments`\>, `"commonOptions"`\> & `object` = `{}`
+`Omit`\<[`WithBuilderExtensionsConfig`](../../type-aliases/WithBuilderExtensionsConfig.md)\<`CustomCliArguments`\>, `"commonOptions"`\> & `object` = `{}`
 
 ## Returns
 
-`WithBuilderExtensionsReturnType`\<`CustomCliArguments`, `CustomExecutionContext`\>
+[`WithBuilderExtensionsReturnType`](../../type-aliases/WithBuilderExtensionsReturnType.md)\<`CustomCliArguments`, `CustomExecutionContext`\>
