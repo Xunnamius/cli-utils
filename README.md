@@ -66,6 +66,13 @@ To install:
 npm install @-xun/cli
 ```
 
+> [!TIP]
+>
+> `@-xun/cli` already comes bundled with (and re-exports) [@black-flag/core][1],
+> [@black-flag/extensions][2], and [@black-flag/checks][3]. _`@-xun/cli` is an
+> all-in-one package!_ Redundantly installing the `@black-flag/*` packages may
+> lead to version mis-matches, which can cause strange bugs.
+
 ## Usage
 
 <!-- TODO -->
@@ -256,3 +263,6 @@ specification. Contributions of any kind welcome!
 [x-repo-pr-compare]: https://github.com/Xunnamius/cli-utils/compare
 [x-repo-sponsor]: https://github.com/sponsors/Xunnamius
 [x-repo-support]: /.github/SUPPORT.md
+[1]: https://npm.im/@black-flag/core
+[2]: https://npm.im/@black-flag/extensions
+[3]: https://npm.im/@black-flag/checks
