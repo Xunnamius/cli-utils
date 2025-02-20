@@ -757,7 +757,7 @@ describe('::makeStandardConfigureErrorHandlingEpilogue', () => {
     {
       const { meta, argv, context } = await makeMocks({ withListr2Support: true });
       meta.error = new Error('message');
-      context.taskManager!.errors = [
+      context.taskManager.errors = [
         { message: '1' },
         { message: '2' },
         { message: '2' },
