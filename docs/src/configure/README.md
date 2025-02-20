@@ -6,6 +6,10 @@
 
 # src/configure
 
+## Type Aliases
+
+- [MakeStandardConfigureExecutionContextOptions](type-aliases/MakeStandardConfigureExecutionContextOptions.md)
+
 ## Functions
 
 - [makeStandardConfigureErrorHandlingEpilogue](functions/makeStandardConfigureErrorHandlingEpilogue.md)

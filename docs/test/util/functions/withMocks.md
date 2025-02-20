@@ -23,11 +23,11 @@ Wraps [withMockedArgv](withMockedArgv.md) + [withMockedEnv](withMockedEnv.md) wi
 
 #### options?
 
-\{ `passthrough`: (`"error"` \| `"warn"` \| `"log"` \| `"info"` \| `"stdout"` \| `"stderr"`)[]; `passthroughDebugEnv`: `boolean`; `passthroughOutputIfDebugging`: `boolean`; `replaceEntireArgv`: `boolean`; `replaceEntireEnv`: `boolean`; \}
+\{ `passthrough`: (`"log"` \| `"error"` \| `"warn"` \| `"info"` \| `"stdout"` \| `"stderr"`)[]; `passthroughDebugEnv`: `boolean`; `passthroughOutputIfDebugging`: `boolean`; `replaceEntireArgv`: `boolean`; `replaceEntireEnv`: `boolean`; \}
 
 #### options.passthrough?
 
-(`"error"` \| `"warn"` \| `"log"` \| `"info"` \| `"stdout"` \| `"stderr"`)[]
+(`"log"` \| `"error"` \| `"warn"` \| `"info"` \| `"stdout"` \| `"stderr"`)[]
 
 Prevent mocking the implementation of one or more output spies, allowing
 output to be passed through to the original function. Said spies will

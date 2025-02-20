@@ -6,43 +6,59 @@
 
 # Function: makeStandardConfigureExecutionContext()
 
-> **makeStandardConfigureExecutionContext**(`__namedParameters`): `Promise`\<[`ConfigureExecutionContext`](../../type-aliases/ConfigureExecutionContext.md)\<[`StandardExecutionContext`](../../extensions/type-aliases/StandardExecutionContext.md)\>\>
+## Call Signature
 
-Defined in: [src/configure.ts:23](https://github.com/Xunnamius/cli-utils/blob/caf1d74e366c1a64e9bac76fadfeeb54b974c17e/src/configure.ts#L23)
+> **makeStandardConfigureExecutionContext**(`options`): `Promise`\<[`ConfigureExecutionContext`](../../type-aliases/ConfigureExecutionContext.md)\<[`StandardExecutionContext`](../../extensions/type-aliases/StandardExecutionContext.md)\>\>
+
+Defined in: [src/configure.ts:45](https://github.com/Xunnamius/cli-utils/blob/7f8ef5efdc5cf88e30e7ff639a19dc6088662732/src/configure.ts#L45)
 
 Returns a [ConfigureExecutionContext](../../type-aliases/ConfigureExecutionContext.md) instance considered standard
 across [Xunnamius](https://github.com/Xunnamius)'s CLI projects.
 
-## Parameters
+### Parameters
 
-### \_\_namedParameters
+#### options
 
-#### rootDebugLogger
+[`MakeStandardConfigureExecutionContextOptions`](../type-aliases/MakeStandardConfigureExecutionContextOptions.md) & `object`
 
-`ExtendedDebugger`
+### Returns
 
-The generic logging function used whenever the CLI wants to send text to
-stderr.
+`Promise`\<[`ConfigureExecutionContext`](../../type-aliases/ConfigureExecutionContext.md)\<[`StandardExecutionContext`](../../extensions/type-aliases/StandardExecutionContext.md)\>\>
 
-#### rootGenericLogger
+## Call Signature
 
-`ExtendedLogger`
+> **makeStandardConfigureExecutionContext**(`options`): `Promise`\<[`ConfigureExecutionContext`](../../type-aliases/ConfigureExecutionContext.md)\<\{ `[key: string]`: `unknown`;  `commands`: `Map`\<`string`, \{ `metadata`: [`ProgramMetadata`](../../type-aliases/ProgramMetadata.md); `programs`: [`Programs`](../../type-aliases/Programs.md); \}\>; `debug`: `ExtendedDebugger`; `standardDebug`: `ExtendedDebugger`; `standardLog`: `ExtendedLogger`; `state`: `object` & `object`; `taskManager`: `ListrManager`\<`any`\>; \}\>\>
 
-The generic logging function used whenever the CLI wants to send text to
-stdout.
+Defined in: [src/configure.ts:48](https://github.com/Xunnamius/cli-utils/blob/7f8ef5efdc5cf88e30e7ff639a19dc6088662732/src/configure.ts#L48)
 
-#### withListr2Support?
+Returns a [ConfigureExecutionContext](../../type-aliases/ConfigureExecutionContext.md) instance considered standard
+across [Xunnamius](https://github.com/Xunnamius)'s CLI projects.
 
-`boolean` = `false`
+### Parameters
 
-If `true`, support for Listr2 tasks will be enabled for this program.
+#### options
 
-**Default**
+[`MakeStandardConfigureExecutionContextOptions`](../type-aliases/MakeStandardConfigureExecutionContextOptions.md) & `object`
 
-```ts
-false
-```
+### Returns
 
-## Returns
+`Promise`\<[`ConfigureExecutionContext`](../../type-aliases/ConfigureExecutionContext.md)\<\{ `[key: string]`: `unknown`;  `commands`: `Map`\<`string`, \{ `metadata`: [`ProgramMetadata`](../../type-aliases/ProgramMetadata.md); `programs`: [`Programs`](../../type-aliases/Programs.md); \}\>; `debug`: `ExtendedDebugger`; `standardDebug`: `ExtendedDebugger`; `standardLog`: `ExtendedLogger`; `state`: `object` & `object`; `taskManager`: `ListrManager`\<`any`\>; \}\>\>
+
+## Call Signature
+
+> **makeStandardConfigureExecutionContext**(`options`): `Promise`\<[`ConfigureExecutionContext`](../../type-aliases/ConfigureExecutionContext.md)\<[`StandardExecutionContext`](../../extensions/type-aliases/StandardExecutionContext.md)\>\>
+
+Defined in: [src/configure.ts:55](https://github.com/Xunnamius/cli-utils/blob/7f8ef5efdc5cf88e30e7ff639a19dc6088662732/src/configure.ts#L55)
+
+Returns a [ConfigureExecutionContext](../../type-aliases/ConfigureExecutionContext.md) instance considered standard
+across [Xunnamius](https://github.com/Xunnamius)'s CLI projects.
+
+### Parameters
+
+#### options
+
+[`MakeStandardConfigureExecutionContextOptions`](../type-aliases/MakeStandardConfigureExecutionContextOptions.md)
+
+### Returns
 
 `Promise`\<[`ConfigureExecutionContext`](../../type-aliases/ConfigureExecutionContext.md)\<[`StandardExecutionContext`](../../extensions/type-aliases/StandardExecutionContext.md)\>\>

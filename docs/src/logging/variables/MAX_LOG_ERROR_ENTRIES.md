@@ -8,7 +8,7 @@
 
 > `const` **MAX\_LOG\_ERROR\_ENTRIES**: `10` = `10`
 
-Defined in: [src/logging.ts:8](https://github.com/Xunnamius/cli-utils/blob/caf1d74e366c1a64e9bac76fadfeeb54b974c17e/src/logging.ts#L8)
+Defined in: [src/logging.ts:8](https://github.com/Xunnamius/cli-utils/blob/7f8ef5efdc5cf88e30e7ff639a19dc6088662732/src/logging.ts#L8)
 
 Hard-coded maximum reporting depth of the causal stack when fatal errors
 occur.

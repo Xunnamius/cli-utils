@@ -6,13 +6,15 @@
 
 # Type Alias: StandardExecutionContext
 
-> **StandardExecutionContext**: [`ExecutionContext`](../../type-aliases/ExecutionContext.md) & `object` & `0` *extends* `1` & `ListrManager` ? `object` : `object`
+> **StandardExecutionContext**: [`ExecutionContext`](../../type-aliases/ExecutionContext.md) & `object`
 
-Defined in: [src/extensions.ts:40](https://github.com/Xunnamius/cli-utils/blob/caf1d74e366c1a64e9bac76fadfeeb54b974c17e/src/extensions.ts#L40)
+Defined in: [src/extensions.ts:35](https://github.com/Xunnamius/cli-utils/blob/7f8ef5efdc5cf88e30e7ff639a19dc6088662732/src/extensions.ts#L35)
 
 This [ExecutionContext](../../type-aliases/ExecutionContext.md) subtype contains state related to
 [standardCommonCliArguments](../variables/standardCommonCliArguments.md), both of which are required for the proper
 function of [withStandardBuilder](../functions/withStandardBuilder.md).
+
+See also: [StandardExecutionContextWithListr2](StandardExecutionContextWithListr2.md)
 
 ## Type declaration
 
@@ -57,3 +59,10 @@ If `true`, the program should not output anything at all. It also implies
 > **startTime**: `Date`
 
 A `Date` object representing the start time of execution.
+
+### taskManager?
+
+> `optional` **taskManager**: `unknown`
+
+The global Listr task manager singleton. This is `undefined` if listr2
+support has not been explicitly enabled.

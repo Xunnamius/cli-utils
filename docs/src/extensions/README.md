@@ -10,6 +10,7 @@
 
 - [StandardCommonCliArguments](type-aliases/StandardCommonCliArguments.md)
 - [StandardExecutionContext](type-aliases/StandardExecutionContext.md)
+- [StandardExecutionContextWithListr2](type-aliases/StandardExecutionContextWithListr2.md)
 
 ## Variables
 
