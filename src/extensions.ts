@@ -21,14 +21,7 @@ import type {
 } from '@black-flag/extensions';
 
 import type { ExtendedDebugger, ExtendedLogger } from 'rejoinder';
-import type { ListrManager } from 'rejoinder-listr2';
-import type { Entries } from 'type-fest';
-
-import type {
-  // ? Used in documentation
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  makeStandardConfigureExecutionContext
-} from 'universe:configure.ts';
+import type { Entries, Merge } from 'type-fest';
 
 export { withUsageExtensions as withStandardUsage } from '@black-flag/extensions';
 
@@ -36,6 +29,8 @@ export { withUsageExtensions as withStandardUsage } from '@black-flag/extensions
  * This {@link ExecutionContext} subtype contains state related to
  * {@link standardCommonCliArguments}, both of which are required for the proper
  * function of {@link withStandardBuilder}.
+ *
+ * See also: {@link StandardExecutionContextWithListr2}
  */
 export type StandardExecutionContext = ExecutionContext & {
   /**
@@ -66,18 +61,29 @@ export type StandardExecutionContext = ExecutionContext & {
      */
     startTime: Date;
   };
-  // ? This bit of dark magic detects if ListrManager is the "any" type or not.
-  // ? We need this check because ListrManager is an optional peer dependency.
-} & (0 extends 1 & ListrManager
-    ? { taskManager?: undefined }
-    : {
-        /**
-         * The global Listr task manager singleton or `undefined` if Listr2
-         * support has not been enabled via
-         * {@link makeStandardConfigureExecutionContext}.
-         */
-        taskManager?: import('rejoinder-listr2').ListrManager;
-      });
+  /**
+   * The global Listr task manager singleton. This is `undefined` if listr2
+   * support has not been explicitly enabled.
+   */
+  taskManager?: unknown;
+};
+
+/**
+ * This {@link ExecutionContext} subtype contains state related to
+ * {@link standardCommonCliArguments}, both of which are required for the proper
+ * function of {@link withStandardBuilder}. Also includes listr2 support.
+ *
+ * See also: {@link StandardExecutionContext}
+ */
+export type StandardExecutionContextWithListr2 = Merge<
+  StandardExecutionContext,
+  {
+    /**
+     * The global Listr task manager singleton.
+     */
+    taskManager: import('rejoinder-listr2').ListrManager;
+  }
+>;
 
 /**
  * These properties will be available in the `argv` object of any command that

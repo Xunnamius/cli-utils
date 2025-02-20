@@ -17,14 +17,9 @@ import type { StandardExecutionContext } from 'universe:extensions.ts';
 const { IF_NOT_SILENCED, IF_NOT_QUIETED, IF_NOT_HUSHED } = LogTag;
 
 /**
- * Returns a {@link ConfigureExecutionContext} instance considered standard
- * across [Xunnamius](https://github.com/Xunnamius)'s CLI projects.
+ * @see {@link makeStandardConfigureExecutionContext}
  */
-export async function makeStandardConfigureExecutionContext({
-  rootDebugLogger,
-  rootGenericLogger,
-  withListr2Support = false
-}: {
+export type MakeStandardConfigureExecutionContextOptions = {
   /**
    * The generic logging function used whenever the CLI wants to send text to
    * stdout.
@@ -41,7 +36,32 @@ export async function makeStandardConfigureExecutionContext({
    * @default false
    */
   withListr2Support?: boolean;
-}): Promise<ConfigureExecutionContext<StandardExecutionContext>> {
+};
+
+/**
+ * Returns a {@link ConfigureExecutionContext} instance considered standard
+ * across [Xunnamius](https://github.com/Xunnamius)'s CLI projects.
+ */
+export async function makeStandardConfigureExecutionContext(
+  options: MakeStandardConfigureExecutionContextOptions & { withListr2Support?: false }
+): Promise<ConfigureExecutionContext<StandardExecutionContext>>;
+export async function makeStandardConfigureExecutionContext(
+  options: MakeStandardConfigureExecutionContextOptions & { withListr2Support: true }
+): Promise<
+  ConfigureExecutionContext<
+    import('universe:extensions.ts').StandardExecutionContextWithListr2
+  >
+>;
+export async function makeStandardConfigureExecutionContext(
+  options: MakeStandardConfigureExecutionContextOptions
+): Promise<ConfigureExecutionContext<StandardExecutionContext>>;
+export async function makeStandardConfigureExecutionContext({
+  rootDebugLogger,
+  rootGenericLogger,
+  withListr2Support = false
+}: MakeStandardConfigureExecutionContextOptions): Promise<
+  ConfigureExecutionContext<StandardExecutionContext>
+> {
   const taskManager = withListr2Support
     ? (await import('rejoinder-listr2')).createListrManager()
     : undefined;
@@ -139,22 +159,24 @@ export function makeStandardConfigureErrorHandlingEpilogue(): ConfigureErrorHand
         }
       }
 
-      if (
-        context.taskManager &&
-        !context.state.isHushed &&
-        context.taskManager.errors.length > 0
-      ) {
-        context.standardLog.newline([IF_NOT_HUSHED], 'alternate');
-        context.standardLog.error([IF_NOT_HUSHED], '❌ Fatal task errors:');
+      if (context.taskManager) {
+        const taskManager = (
+          context as import('universe:extensions.ts').StandardExecutionContextWithListr2
+        ).taskManager;
 
-        const { ListrErrorTypes } = await import('rejoinder-listr2');
+        if (!context.state.isHushed && taskManager.errors.length > 0) {
+          context.standardLog.newline([IF_NOT_HUSHED], 'alternate');
+          context.standardLog.error([IF_NOT_HUSHED], '❌ Fatal task errors:');
 
-        for (const taskError of context.taskManager.errors) {
-          if (taskError.type !== ListrErrorTypes.HAS_FAILED_WITHOUT_ERROR) {
-            context.standardLog.error(
-              [IF_NOT_HUSHED],
-              `${TAB}❗ ${toSentenceCase(taskError.message)}`
-            );
+          const { ListrErrorTypes } = await import('rejoinder-listr2');
+
+          for (const taskError of taskManager.errors) {
+            if (taskError.type !== ListrErrorTypes.HAS_FAILED_WITHOUT_ERROR) {
+              context.standardLog.error(
+                [IF_NOT_HUSHED],
+                `${TAB}❗ ${toSentenceCase(taskError.message)}`
+              );
+            }
           }
         }
       }

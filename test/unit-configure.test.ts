@@ -12,10 +12,14 @@ import {
 
 import { withMockedOutput } from 'testverse:util.ts';
 
-import type { Arguments } from '@black-flag/core';
+import type { Arguments, ConfigureExecutionContext } from '@black-flag/core';
 import type { ExecutionContext } from '@black-flag/core/util';
 import type { PartialDeep } from 'type-fest';
-import type { StandardExecutionContext } from 'universe:extensions.ts';
+
+import type {
+  StandardExecutionContext,
+  StandardExecutionContextWithListr2
+} from 'universe:extensions.ts';
 
 const namespace = { namespace: 'test' };
 
@@ -776,13 +780,13 @@ describe('::makeStandardConfigureErrorHandlingEpilogue', () => {
   });
 });
 
-async function makeMocks({
+async function makeMocks<T extends boolean | undefined>({
   state = {},
   withListr2Support = false,
   withTaskManagerErrors = withListr2Support
 }: {
   state?: PartialDeep<StandardExecutionContext['state']>;
-  withListr2Support?: boolean;
+  withListr2Support?: T;
   withTaskManagerErrors?: boolean | { message: string }[];
 } = {}) {
   const mocks = {
@@ -793,22 +797,26 @@ async function makeMocks({
     },
     argv: {} as Arguments,
     context: await (
-      await makeStandardConfigureExecutionContext({
+      (await makeStandardConfigureExecutionContext({
         rootDebugLogger: createDebugLogger(namespace),
         rootGenericLogger: createGenericLogger(namespace),
         withListr2Support
-      })
+      })) as ConfigureExecutionContext<
+        T extends true ? StandardExecutionContextWithListr2 : StandardExecutionContext
+      >
     )({} as ExecutionContext)
   };
 
   Object.assign(mocks.context.state, state);
 
   if (mocks.context.taskManager && withTaskManagerErrors) {
-    mocks.context.taskManager.errors = (
+    const context = mocks.context as StandardExecutionContextWithListr2;
+
+    context.taskManager.errors = (
       withTaskManagerErrors === true
         ? [{ message: 'dummy task error' }]
         : withTaskManagerErrors
-    ) as typeof mocks.context.taskManager.errors;
+    ) as typeof context.taskManager.errors;
   }
 
   return mocks;
