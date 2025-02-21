@@ -8,7 +8,7 @@
 
 > **StandardCommonCliArguments**: `object`
 
-Defined in: [src/extensions.ts:99](https://github.com/Xunnamius/cli-utils/blob/7f8ef5efdc5cf88e30e7ff639a19dc6088662732/src/extensions.ts#L99)
+Defined in: [src/extensions.ts:99](https://github.com/Xunnamius/cli-utils/blob/f852d38d2fff563e997c4bcbc30d36f7a4093d87/src/extensions.ts#L99)
 
 These properties will be available in the `argv` object of any command that
 uses [withStandardBuilder](../functions/withStandardBuilder.md) to construct its `builder`.
