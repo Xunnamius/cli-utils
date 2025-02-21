@@ -81,10 +81,10 @@ describe('::makeStandardConfigureErrorHandlingEpilogue', () => {
     {
       const { meta, argv, context } = await makeMocks({ withListr2Support: true });
 
-      await withMockedOutput(async ({ errorSpy }) => {
+      await withMockedOutput(async ({ nodeErrorSpy }) => {
         await makeStandardConfigureErrorHandlingEpilogue()(meta, argv, context);
 
-        expect(errorSpy.mock.calls).toStrictEqual([
+        expect(nodeErrorSpy.mock.calls).toStrictEqual([
           [expect.stringContaining('test::<error> ❌ Execution failed: message')],
           [''],
           [expect.stringContaining('test::<error> ❌ Causal stack:')],
@@ -101,10 +101,10 @@ describe('::makeStandardConfigureErrorHandlingEpilogue', () => {
     {
       const { meta, argv, context } = await makeMocks({ withListr2Support: false });
 
-      await withMockedOutput(async ({ errorSpy }) => {
+      await withMockedOutput(async ({ nodeErrorSpy }) => {
         await makeStandardConfigureErrorHandlingEpilogue()(meta, argv, context);
 
-        expect(errorSpy.mock.calls).toStrictEqual([
+        expect(nodeErrorSpy.mock.calls).toStrictEqual([
           [expect.stringContaining('test::<error> ❌ Execution failed: message')],
           [''],
           [expect.stringContaining('test::<error> ❌ Causal stack:')],
@@ -125,10 +125,10 @@ describe('::makeStandardConfigureErrorHandlingEpilogue', () => {
         state: { didOutputHelpOrVersionText: true }
       });
 
-      await withMockedOutput(async ({ errorSpy }) => {
+      await withMockedOutput(async ({ nodeErrorSpy }) => {
         await makeStandardConfigureErrorHandlingEpilogue()(meta, argv, context);
 
-        expect(errorSpy.mock.calls).toStrictEqual([
+        expect(nodeErrorSpy.mock.calls).toStrictEqual([
           [''],
           [expect.stringContaining('test::<error> ❌ Execution failed: message')],
           [''],
@@ -149,10 +149,10 @@ describe('::makeStandardConfigureErrorHandlingEpilogue', () => {
         state: { didOutputHelpOrVersionText: true }
       });
 
-      await withMockedOutput(async ({ errorSpy }) => {
+      await withMockedOutput(async ({ nodeErrorSpy }) => {
         await makeStandardConfigureErrorHandlingEpilogue()(meta, argv, context);
 
-        expect(errorSpy.mock.calls).toStrictEqual([
+        expect(nodeErrorSpy.mock.calls).toStrictEqual([
           [''],
           [expect.stringContaining('test::<error> ❌ Execution failed: message')],
           [''],
@@ -212,10 +212,10 @@ describe('::makeStandardConfigureErrorHandlingEpilogue', () => {
         state
       });
 
-      await withMockedOutput(async ({ errorSpy }) => {
+      await withMockedOutput(async ({ nodeErrorSpy }) => {
         await makeStandardConfigureErrorHandlingEpilogue()(meta, argv, context);
 
-        expect(errorSpy.mock.calls).toStrictEqual([
+        expect(nodeErrorSpy.mock.calls).toStrictEqual([
           [expect.stringContaining('test::<error> ❌ Execution failed: message')]
         ]);
       });
@@ -227,10 +227,10 @@ describe('::makeStandardConfigureErrorHandlingEpilogue', () => {
         state
       });
 
-      await withMockedOutput(async ({ errorSpy }) => {
+      await withMockedOutput(async ({ nodeErrorSpy }) => {
         await makeStandardConfigureErrorHandlingEpilogue()(meta, argv, context);
 
-        expect(errorSpy.mock.calls).toStrictEqual([
+        expect(nodeErrorSpy.mock.calls).toStrictEqual([
           [expect.stringContaining('test::<error> ❌ Execution failed: message')]
         ]);
       });
@@ -252,10 +252,10 @@ describe('::makeStandardConfigureErrorHandlingEpilogue', () => {
         state
       });
 
-      await withMockedOutput(async ({ errorSpy }) => {
+      await withMockedOutput(async ({ nodeErrorSpy }) => {
         await makeStandardConfigureErrorHandlingEpilogue()(meta, argv, context);
 
-        expect(errorSpy.mock.calls).toStrictEqual([
+        expect(nodeErrorSpy.mock.calls).toStrictEqual([
           [expect.stringContaining('test::<error> ❌ Execution failed: message')],
           [''],
           [expect.stringContaining('test::<error> ❌ Causal stack:')],
@@ -272,10 +272,10 @@ describe('::makeStandardConfigureErrorHandlingEpilogue', () => {
         state
       });
 
-      await withMockedOutput(async ({ errorSpy }) => {
+      await withMockedOutput(async ({ nodeErrorSpy }) => {
         await makeStandardConfigureErrorHandlingEpilogue()(meta, argv, context);
 
-        expect(errorSpy.mock.calls).toStrictEqual([
+        expect(nodeErrorSpy.mock.calls).toStrictEqual([
           [expect.stringContaining('test::<error> ❌ Execution failed: message')],
           [''],
           [expect.stringContaining('test::<error> ❌ Causal stack:')],
@@ -305,14 +305,14 @@ describe('::makeStandardConfigureErrorHandlingEpilogue', () => {
     {
       const { meta, argv, context } = await makeMocks({ withTaskManagerErrors: false });
 
-      await withMockedOutput(async ({ errorSpy }) => {
+      await withMockedOutput(async ({ nodeErrorSpy }) => {
         await makeStandardConfigureErrorHandlingEpilogue()(
           { ...meta, message: '' },
           argv,
           context
         );
 
-        expect(errorSpy.mock.calls).toStrictEqual([]);
+        expect(nodeErrorSpy.mock.calls).toStrictEqual([]);
       });
     }
   });
@@ -323,14 +323,14 @@ describe('::makeStandardConfigureErrorHandlingEpilogue', () => {
     {
       const { meta, argv, context } = await makeMocks({ withListr2Support: true });
 
-      await withMockedOutput(async ({ errorSpy }) => {
+      await withMockedOutput(async ({ nodeErrorSpy }) => {
         await makeStandardConfigureErrorHandlingEpilogue()(
           { ...meta, message: '1' },
           argv,
           context
         );
 
-        expect(errorSpy.mock.calls).toStrictEqual([
+        expect(nodeErrorSpy.mock.calls).toStrictEqual([
           [expect.stringContaining('test::<error> ❌ Execution failed: 1')],
           [''],
           [expect.stringContaining('test::<error> ❌ Causal stack:')],
@@ -346,14 +346,14 @@ describe('::makeStandardConfigureErrorHandlingEpilogue', () => {
     {
       const { meta, argv, context } = await makeMocks({ withListr2Support: false });
 
-      await withMockedOutput(async ({ errorSpy }) => {
+      await withMockedOutput(async ({ nodeErrorSpy }) => {
         await makeStandardConfigureErrorHandlingEpilogue()(
           { ...meta, message: '1' },
           argv,
           context
         );
 
-        expect(errorSpy.mock.calls).toStrictEqual([
+        expect(nodeErrorSpy.mock.calls).toStrictEqual([
           [expect.stringContaining('test::<error> ❌ Execution failed: 1')],
           [''],
           [expect.stringContaining('test::<error> ❌ Causal stack:')],
@@ -366,7 +366,7 @@ describe('::makeStandardConfigureErrorHandlingEpilogue', () => {
     {
       const { meta, argv, context } = await makeMocks({ withListr2Support: true });
 
-      await withMockedOutput(async ({ errorSpy }) => {
+      await withMockedOutput(async ({ nodeErrorSpy }) => {
         await makeStandardConfigureErrorHandlingEpilogue()(
           {
             ...meta,
@@ -388,7 +388,7 @@ describe('::makeStandardConfigureErrorHandlingEpilogue', () => {
           context
         );
 
-        expect(errorSpy.mock.calls).toStrictEqual([
+        expect(nodeErrorSpy.mock.calls).toStrictEqual([
           [expect.stringContaining('test::<error> ❌ Execution failed: message')],
           [''],
           [expect.stringContaining('test::<error> ❌ Causal stack:')],
@@ -407,14 +407,14 @@ describe('::makeStandardConfigureErrorHandlingEpilogue', () => {
     {
       const { meta, argv, context } = await makeMocks({ withListr2Support: true });
 
-      await withMockedOutput(async ({ errorSpy }) => {
+      await withMockedOutput(async ({ nodeErrorSpy }) => {
         await makeStandardConfigureErrorHandlingEpilogue()(
           { ...meta, error: new Error(meta.message, { cause: meta.message }) },
           argv,
           context
         );
 
-        expect(errorSpy.mock.calls).toStrictEqual([
+        expect(nodeErrorSpy.mock.calls).toStrictEqual([
           [expect.stringContaining('test::<error> ❌ Execution failed: message')],
           [''],
           [expect.stringContaining('test::<error> ❌ Fatal task errors:')],
@@ -430,7 +430,7 @@ describe('::makeStandardConfigureErrorHandlingEpilogue', () => {
     {
       const { meta, argv, context } = await makeMocks({ withListr2Support: true });
 
-      await withMockedOutput(async ({ errorSpy }) => {
+      await withMockedOutput(async ({ nodeErrorSpy }) => {
         await makeStandardConfigureErrorHandlingEpilogue()(
           {
             ...meta,
@@ -445,7 +445,7 @@ describe('::makeStandardConfigureErrorHandlingEpilogue', () => {
           context
         );
 
-        expect(errorSpy.mock.calls).toStrictEqual([
+        expect(nodeErrorSpy.mock.calls).toStrictEqual([
           [expect.stringContaining('test::<error> ❌ Execution failed: 1')],
           [''],
           [expect.stringContaining('test::<error> ❌ Causal stack:')],
@@ -462,7 +462,7 @@ describe('::makeStandardConfigureErrorHandlingEpilogue', () => {
     {
       const { meta, argv, context } = await makeMocks({ withListr2Support: false });
 
-      await withMockedOutput(async ({ errorSpy }) => {
+      await withMockedOutput(async ({ nodeErrorSpy }) => {
         await makeStandardConfigureErrorHandlingEpilogue()(
           {
             ...meta,
@@ -477,7 +477,7 @@ describe('::makeStandardConfigureErrorHandlingEpilogue', () => {
           context
         );
 
-        expect(errorSpy.mock.calls).toStrictEqual([
+        expect(nodeErrorSpy.mock.calls).toStrictEqual([
           [expect.stringContaining('test::<error> ❌ Execution failed: 1')],
           [''],
           [expect.stringContaining('test::<error> ❌ Causal stack:')],
@@ -495,7 +495,7 @@ describe('::makeStandardConfigureErrorHandlingEpilogue', () => {
     {
       const { meta, argv, context } = await makeMocks({ withListr2Support: true });
 
-      await withMockedOutput(async ({ errorSpy }) => {
+      await withMockedOutput(async ({ nodeErrorSpy }) => {
         await makeStandardConfigureErrorHandlingEpilogue()(
           {
             ...meta,
@@ -506,7 +506,7 @@ describe('::makeStandardConfigureErrorHandlingEpilogue', () => {
           context
         );
 
-        expect(errorSpy.mock.calls).toStrictEqual([
+        expect(nodeErrorSpy.mock.calls).toStrictEqual([
           [expect.stringContaining('test::<error> ❌ Execution failed: 1')],
           [''],
           [expect.stringContaining('test::<error> ❌ Fatal task errors:')],
@@ -518,7 +518,7 @@ describe('::makeStandardConfigureErrorHandlingEpilogue', () => {
     {
       const { meta, argv, context } = await makeMocks({ withListr2Support: false });
 
-      await withMockedOutput(async ({ errorSpy }) => {
+      await withMockedOutput(async ({ nodeErrorSpy }) => {
         await makeStandardConfigureErrorHandlingEpilogue()(
           {
             ...meta,
@@ -529,7 +529,7 @@ describe('::makeStandardConfigureErrorHandlingEpilogue', () => {
           context
         );
 
-        expect(errorSpy.mock.calls).toStrictEqual([
+        expect(nodeErrorSpy.mock.calls).toStrictEqual([
           [expect.stringContaining('test::<error> ❌ Execution failed: 1')]
         ]);
       });
@@ -540,7 +540,7 @@ describe('::makeStandardConfigureErrorHandlingEpilogue', () => {
     {
       const { meta, argv, context } = await makeMocks({ withListr2Support: true });
 
-      await withMockedOutput(async ({ errorSpy }) => {
+      await withMockedOutput(async ({ nodeErrorSpy }) => {
         await makeStandardConfigureErrorHandlingEpilogue()(
           {
             ...meta,
@@ -550,7 +550,7 @@ describe('::makeStandardConfigureErrorHandlingEpilogue', () => {
           context
         );
 
-        expect(errorSpy.mock.calls).toStrictEqual([
+        expect(nodeErrorSpy.mock.calls).toStrictEqual([
           [expect.stringContaining('test::<error> ❌ Execution failed: message')],
           [''],
           [expect.stringContaining('test::<error> ❌ Fatal task errors:')],
@@ -562,7 +562,7 @@ describe('::makeStandardConfigureErrorHandlingEpilogue', () => {
     {
       const { meta, argv, context } = await makeMocks({ withListr2Support: false });
 
-      await withMockedOutput(async ({ errorSpy }) => {
+      await withMockedOutput(async ({ nodeErrorSpy }) => {
         await makeStandardConfigureErrorHandlingEpilogue()(
           {
             ...meta,
@@ -572,7 +572,7 @@ describe('::makeStandardConfigureErrorHandlingEpilogue', () => {
           context
         );
 
-        expect(errorSpy.mock.calls).toStrictEqual([
+        expect(nodeErrorSpy.mock.calls).toStrictEqual([
           [expect.stringContaining('test::<error> ❌ Execution failed: message')]
         ]);
       });
@@ -585,7 +585,7 @@ describe('::makeStandardConfigureErrorHandlingEpilogue', () => {
     {
       const { meta, argv, context } = await makeMocks({ withListr2Support: true });
 
-      await withMockedOutput(async ({ errorSpy }) => {
+      await withMockedOutput(async ({ nodeErrorSpy }) => {
         await makeStandardConfigureErrorHandlingEpilogue()(
           {
             ...meta,
@@ -607,7 +607,7 @@ describe('::makeStandardConfigureErrorHandlingEpilogue', () => {
           context
         );
 
-        expect(errorSpy.mock.calls).toStrictEqual([
+        expect(nodeErrorSpy.mock.calls).toStrictEqual([
           [expect.stringContaining('test::<error> ❌ Execution failed: message')],
           [''],
           [expect.stringContaining('test::<error> ❌ Causal stack:')],
@@ -630,7 +630,7 @@ describe('::makeStandardConfigureErrorHandlingEpilogue', () => {
     {
       const { meta, argv, context } = await makeMocks({ withListr2Support: true });
 
-      await withMockedOutput(async ({ errorSpy }) => {
+      await withMockedOutput(async ({ nodeErrorSpy }) => {
         await makeStandardConfigureErrorHandlingEpilogue()(
           {
             ...meta,
@@ -666,7 +666,7 @@ describe('::makeStandardConfigureErrorHandlingEpilogue', () => {
           context
         );
 
-        expect(errorSpy.mock.calls).toStrictEqual([
+        expect(nodeErrorSpy.mock.calls).toStrictEqual([
           [expect.stringContaining('test::<error> ❌ Execution failed: message')],
           [''],
           [expect.stringContaining('test::<error> ❌ Causal stack:')],
@@ -693,7 +693,7 @@ describe('::makeStandardConfigureErrorHandlingEpilogue', () => {
     {
       const { meta, argv, context } = await makeMocks({ withListr2Support: false });
 
-      await withMockedOutput(async ({ errorSpy }) => {
+      await withMockedOutput(async ({ nodeErrorSpy }) => {
         await makeStandardConfigureErrorHandlingEpilogue()(
           {
             ...meta,
@@ -731,7 +731,7 @@ describe('::makeStandardConfigureErrorHandlingEpilogue', () => {
           context
         );
 
-        expect(errorSpy.mock.calls).toStrictEqual([
+        expect(nodeErrorSpy.mock.calls).toStrictEqual([
           [expect.stringContaining('test::<error> ❌ Execution failed: message')],
           [''],
           [expect.stringContaining('test::<error> ❌ Causal stack:')],
@@ -764,10 +764,10 @@ describe('::makeStandardConfigureErrorHandlingEpilogue', () => {
         { message: '3', type: ListrErrorTypes.HAS_FAILED_WITHOUT_ERROR }
       ] as NonNullable<typeof context.taskManager>['errors'];
 
-      await withMockedOutput(async ({ errorSpy }) => {
+      await withMockedOutput(async ({ nodeErrorSpy }) => {
         await makeStandardConfigureErrorHandlingEpilogue()(meta, argv, context);
 
-        expect(errorSpy.mock.calls).toStrictEqual([
+        expect(nodeErrorSpy.mock.calls).toStrictEqual([
           [expect.stringContaining('test::<error> ❌ Execution failed: message')],
           [''],
           [expect.stringContaining('test::<error> ❌ Fatal task errors:')],
