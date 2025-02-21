@@ -110,11 +110,11 @@
   },
   "devDependencies": {
     "@-xun/run": "^1.0.2",
-    "@-xun/symbiote": "^3.0.0",
+    "@-xun/symbiote": "^3.1.2",
     "listr2": "^8.2.5"
   },
   "peerDependencies": {
-    "rejoinder-listr2": "^1.0.2"
+    "rejoinder-listr2": "^1.0.3"
   },
   "peerDependenciesMeta": {
     "rejoinder-listr2": {
