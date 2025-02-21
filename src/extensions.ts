@@ -378,7 +378,7 @@ export function withStandardBuilder<
               debug('undoing state changes due to artificial invocation');
 
               if (silent) {
-                if (!originallyDisabledTags.has(LogTag.IF_NOT_SILENCED)) {
+                if (!originallyDisabledTags.includes(LogTag.IF_NOT_SILENCED)) {
                   enableLoggingByTag({ tags: [LogTag.IF_NOT_SILENCED] });
                 }
 
@@ -387,7 +387,7 @@ export function withStandardBuilder<
               }
 
               if (quiet) {
-                if (!originallyDisabledTags.has(LogTag.IF_NOT_QUIETED)) {
+                if (!originallyDisabledTags.includes(LogTag.IF_NOT_QUIETED)) {
                   enableLoggingByTag({ tags: [LogTag.IF_NOT_QUIETED] });
                 }
 
@@ -395,7 +395,7 @@ export function withStandardBuilder<
               }
 
               if (hush) {
-                if (!originallyDisabledTags.has(LogTag.IF_NOT_HUSHED)) {
+                if (!originallyDisabledTags.includes(LogTag.IF_NOT_HUSHED)) {
                   enableLoggingByTag({ tags: [LogTag.IF_NOT_HUSHED] });
                 }
 
