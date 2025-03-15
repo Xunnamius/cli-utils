@@ -6,32 +6,29 @@
 
 # Function: configureProgram()
 
-> **configureProgram**\<`CustomContext`\>(`commandModulePath`, `configurationHooks`?): `Promise`\<[`PreExecutionContext`](../type-aliases/PreExecutionContext.md)\>
+> **configureProgram**(`commandModulesPath`, `configurationHooks`?): `Promise`\<[`PreExecutionContext`](../type-aliases/PreExecutionContext.md)\>
 
-Defined in: node\_modules/@black-flag/core/dist/src/index.d.ts:15
+Defined in: node\_modules/@black-flag/core/dist/src/index.d.ts:100
 
 Create and return a [PreExecutionContext](../type-aliases/PreExecutionContext.md) containing fully-configured
 [Program](../type-aliases/Program.md) instances and an [Executor](../type-aliases/Executor.md) entry point function.
 
-Command auto-discovery will occur at `commandModulePath`. An exception will
-occur if no commands are loadable from the given `commandModulePath`.
+Command auto-discovery will occur at `commandModulesPath`. An exception will
+occur if no commands are loadable from the given `commandModulesPath`.
 
 **This function throws whenever an exception occurs**, making it not ideal as
-an entry point for a CLI. See [runProgram](runProgram.md) for a wrapper function that
-handles exceptions and sets the exit code for you.
-
-## Type Parameters
-
-• **CustomContext** *extends* [`ExecutionContext`](../type-aliases/ExecutionContext.md) = [`ExecutionContext`](../type-aliases/ExecutionContext.md)
+an entry point for a CLI, but perhaps useful during testing. See
+[runProgram](runProgram.md) for a wrapper function that handles exceptions and sets
+the exit code automatically.
 
 ## Parameters
 
-### commandModulePath
+### commandModulesPath
 
 `string`
 
-Command auto-discovery will occur at `commandModulePath`. An exception will
-occur if no commands are loadable from the given `commandModulePath`.
+Command auto-discovery will occur at `commandModulesPath`. An exception will
+occur if no commands are loadable from the given `commandModulesPath`.
 
 `'file://...'`-style URLs are also accepted.
 

@@ -6,9 +6,9 @@
 
 # Type Alias: EffectorProgram\<CustomCliArguments, CustomExecutionContext\>
 
-> **EffectorProgram**\<`CustomCliArguments`, `CustomExecutionContext`\>: `Omit`\<[`Program`](Program.md)\<`CustomCliArguments`, `CustomExecutionContext`\>, `"command_deferred"` \| `"command_finalize_deferred"`\>
+> **EffectorProgram**\<`CustomCliArguments`, `CustomExecutionContext`\>: `Omit`\<[`Program`](Program.md)\<`CustomCliArguments`, `CustomExecutionContext`\>, `"command"`\>
 
-Defined in: node\_modules/@black-flag/core/dist/types/program.d.ts:68
+Defined in: node\_modules/@black-flag/core/dist/src/types/program.d.ts:68
 
 Represents an "effector" [Program](Program.md) instance.
 

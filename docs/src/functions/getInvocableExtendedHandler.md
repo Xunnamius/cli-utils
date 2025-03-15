@@ -8,7 +8,7 @@
 
 > **getInvocableExtendedHandler**\<`CustomCliArguments`, `CustomExecutionContext`\>(`maybeCommand`, `context`): `Promise`\<(`argv_`) => `Promise`\<`void`\>\>
 
-Defined in: node\_modules/@black-flag/extensions/dist/src/index.d.ts:489
+Defined in: node\_modules/@black-flag/extensions/dist/packages/extensions/src/index.d.ts:491
 
 This function returns a version of `maybeCommand`'s handler function that is
 ready to invoke immediately. It can be used with both BFE and normal Black
@@ -27,8 +27,8 @@ correctness checks.**
 Use `CustomCliArguments` (and `CustomExecutionContext`) to assert the
 expected shape of the "reified argv".
 
-See [the BFE
-documentation](https://github.com/Xunnamius/black-flag-extensions?tab=readme-ov-file#getinvocableextendedhandler)
+See [the
+documentation](https://github.com/Xunnamius/black-flag/blob/main/packages/extensions/README.md#getinvocableextendedhandler)
 for more details.
 
 ## Type Parameters

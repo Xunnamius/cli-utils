@@ -6,7 +6,7 @@
 
 # Class: CliError
 
-Defined in: node\_modules/@black-flag/core/dist/src/error.d.ts:75
+Defined in: node\_modules/@black-flag/core/dist/src/error.d.ts:95
 
 Represents a CLI-specific error with suggested exit code and other
 properties. As `CliError` has built-in support for cause chaining, this class
@@ -24,22 +24,23 @@ can be used as a simple wrapper around other errors.
 
 ## Implements
 
-- `NonNullable`\<[`CliErrorOptions`](../type-aliases/CliErrorOptions.md)\>
+- `Required`\<`Omit`\<[`CliErrorOptions`](../type-aliases/CliErrorOptions.md), `"cause"`\>\>
+- `Pick`\<[`CliErrorOptions`](../type-aliases/CliErrorOptions.md), `"cause"`\>
 
 ## Constructors
 
 ### new CliError()
 
-> **new CliError**(`reason`, `options`?): [`CliError`](CliError.md)
+> **new CliError**(`reason`?, `options`?): [`CliError`](CliError.md)
 
-Defined in: node\_modules/@black-flag/core/dist/src/error.d.ts:84
+Defined in: node\_modules/@black-flag/core/dist/src/error.d.ts:104
 
 Represents a CLI-specific error, optionally with suggested exit code and
 other context.
 
 #### Parameters
 
-##### reason
+##### reason?
 
 `string` | `Error`
 
@@ -59,7 +60,7 @@ other context.
 
 > **new CliError**(`reason`, `options`, `message`, `superOptions`): [`CliError`](CliError.md)
 
-Defined in: node\_modules/@black-flag/core/dist/src/error.d.ts:89
+Defined in: node\_modules/@black-flag/core/dist/src/error.d.ts:109
 
 This constructor syntax is used by subclasses when calling this constructor
 via `super`.
@@ -96,7 +97,7 @@ via `super`.
 
 > **\[$type\]**: `string`[]
 
-Defined in: node\_modules/@black-flag/core/dist/src/error.d.ts:79
+Defined in: node\_modules/@black-flag/core/dist/src/error.d.ts:99
 
 ***
 
@@ -108,7 +109,7 @@ Defined in: node\_modules/typescript/lib/lib.es2022.error.d.ts:26
 
 #### Implementation of
 
-`NonNullable.cause`
+`Pick.cause`
 
 #### Inherited from
 
@@ -120,9 +121,9 @@ Defined in: node\_modules/typescript/lib/lib.es2022.error.d.ts:26
 
 > **dangerouslyFatal**: `boolean`
 
-Defined in: node\_modules/@black-flag/core/dist/src/error.d.ts:78
+Defined in: node\_modules/@black-flag/core/dist/src/error.d.ts:98
 
-This option is similar in intent to yargs's `exitProcess()` function,
+This option is similar in intent to Yargs's `exitProcess()` function,
 except applied more granularly.
 
 Normally, [runProgram](../functions/runProgram.md) never throws and never calls `process.exit`,
@@ -145,9 +146,15 @@ heisenbugs.** You will also have to specially handle `process.exit` when
 running unit/integration tests and executing command handlers within other
 command handlers. Tread carefully.
 
+#### Default
+
+```ts
+false
+```
+
 #### Implementation of
 
-`NonNullable.dangerouslyFatal`
+`Required.dangerouslyFatal`
 
 ***
 
@@ -177,23 +184,40 @@ Defined in: node\_modules/typescript/lib/lib.es5.d.ts:1076
 
 ### showHelp
 
-> **showHelp**: `boolean`
+> **showHelp**: `NonNullable`\<`undefined` \| `false` \| `"full"` \| `"short"` \| `"default"`\>
 
-Defined in: node\_modules/@black-flag/core/dist/src/error.d.ts:77
+Defined in: node\_modules/@black-flag/core/dist/src/error.d.ts:97
 
-If `true`, help text will be sent to stderr _before this exception finishes
-bubbling_. Where the exception is thrown will determine which instance is
-responsible for error text generation.
+If `showHelp` is set to a string that isn't `"default"`, help text will be
+sent to stderr. Note that help text is always sent _before this exception
+finishes bubbling up to `ConfigureErrorHandlingEpilogue`_.
+
+Specifically, if `showHelp` is set to `"full"`, the full help text will be
+sent to stderr, including the entire `usage` string. If set to `"short"`
+(or `true`), the same help text will be sent to stderr except only the
+first line of usage will be included. In either case, help text will be
+sent to stderr regardless of the value of
+`ExecutionContext::state.showHelpOnFail`.
+
+Alternatively, if set to `"default"`, the value of
+`ExecutionContext::state.showHelpOnFail` will be used. And if set to
+`false`, no help text will be sent to stderr due to this error regardless
+of the value of `ExecutionContext::state.showHelpOnFail`.
+
+Note that, regardless of this `showHelp`, help text is always output when a
+parent command is invoked that (1) has one or more child commands and (2)
+lacks its own handler implementation or implements a handler that throws
+[CommandNotImplementedError](CommandNotImplementedError.md).
 
 #### Default
 
 ```ts
-false
+"default"
 ```
 
 #### Implementation of
 
-`NonNullable.showHelp`
+`Required.showHelp`
 
 ***
 
@@ -213,7 +237,7 @@ Defined in: node\_modules/typescript/lib/lib.es5.d.ts:1078
 
 > **suggestedExitCode**: [`FrameworkExitCode`](../enumerations/FrameworkExitCode.md)
 
-Defined in: node\_modules/@black-flag/core/dist/src/error.d.ts:76
+Defined in: node\_modules/@black-flag/core/dist/src/error.d.ts:96
 
 The exit code that will be returned when the application exits, given
 nothing else goes wrong in the interim.
@@ -226,7 +250,7 @@ FrameworkExitCode.DefaultError
 
 #### Implementation of
 
-`NonNullable.suggestedExitCode`
+`Required.suggestedExitCode`
 
 ***
 

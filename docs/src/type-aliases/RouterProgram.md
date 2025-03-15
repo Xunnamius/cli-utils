@@ -8,7 +8,7 @@
 
 > **RouterProgram**\<`CustomCliArguments`, `CustomExecutionContext`\>: `Pick`\<[`Program`](Program.md)\<`CustomCliArguments`, `CustomExecutionContext`\>, `"parseAsync"` \| `"command"`\>
 
-Defined in: node\_modules/@black-flag/core/dist/types/program.d.ts:76
+Defined in: node\_modules/@black-flag/core/dist/src/types/program.d.ts:76
 
 Represents an "router" [Program](Program.md) instance.
 

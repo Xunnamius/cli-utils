@@ -6,24 +6,34 @@
 
 # Function: makeRunner()
 
-> **makeRunner**\<`CustomCliArguments`\>(`options`): \<`T`\>(...`args`) => `Promise`\<[`NullArguments`](../type-aliases/NullArguments.md) \| [`Arguments`](../type-aliases/Arguments.md)\<`CustomCliArguments`\>\>
+> **makeRunner**\<`CustomCliArguments`\>(`options`): (...`args`) => [`RunProgramReturnType`](../type-aliases/RunProgramReturnType.md)\<`CustomCliArguments`\>
 
-Defined in: node\_modules/@black-flag/core/dist/src/util.d.ts:21
+Defined in: node\_modules/@black-flag/core/dist/src/index.d.ts:134
 
-A high-order factory function that returns a "low-order" [runProgram](runProgram.md)
-function that can be called multiple times while only having to provide a
-subset of the required parameters at initialization.
+A "high-order" factory function that returns a "low-order" curried
+[runProgram](runProgram.md) function that can be called multiple times while only
+having to provide a subset of the required parameters.
 
-This is useful when unit/integration testing your CLI, which will likely
-require multiple calls to `runProgram(...)`.
+This is useful when unit/integration testing a CLI, which will likely require
+multiple calls to `runProgram(...)`.
 
-Note: when an exception (e.g. bad arguments) occurs in the low-order
-function, `undefined` will be returned if `configureProgram` threw or
-`NullArguments` if `execute` threw. Otherwise, upon success, `Arguments` is
-returned as expected. That is: **the promise returned by the low-order
-function will never reject and no exception will ever be thrown.** Keep this
-in mind when writing your unit tests and see [runProgram](runProgram.md) for more
-details.
+**BE AWARE**: when an exception (e.g. bad CLI arguments) occurs in the
+low-order function, `process.exitCode` is set to the appropriate value, the
+[ConfigureErrorHandlingEpilogue](../type-aliases/ConfigureErrorHandlingEpilogue.md) hook is triggered, and either
+`NullArguments` (only if `GracefulEarlyExitError` was thrown) or `undefined`
+is returned. Otherwise, upon success, `Arguments` is returned.
+
+In other words: **the promise returned by the low-order function will never
+reject and no exception will ever be thrown.** Keep this in mind when writing
+unit tests and see [runProgram](runProgram.md) for more details.
+
+Ideally, testing for the presence of errors should be done by capturing
+output sent to `process.stderr` (e.g. `console.error`)—or by interrogating
+whichever error handling method was implemented in
+[ConfigureErrorHandlingEpilogue](../type-aliases/ConfigureErrorHandlingEpilogue.md)—since that is what end-users will see
+and experience. That said, if it would be more optimal to test against an
+actual thrown error, set `makeRunner`'s `errorHandlingBehavior` option to
+`'throw'`.
 
 ## Type Parameters
 
@@ -33,22 +43,18 @@ details.
 
 ### options
 
-`object` & \{ `configurationHooks`: Promisable\<ConfigurationHooks\> \| undefined; `preExecutionContext`: `undefined`; \} \| \{ `configurationHooks`: `undefined`; `preExecutionContext`: Promisable\<PreExecutionContext\> \| undefined; \}
+[`MakeRunnerOptions`](../type-aliases/MakeRunnerOptions.md)
 
 ## Returns
 
 `Function`
 
-### Type Parameters
-
-• **T** *extends* \[`string`\] \| \[`string`, `Promisable`\<[`ConfigurationHooks`](../type-aliases/ConfigurationHooks.md)\>\] \| \[`string`, `Promisable`\<[`PreExecutionContext`](../type-aliases/PreExecutionContext.md)\>\] \| \[`string`, `string` \| `string`[]\] \| \[`string`, `string` \| `string`[], `Promisable`\<[`ConfigurationHooks`](../type-aliases/ConfigurationHooks.md)\>\] \| \[`string`, `string` \| `string`[], `Promisable`\<[`PreExecutionContext`](../type-aliases/PreExecutionContext.md)\>\]
-
 ### Parameters
 
 #### args
 
-...`T` *extends* \[`_`, `...Tail[]`\] ? `Tail` : \[\]
+\[\] | \[`Promisable`\<[`ConfigurationHooks`](../type-aliases/ConfigurationHooks.md)\>\] | \[`Promisable`\<[`PreExecutionContext`](../type-aliases/PreExecutionContext.md)\>\] | \[`string` \| `string`[]\] | \[`string` \| `string`[], `Promisable`\<[`ConfigurationHooks`](../type-aliases/ConfigurationHooks.md)\>\] | \[`string` \| `string`[], `Promisable`\<[`PreExecutionContext`](../type-aliases/PreExecutionContext.md)\>\]
 
 ### Returns
 
-`Promise`\<[`NullArguments`](../type-aliases/NullArguments.md) \| [`Arguments`](../type-aliases/Arguments.md)\<`CustomCliArguments`\>\>
+[`RunProgramReturnType`](../type-aliases/RunProgramReturnType.md)\<`CustomCliArguments`\>

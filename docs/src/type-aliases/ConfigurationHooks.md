@@ -8,7 +8,7 @@
 
 > **ConfigurationHooks**: `object`
 
-Defined in: node\_modules/@black-flag/core/dist/types/configure.d.ts:72
+Defined in: node\_modules/@black-flag/core/dist/src/types/configure.d.ts:88
 
 An object containing zero or more configuration hooks. See each hook type
 definition for details.
@@ -20,10 +20,15 @@ definition for details.
 > `optional` **configureArguments**: [`ConfigureArguments`](ConfigureArguments.md)
 
 This function is called once towards the beginning of the execution of
-`PreExecutionContext::execute` and should return a `process.argv`-like array.
+`PreExecutionContext::execute` and should return a `process.argv`-like
+array.
 
 This is where yargs middleware and other argument pre-processing can be
-implemented.
+implemented, if desired.
+
+Note that errors thrown at this point in the initialization process will be
+handled by [ConfigureErrorHandlingEpilogue](ConfigureErrorHandlingEpilogue.md) but will never send help
+text to stderr regardless of error type.
 
 ### configureErrorHandlingEpilogue?
 
@@ -38,32 +43,41 @@ exceptions to this are if (1) the error occurs within
 `configureErrorHandlingEpilogue` itself or (2) the error is an instance of
 `GracefulEarlyExitError`.
 
-This function is also called even after yargs internally handles and reports
-an argument parsing/validation error.
+This function is also called even after yargs internally handles and
+reports an argument parsing/validation error.
 
 ### configureExecutionContext?
 
 > `optional` **configureExecutionContext**: [`ConfigureExecutionContext`](ConfigureExecutionContext.md)
 
 This function is called once towards the beginning of the execution of
-`configureProgram` and should return what will become the global
+`configureProgram` and should return the value that will become the global
 [ExecutionContext](ExecutionContext.md) singleton.
 
-Note that any errors thrown this early in the initialization process will
-be thrown as-is and will NOT trigger
-[ConfigureErrorHandlingEpilogue](ConfigureErrorHandlingEpilogue.md).
+Note that the value returned by this function is discarded after being
+shallowly cloned by `Object.assign`. That is: the global
+[ExecutionContext](ExecutionContext.md) singleton will not strictly equal `context`.
+
+Also note that any errors thrown this early in the initialization process
+will trigger a framework error and will NOT be handled by
+[ConfigureErrorHandlingEpilogue](ConfigureErrorHandlingEpilogue.md) nor send help text to stderr
+regardless of error type.
 
 ### configureExecutionEpilogue?
 
 > `optional` **configureExecutionEpilogue**: [`ConfigureExecutionEpilogue`](ConfigureExecutionEpilogue.md)
 
-This function is called once after CLI argument parsing completes and either
-(1) handler execution succeeds or (2) a `GracefulEarlyExitError` is thrown.
-The value returned by this function is used as the return value of the
-`PreExecutionContext::execute` method. This function will _not_ be called
-when yargs argument validation fails.
+This function is called once after CLI argument parsing completes and
+either (1) handler execution succeeds or (2) a `GracefulEarlyExitError` is
+thrown. The value returned by this function is used as the return value of
+the `PreExecutionContext::execute` method. This function will _not_ be
+called when yargs argument validation fails.
 
 This function is the complement of [ConfigureExecutionPrologue](ConfigureExecutionPrologue.md).
+
+Note that errors thrown at this point in the cleanup process will be
+handled by [ConfigureErrorHandlingEpilogue](ConfigureErrorHandlingEpilogue.md) but will never send help
+text to stderr regardless of error type.
 
 ### configureExecutionPrologue?
 
@@ -77,10 +91,11 @@ programs that constitute the command line interface.
 All commands and sub-commands known to Black Flag are available in the
 [ExecutionContext.commands](ExecutionContext.md#commands) map, which can be accessed from the
 `context` parameter or from the [Arguments](Arguments.md) object returned by
-`Program::parseAsync` et al.
+`Program::parseAsync` etc.
 
 This function is the complement of [ConfigureExecutionEpilogue](ConfigureExecutionEpilogue.md).
 
 Note that any errors thrown this early in the initialization process will
-be thrown as-is and will NOT trigger
-[ConfigureErrorHandlingEpilogue](ConfigureErrorHandlingEpilogue.md).
+trigger a framework error and will NOT be handled by
+[ConfigureErrorHandlingEpilogue](ConfigureErrorHandlingEpilogue.md) nor send help text to stderr
+regardless of error type.

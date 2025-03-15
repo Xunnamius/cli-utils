@@ -8,17 +8,19 @@
 
 ## Call Signature
 
-> **runProgram**\<`CustomCliArguments`\>(...`args`): `Promise`\<`undefined` \| [`NullArguments`](../type-aliases/NullArguments.md) \| [`Arguments`](../type-aliases/Arguments.md)\<`CustomCliArguments`\>\>
+> **runProgram**\<`CustomCliArguments`\>(`commandModulesPath`): [`RunProgramReturnType`](../type-aliases/RunProgramReturnType.md)\<`CustomCliArguments`\>
 
-Defined in: node\_modules/@black-flag/core/dist/src/util.d.ts:58
+Defined in: node\_modules/@black-flag/core/dist/src/index.d.ts:152
 
 Invokes the dynamically imported
-`configureProgram(commandModulePath).execute()` function.
+`configureProgram(commandModulesPath).execute()` function.
 
 This function is suitable for a CLI entry point since it will **never throw
-or reject no matter what.** Instead, when an error is caught,
-`process.exitCode` is set to the appropriate value and either `NullArguments`
-(only if `GracefulEarlyExitError` was thrown) or `undefined` is returned.
+or reject no matter what.** Instead, when an exception occurs,
+`process.exitCode` is set to the appropriate value, the
+[ConfigureErrorHandlingEpilogue](../type-aliases/ConfigureErrorHandlingEpilogue.md) hook is triggered, and either
+`NullArguments` (only if `GracefulEarlyExitError` was thrown) or `undefined`
+is returned.
 
 Note: It is always safe to invoke this form of `runProgram` as many times as
 desired.
@@ -29,30 +31,32 @@ desired.
 
 ### Parameters
 
-#### args
+#### commandModulesPath
 
-...\[`string`\]
+`string`
 
 ### Returns
 
-`Promise`\<`undefined` \| [`NullArguments`](../type-aliases/NullArguments.md) \| [`Arguments`](../type-aliases/Arguments.md)\<`CustomCliArguments`\>\>
+[`RunProgramReturnType`](../type-aliases/RunProgramReturnType.md)\<`CustomCliArguments`\>
 
 `NullArguments` if `GracefulEarlyExitError` is thrown, `undefined`
-if any other error occurs, or `Arguments` otherwise.
+if any other exception occurs, or `Arguments` otherwise.
 
 ## Call Signature
 
-> **runProgram**\<`CustomCliArguments`\>(...`args`): `Promise`\<`undefined` \| [`NullArguments`](../type-aliases/NullArguments.md) \| [`Arguments`](../type-aliases/Arguments.md)\<`CustomCliArguments`\>\>
+> **runProgram**\<`CustomCliArguments`\>(`commandModulesPath`, `configurationHooks`): [`RunProgramReturnType`](../type-aliases/RunProgramReturnType.md)\<`CustomCliArguments`\>
 
-Defined in: node\_modules/@black-flag/core/dist/src/util.d.ts:74
+Defined in: node\_modules/@black-flag/core/dist/src/index.d.ts:170
 
-Invokes the dynamically imported `configureProgram(commandModulePath,
+Invokes the dynamically imported `configureProgram(commandModulesPath,
 configurationHooks).execute()` function.
 
 This function is suitable for a CLI entry point since it will **never throw
-or reject no matter what.** Instead, when an error is caught,
-`process.exitCode` is set to the appropriate value and either `NullArguments`
-(only if `GracefulEarlyExitError` was thrown) or `undefined` is returned.
+or reject no matter what.** Instead, when an exception occurs,
+`process.exitCode` is set to the appropriate value, the
+[ConfigureErrorHandlingEpilogue](../type-aliases/ConfigureErrorHandlingEpilogue.md) hook is triggered, and either
+`NullArguments` (only if `GracefulEarlyExitError` was thrown) or `undefined`
+is returned.
 
 Note: It is always safe to invoke this form of `runProgram` as many times as
 desired.
@@ -63,22 +67,26 @@ desired.
 
 ### Parameters
 
-#### args
+#### commandModulesPath
 
-...\[`string`, `Promisable`\<[`ConfigurationHooks`](../type-aliases/ConfigurationHooks.md)\>\]
+`string`
+
+#### configurationHooks
+
+`Promisable`\<[`ConfigurationHooks`](../type-aliases/ConfigurationHooks.md)\>
 
 ### Returns
 
-`Promise`\<`undefined` \| [`NullArguments`](../type-aliases/NullArguments.md) \| [`Arguments`](../type-aliases/Arguments.md)\<`CustomCliArguments`\>\>
+[`RunProgramReturnType`](../type-aliases/RunProgramReturnType.md)\<`CustomCliArguments`\>
 
 `NullArguments` if `GracefulEarlyExitError` is thrown, `undefined`
-if any other error occurs, or `Arguments` otherwise.
+if any other exception occurs, or `Arguments` otherwise.
 
 ## Call Signature
 
-> **runProgram**\<`CustomCliArguments`\>(...`args`): `Promise`\<`undefined` \| [`NullArguments`](../type-aliases/NullArguments.md) \| [`Arguments`](../type-aliases/Arguments.md)\<`CustomCliArguments`\>\>
+> **runProgram**\<`CustomCliArguments`\>(`commandModulesPath`, `preExecutionContext`): [`RunProgramReturnType`](../type-aliases/RunProgramReturnType.md)\<`CustomCliArguments`\>
 
-Defined in: node\_modules/@black-flag/core/dist/src/util.d.ts:91
+Defined in: node\_modules/@black-flag/core/dist/src/index.d.ts:189
 
 Invokes the `preExecutionContext.execute()` function.
 
@@ -88,9 +96,11 @@ yargs does not support calling `yargs::parseAsync` more than once. If this is
 unacceptable, do not pass `runProgram` a `preExecutionContext` property.
 
 This function is suitable for a CLI entry point since it will **never throw
-or reject no matter what.** Instead, when an error is caught,
-`process.exitCode` is set to the appropriate value and either `NullArguments`
-(only if `GracefulEarlyExitError` was thrown) or `undefined` is returned.
+or reject no matter what.** Instead, when an exception occurs,
+`process.exitCode` is set to the appropriate value, the
+[ConfigureErrorHandlingEpilogue](../type-aliases/ConfigureErrorHandlingEpilogue.md) hook is triggered, and either
+`NullArguments` (only if `GracefulEarlyExitError` was thrown) or `undefined`
+is returned.
 
 ### Type Parameters
 
@@ -98,31 +108,37 @@ or reject no matter what.** Instead, when an error is caught,
 
 ### Parameters
 
-#### args
+#### commandModulesPath
 
-...\[`string`, `Promisable`\<[`PreExecutionContext`](../type-aliases/PreExecutionContext.md)\>\]
+`string`
+
+#### preExecutionContext
+
+`Promisable`\<[`PreExecutionContext`](../type-aliases/PreExecutionContext.md)\>
 
 ### Returns
 
-`Promise`\<`undefined` \| [`NullArguments`](../type-aliases/NullArguments.md) \| [`Arguments`](../type-aliases/Arguments.md)\<`CustomCliArguments`\>\>
+[`RunProgramReturnType`](../type-aliases/RunProgramReturnType.md)\<`CustomCliArguments`\>
 
 `NullArguments` if `GracefulEarlyExitError` is thrown, `undefined`
-if any other error occurs, or `Arguments` otherwise.
+if any other exception occurs, or `Arguments` otherwise.
 
 ## Call Signature
 
-> **runProgram**\<`CustomCliArguments`\>(...`args`): `Promise`\<[`NullArguments`](../type-aliases/NullArguments.md) \| [`Arguments`](../type-aliases/Arguments.md)\<`CustomCliArguments`\>\>
+> **runProgram**\<`CustomCliArguments`\>(`commandModulesPath`, `argv`): [`RunProgramReturnType`](../type-aliases/RunProgramReturnType.md)\<`CustomCliArguments`\>
 
-Defined in: node\_modules/@black-flag/core/dist/src/util.d.ts:111
+Defined in: node\_modules/@black-flag/core/dist/src/index.d.ts:208
 
 Invokes the dynamically imported
-`configureProgram(commandModulePath).execute(argv)` function. If `argv` is a
+`configureProgram(commandModulesPath).execute(argv)` function. If `argv` is a
 string, `argv = argv.split(' ')` is applied first.
 
 This function is suitable for a CLI entry point since it will **never throw
-or reject no matter what.** Instead, when an error is caught,
-`process.exitCode` is set to the appropriate value and either `NullArguments`
-(only if `GracefulEarlyExitError` was thrown) or `undefined` is returned.
+or reject no matter what.** Instead, when an exception occurs,
+`process.exitCode` is set to the appropriate value, the
+[ConfigureErrorHandlingEpilogue](../type-aliases/ConfigureErrorHandlingEpilogue.md) hook is triggered, and either
+`NullArguments` (only if `GracefulEarlyExitError` was thrown) or `undefined`
+is returned.
 
 Note: It is always safe to invoke this form of `runProgram` as many times as
 desired.
@@ -133,31 +149,37 @@ desired.
 
 ### Parameters
 
-#### args
+#### commandModulesPath
 
-...\[`string`, `string` \| `string`[]\]
+`string`
+
+#### argv
+
+`string` | `string`[]
 
 ### Returns
 
-`Promise`\<[`NullArguments`](../type-aliases/NullArguments.md) \| [`Arguments`](../type-aliases/Arguments.md)\<`CustomCliArguments`\>\>
+[`RunProgramReturnType`](../type-aliases/RunProgramReturnType.md)\<`CustomCliArguments`\>
 
 `NullArguments` if `GracefulEarlyExitError` is thrown, `undefined`
-if any other error occurs, or `Arguments` otherwise.
+if any other exception occurs, or `Arguments` otherwise.
 
 ## Call Signature
 
-> **runProgram**\<`CustomCliArguments`\>(...`args`): `Promise`\<[`NullArguments`](../type-aliases/NullArguments.md) \| [`Arguments`](../type-aliases/Arguments.md)\<`CustomCliArguments`\>\>
+> **runProgram**\<`CustomCliArguments`\>(`commandModulesPath`, `argv`, `configurationHooks`): [`RunProgramReturnType`](../type-aliases/RunProgramReturnType.md)\<`CustomCliArguments`\>
 
-Defined in: node\_modules/@black-flag/core/dist/src/util.d.ts:128
+Defined in: node\_modules/@black-flag/core/dist/src/index.d.ts:227
 
-Invokes the dynamically imported `configureProgram(commandModulePath,
+Invokes the dynamically imported `configureProgram(commandModulesPath,
 configurationHooks).execute(argv)` function. If `argv` is a string, `argv =
 argv.split(' ')` is applied first.
 
 This function is suitable for a CLI entry point since it will **never throw
-or reject no matter what.** Instead, when an error is caught,
-`process.exitCode` is set to the appropriate value and either `NullArguments`
-(only if `GracefulEarlyExitError` was thrown) or `undefined` is returned.
+or reject no matter what.** Instead, when an exception occurs,
+`process.exitCode` is set to the appropriate value, the
+[ConfigureErrorHandlingEpilogue](../type-aliases/ConfigureErrorHandlingEpilogue.md) hook is triggered, and either
+`NullArguments` (only if `GracefulEarlyExitError` was thrown) or `undefined`
+is returned.
 
 Note: It is always safe to invoke this form of `runProgram` as many times as
 desired.
@@ -168,22 +190,30 @@ desired.
 
 ### Parameters
 
-#### args
+#### commandModulesPath
 
-...\[`string`, `string` \| `string`[], `Promisable`\<[`ConfigurationHooks`](../type-aliases/ConfigurationHooks.md)\>\]
+`string`
+
+#### argv
+
+`string` | `string`[]
+
+#### configurationHooks
+
+`Promisable`\<[`ConfigurationHooks`](../type-aliases/ConfigurationHooks.md)\>
 
 ### Returns
 
-`Promise`\<[`NullArguments`](../type-aliases/NullArguments.md) \| [`Arguments`](../type-aliases/Arguments.md)\<`CustomCliArguments`\>\>
+[`RunProgramReturnType`](../type-aliases/RunProgramReturnType.md)\<`CustomCliArguments`\>
 
 `NullArguments` if `GracefulEarlyExitError` is thrown, `undefined`
-if any other error occurs, or `Arguments` otherwise.
+if any other exception occurs, or `Arguments` otherwise.
 
 ## Call Signature
 
-> **runProgram**\<`CustomCliArguments`\>(...`args`): `Promise`\<[`NullArguments`](../type-aliases/NullArguments.md) \| [`Arguments`](../type-aliases/Arguments.md)\<`CustomCliArguments`\>\>
+> **runProgram**\<`CustomCliArguments`\>(`commandModulesPath`, `argv`, `preExecutionContext`): [`RunProgramReturnType`](../type-aliases/RunProgramReturnType.md)\<`CustomCliArguments`\>
 
-Defined in: node\_modules/@black-flag/core/dist/src/util.d.ts:150
+Defined in: node\_modules/@black-flag/core/dist/src/index.d.ts:247
 
 Invokes the `preExecutionContext.execute(argv)` function. If `argv` is a
 string, `argv = argv.split(' ')` is applied first.
@@ -194,9 +224,51 @@ yargs does not support calling `yargs::parseAsync` more than once. If this is
 unacceptable, do not pass `runProgram` a `preExecutionContext` property.
 
 This function is suitable for a CLI entry point since it will **never throw
-or reject no matter what.** Instead, when an error is caught,
-`process.exitCode` is set to the appropriate value and either `NullArguments`
-(only if `GracefulEarlyExitError` was thrown) or `undefined` is returned.
+or reject no matter what.** Instead, when an exception occurs,
+`process.exitCode` is set to the appropriate value, the
+[ConfigureErrorHandlingEpilogue](../type-aliases/ConfigureErrorHandlingEpilogue.md) hook is triggered, and either
+`NullArguments` (only if `GracefulEarlyExitError` was thrown) or `undefined`
+is returned.
+
+### Type Parameters
+
+• **CustomCliArguments** *extends* `Record`\<`string`, `unknown`\> = `Record`\<`string`, `unknown`\>
+
+### Parameters
+
+#### commandModulesPath
+
+`string`
+
+#### argv
+
+`string` | `string`[]
+
+#### preExecutionContext
+
+`Promisable`\<[`PreExecutionContext`](../type-aliases/PreExecutionContext.md)\>
+
+### Returns
+
+[`RunProgramReturnType`](../type-aliases/RunProgramReturnType.md)\<`CustomCliArguments`\>
+
+`NullArguments` if `GracefulEarlyExitError` is thrown, `undefined`
+if any other exception occurs, or `Arguments` otherwise.
+
+## Call Signature
+
+> **runProgram**\<`CustomCliArguments`\>(...`args`): [`RunProgramReturnType`](../type-aliases/RunProgramReturnType.md)\<`CustomCliArguments`\>
+
+Defined in: node\_modules/@black-flag/core/dist/src/index.d.ts:261
+
+Run the given program with the configuration given in `args`.
+
+This function is suitable for a CLI entry point since it will **never throw
+or reject no matter what.** Instead, when an exception occurs,
+`process.exitCode` is set to the appropriate value, the
+[ConfigureErrorHandlingEpilogue](../type-aliases/ConfigureErrorHandlingEpilogue.md) hook is triggered, and either
+`NullArguments` (only if `GracefulEarlyExitError` was thrown) or `undefined`
+is returned.
 
 ### Type Parameters
 
@@ -206,11 +278,11 @@ or reject no matter what.** Instead, when an error is caught,
 
 #### args
 
-...\[`string`, `string` \| `string`[], `Promisable`\<[`PreExecutionContext`](../type-aliases/PreExecutionContext.md)\>\]
+...[`RunProgramParameters`](../type-aliases/RunProgramParameters.md)
 
 ### Returns
 
-`Promise`\<[`NullArguments`](../type-aliases/NullArguments.md) \| [`Arguments`](../type-aliases/Arguments.md)\<`CustomCliArguments`\>\>
+[`RunProgramReturnType`](../type-aliases/RunProgramReturnType.md)\<`CustomCliArguments`\>
 
 `NullArguments` if `GracefulEarlyExitError` is thrown, `undefined`
-if any other error occurs, or `Arguments` otherwise.
+if any other exception occurs, or `Arguments` otherwise.

@@ -8,14 +8,20 @@
 
 > **ConfigureExecutionContext**\<`CustomContext`\>: (`context`) => `Promisable`\<`CustomContext`\>
 
-Defined in: node\_modules/@black-flag/core/dist/types/configure.d.ts:12
+Defined in: node\_modules/@black-flag/core/dist/src/types/configure.d.ts:18
 
 This function is called once towards the beginning of the execution of
-`configureProgram` and should return what will become the global
+`configureProgram` and should return the value that will become the global
 [ExecutionContext](ExecutionContext.md) singleton.
 
-Note that any errors thrown this early in the initialization process will be
-thrown as-is and will NOT trigger [ConfigureErrorHandlingEpilogue](ConfigureErrorHandlingEpilogue.md).
+Note that the value returned by this function is discarded after being
+shallowly cloned by `Object.assign`. That is: the global
+[ExecutionContext](ExecutionContext.md) singleton will not strictly equal `context`.
+
+Also note that any errors thrown this early in the initialization process
+will trigger a framework error and will NOT be handled by
+[ConfigureErrorHandlingEpilogue](ConfigureErrorHandlingEpilogue.md) nor send help text to stderr
+regardless of error type.
 
 ## Type Parameters
 

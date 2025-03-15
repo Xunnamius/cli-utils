@@ -8,7 +8,7 @@
 
 > **BfeSubOptionOfExtensionValue**\<`CustomCliArguments`, `CustomExecutionContext`\>: `object`
 
-Defined in: node\_modules/@black-flag/extensions/dist/src/index.d.ts:284
+Defined in: node\_modules/@black-flag/extensions/dist/packages/extensions/src/index.d.ts:284
 
 The array element type of
 [BfeBuilderObjectValueExtensions.subOptionOf](BfeBuilderObjectValueExtensions.md#suboptionof).

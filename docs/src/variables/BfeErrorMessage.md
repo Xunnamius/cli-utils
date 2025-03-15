@@ -8,35 +8,11 @@
 
 > `const` **BfeErrorMessage**: `object`
 
-Defined in: node\_modules/@black-flag/extensions/dist/src/error.d.ts:9
+Defined in: node\_modules/@black-flag/extensions/dist/packages/extensions/src/error.d.ts:9
 
 A collection of possible error and warning messages.
 
 ## Type declaration
-
-### AppValidationFailure()
-
-> **AppValidationFailure**: () => `string`
-
-#### Returns
-
-`string`
-
-### AuthFailure()
-
-> **AuthFailure**: () => `string`
-
-#### Returns
-
-`string`
-
-### ClientValidationFailure()
-
-> **ClientValidationFailure**: () => `string`
-
-#### Returns
-
-`string`
 
 ### GuruMeditation()
 
@@ -46,185 +22,7 @@ A collection of possible error and warning messages.
 
 `string`
 
-### HttpFailure()
-
-> **HttpFailure**: (`error`?) => `string`
-
-#### Parameters
-
-##### error?
-
-`string`
-
-#### Returns
-
-`string`
-
-### HttpSubFailure()
-
-> **HttpSubFailure**: (`error`, `statusCode`) => `string`
-
-#### Parameters
-
-##### error
-
-`string` | `null`
-
-##### statusCode
-
-`number`
-
-#### Returns
-
-`string`
-
-### InvalidAppConfiguration()
-
-> **InvalidAppConfiguration**: (`details`?) => `string`
-
-#### Parameters
-
-##### details?
-
-`string`
-
-#### Returns
-
-`string`
-
-### InvalidAppEnvironment()
-
-> **InvalidAppEnvironment**: (`details`?) => `string`
-
-#### Parameters
-
-##### details?
-
-`string`
-
-#### Returns
-
-`string`
-
-### InvalidClientConfiguration()
-
-> **InvalidClientConfiguration**: (`details`?) => `string`
-
-#### Parameters
-
-##### details?
-
-`string`
-
-#### Returns
-
-`string`
-
-### InvalidItem()
-
-> **InvalidItem**: (`item`, `itemName`) => `string`
-
-#### Parameters
-
-##### item
-
-`unknown`
-
-##### itemName
-
-`string`
-
-#### Returns
-
-`string`
-
-### InvalidSecret()
-
-> **InvalidSecret**: (`secretType`) => `string`
-
-#### Parameters
-
-##### secretType
-
-`string`
-
-#### Returns
-
-`string`
-
-### ItemNotFound()
-
-> **ItemNotFound**: (`item`, `itemName`) => `string`
-
-#### Parameters
-
-##### item
-
-`unknown`
-
-##### itemName
-
-`string`
-
-#### Returns
-
-`string`
-
-### ItemOrItemsNotFound()
-
-> **ItemOrItemsNotFound**: (`itemsName`) => `string`
-
-#### Parameters
-
-##### itemsName
-
-`string`
-
-#### Returns
-
-`string`
-
-### NotAuthenticated()
-
-> **NotAuthenticated**: () => `string`
-
-#### Returns
-
-`string`
-
-### NotAuthorized()
-
-> **NotAuthorized**: () => `string`
-
-#### Returns
-
-`string`
-
-### NotFound()
-
-> **NotFound**: () => `string`
-
-#### Returns
-
-`string`
-
-### NotImplemented()
-
-> **NotImplemented**: () => `string`
-
-#### Returns
-
-`string`
-
-### ValidationFailure()
-
-> **ValidationFailure**: () => `string`
-
-#### Returns
-
-`string`
-
-### AssertionFailureBadConfigurationPath()
+### BadConfigurationPath()
 
 #### Parameters
 
@@ -236,57 +34,29 @@ A collection of possible error and warning messages.
 
 `string`
 
-### AssertionFailureBadParameterCombination()
+### BadParameterCombination()
 
 #### Returns
 
 `string`
 
-### AssertionFailureCannotExecuteMultipleTimes()
-
-#### Returns
-
-`string`
-
-### AssertionFailureConfigureExecutionEpilogue()
-
-#### Returns
-
-`string`
-
-### AssertionFailureDuplicateCommandName()
+### BuilderCalledOnInvalidPass()
 
 #### Parameters
 
-##### parentFullName
+##### pass
 
-`undefined` | `string`
-
-##### name1
-
-`string`
-
-##### type1
-
-`"alias"` | `"name"`
-
-##### name2
-
-`string`
-
-##### type2
-
-`"alias"` | `"name"`
+`"first-pass"` | `"second-pass"`
 
 #### Returns
 
 `string`
 
-### AssertionFailureInvalidCommandExport()
+### BuilderCannotBeAsync()
 
 #### Parameters
 
-##### name
+##### commandName
 
 `string`
 
@@ -294,37 +64,7 @@ A collection of possible error and warning messages.
 
 `string`
 
-### AssertionFailureInvocationNotAllowed()
-
-#### Parameters
-
-##### name
-
-`string`
-
-#### Returns
-
-`string`
-
-### AssertionFailureNoConfigurationLoaded()
-
-#### Parameters
-
-##### path
-
-`string`
-
-#### Returns
-
-`string`
-
-### AssertionFailureReachedTheUnreachable()
-
-#### Returns
-
-`string`
-
-### AssertionFailureUseParseAsyncInstead()
+### CannotExecuteMultipleTimes()
 
 #### Returns
 
@@ -438,6 +178,34 @@ A collection of possible error and warning messages.
 
 `string`
 
+### DuplicateCommandName()
+
+#### Parameters
+
+##### parentFullName
+
+`undefined` | `string`
+
+##### name1
+
+`string`
+
+##### type1
+
+`"alias"` | `"name"`
+
+##### name2
+
+`string`
+
+##### type2
+
+`"alias"` | `"name"`
+
+#### Returns
+
+`string`
+
 ### DuplicateOptionName()
 
 #### Parameters
@@ -524,6 +292,30 @@ A collection of possible error and warning messages.
 
 `string`
 
+### InvalidCommandExportBadPositionals()
+
+#### Parameters
+
+##### name
+
+`string`
+
+#### Returns
+
+`string`
+
+### InvalidCommandExportBadStart()
+
+#### Parameters
+
+##### name
+
+`string`
+
+#### Returns
+
+`string`
+
 ### InvalidConfigureArgumentsReturnType()
 
 #### Returns
@@ -536,7 +328,37 @@ A collection of possible error and warning messages.
 
 `string`
 
+### InvalidConfigureExecutionEpilogueReturnType()
+
+#### Returns
+
+`string`
+
+### InvalidExecutionContextBadField()
+
+#### Parameters
+
+##### fieldName
+
+`string`
+
+#### Returns
+
+`string`
+
 ### InvalidSubCommandInvocation()
+
+#### Returns
+
+`string`
+
+### InvocationNotAllowed()
+
+#### Parameters
+
+##### name
+
+`string`
 
 #### Returns
 
@@ -549,6 +371,24 @@ A collection of possible error and warning messages.
 ##### afflictedKey
 
 `string`
+
+#### Returns
+
+`string`
+
+### NoConfigurationLoaded()
+
+#### Parameters
+
+##### path
+
+`string`
+
+#### Returns
+
+`string`
+
+### PathIsNotDirectory()
 
 #### Returns
 
@@ -593,6 +433,12 @@ A collection of possible error and warning messages.
 `string`
 
 ### UnexpectedValueFromInternalYargsMethod()
+
+#### Returns
+
+`string`
+
+### UseParseAsyncInstead()
 
 #### Returns
 

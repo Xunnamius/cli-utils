@@ -8,7 +8,7 @@
 
 > **withBuilderExtensions**\<`CustomCliArguments`, `CustomExecutionContext`\>(`customBuilder`?, `__namedParameters`?): [`WithBuilderExtensionsReturnType`](../type-aliases/WithBuilderExtensionsReturnType.md)\<`CustomCliArguments`, `CustomExecutionContext`\>
 
-Defined in: node\_modules/@black-flag/extensions/dist/src/index.d.ts:425
+Defined in: node\_modules/@black-flag/extensions/dist/packages/extensions/src/index.d.ts:427
 
 This function enables several additional options-related units of
 functionality via analysis of the returned options configuration object and

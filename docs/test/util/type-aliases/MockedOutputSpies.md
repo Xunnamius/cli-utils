@@ -8,7 +8,7 @@
 
 > **MockedOutputSpies**: `object`
 
-Defined in: node\_modules/@-xun/test-mock-output/dist/packages/test-mock-output/src/index.d.ts:26
+Defined in: node\_modules/@-xun/symbiote/node\_modules/@-xun/test-mock-output/dist/packages/test-mock-output/src/index.d.ts:26
 
 ## Type declaration
 

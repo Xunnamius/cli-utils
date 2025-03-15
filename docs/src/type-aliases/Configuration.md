@@ -8,7 +8,7 @@
 
 > **Configuration**\<`CustomCliArguments`, `CustomExecutionContext`\>: `object`
 
-Defined in: node\_modules/@black-flag/core/dist/types/module.d.ts:9
+Defined in: node\_modules/@black-flag/core/dist/src/types/module.d.ts:9
 
 A replacement for the `CommandModule` type that comes with yargs.
 Auto-discovered configuration modules must implement this interface or a
@@ -45,7 +45,7 @@ Note: when a command file is interpreted as a [RootConfiguration](RootConfigurat
 
 ### builder
 
-> **builder**: \{\} \| (`blackFlag`, `helpOrVersionSet`, `argv`?) => `void` \| [`EffectorProgram`](EffectorProgram.md)\<`CustomCliArguments`, `CustomExecutionContext`\> \| \{\} \| `_Program`
+> **builder**: \{\} \| (`blackFlag`, `helpOrVersionSet`, `argv`?) => `undefined` \| [`EffectorProgram`](EffectorProgram.md)\<`CustomCliArguments`, `CustomExecutionContext`\> \| \{\} \| `_Program`
 
 An object containing yargs options configuration or a function that will
 receive the current Black Flag program. Unlike with vanilla yargs, you do
@@ -76,7 +76,9 @@ first invoked** and so aren't available until a little later.
 
 > **command**: `"$0"` \| `` `$0 ${string}` ``
 
-The command as interpreted by yargs. May contain positional arguments.
+The command as interpreted by yargs. Must always begin with `$0`. May
+contain positional arguments declared using the [`yargs::command`
+DSL](https://github.com/yargs/yargs/blob/main/docs/advanced.md#positional-arguments).
 
 It is usually unnecessary to change or use this property if you're not
 using positional arguments. If you want to change your command's name, use
@@ -123,7 +125,8 @@ be considered "hidden" by yargs.
 A function called when this command is invoked. It will receive an object
 of parsed arguments.
 
-If `undefined`, a `CommandNotImplementedError` will be thrown.
+If `undefined`, the command will be considered "unimplemented" and a
+`CommandNotImplementedError` will be thrown.
 
 #### Parameters
 
@@ -158,6 +161,11 @@ filename without extension is "index".
 > **usage**: `string`
 
 Set a usage message shown at the top of the command's help text.
+
+Depending on the value of `ExecutionContext::state.showHelpOnFail`, either
+the "short" first line of usage text will be output during errors or the
+"full" usage string. Either way, whenever help text is explicitly requested
+(e.g. `--help` is given), the full usage string will be output.
 
 Several replacements are made to the `usage` string before it is output. In
 order:

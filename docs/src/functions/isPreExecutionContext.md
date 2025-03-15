@@ -8,7 +8,7 @@
 
 > **isPreExecutionContext**(`obj`): `obj is PreExecutionContext`
 
-Defined in: node\_modules/@black-flag/core/dist/src/util.d.ts:158
+Defined in: node\_modules/@black-flag/core/dist/src/util.d.ts:8
 
 Type-guard for [PreExecutionContext](../type-aliases/PreExecutionContext.md).
 

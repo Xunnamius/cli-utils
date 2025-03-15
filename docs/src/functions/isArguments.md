@@ -8,7 +8,7 @@
 
 > **isArguments**(`obj`): `obj is Arguments`
 
-Defined in: node\_modules/@black-flag/core/dist/src/util.d.ts:166
+Defined in: node\_modules/@black-flag/core/dist/src/util.d.ts:16
 
 Type-guard for [Arguments](../type-aliases/Arguments.md).
 

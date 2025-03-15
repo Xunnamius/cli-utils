@@ -6,7 +6,7 @@
 
 # Class: AssertionFailedError
 
-Defined in: node\_modules/@black-flag/core/dist/src/error.d.ts:119
+Defined in: node\_modules/@black-flag/core/dist/src/error.d.ts:145
 
 Represents a failed sanity check.
 
@@ -18,17 +18,21 @@ Represents a failed sanity check.
 
 ### new AssertionFailedError()
 
-> **new AssertionFailedError**(`message`): [`AssertionFailedError`](AssertionFailedError.md)
+> **new AssertionFailedError**(`error`, `options`?): [`AssertionFailedError`](AssertionFailedError.md)
 
-Defined in: node\_modules/@black-flag/core/dist/src/error.d.ts:124
+Defined in: node\_modules/@black-flag/core/dist/src/error.d.ts:150
 
 Represents a failed sanity check.
 
 #### Parameters
 
-##### message
+##### error
 
-`string`
+`Error`
+
+##### options?
+
+[`CliErrorOptions`](../type-aliases/CliErrorOptions.md)
 
 #### Returns
 
@@ -38,13 +42,61 @@ Represents a failed sanity check.
 
 [`CliError`](CliError.md).[`constructor`](CliError.md#constructors)
 
+### new AssertionFailedError()
+
+> **new AssertionFailedError**(`message`, `options`?): [`AssertionFailedError`](AssertionFailedError.md)
+
+Defined in: node\_modules/@black-flag/core/dist/src/error.d.ts:151
+
+#### Parameters
+
+##### message
+
+`string`
+
+##### options?
+
+[`CliErrorOptions`](../type-aliases/CliErrorOptions.md)
+
+#### Returns
+
+[`AssertionFailedError`](AssertionFailedError.md)
+
+#### Overrides
+
+[`CliError`](CliError.md).[`constructor`](CliError.md#constructors)
+
+### new AssertionFailedError()
+
+> **new AssertionFailedError**(`errorOrMessage`?, `options`?): [`AssertionFailedError`](AssertionFailedError.md)
+
+Defined in: node\_modules/@black-flag/core/dist/src/error.d.ts:152
+
+#### Parameters
+
+##### errorOrMessage?
+
+`string` | `Error`
+
+##### options?
+
+[`CliErrorOptions`](../type-aliases/CliErrorOptions.md)
+
+#### Returns
+
+[`AssertionFailedError`](AssertionFailedError.md)
+
+#### Overrides
+
+`CliError.constructor`
+
 ## Properties
 
 ### \[$type\]
 
 > **\[$type\]**: `string`[]
 
-Defined in: node\_modules/@black-flag/core/dist/src/error.d.ts:120
+Defined in: node\_modules/@black-flag/core/dist/src/error.d.ts:146
 
 #### Overrides
 
@@ -68,9 +120,9 @@ Defined in: node\_modules/typescript/lib/lib.es2022.error.d.ts:26
 
 > **dangerouslyFatal**: `boolean`
 
-Defined in: node\_modules/@black-flag/core/dist/src/error.d.ts:78
+Defined in: node\_modules/@black-flag/core/dist/src/error.d.ts:98
 
-This option is similar in intent to yargs's `exitProcess()` function,
+This option is similar in intent to Yargs's `exitProcess()` function,
 except applied more granularly.
 
 Normally, [runProgram](../functions/runProgram.md) never throws and never calls `process.exit`,
@@ -92,6 +144,12 @@ work to the event loop can lead to faulty/glitchy/flaky software and
 heisenbugs.** You will also have to specially handle `process.exit` when
 running unit/integration tests and executing command handlers within other
 command handlers. Tread carefully.
+
+#### Default
+
+```ts
+false
+```
 
 #### Inherited from
 
@@ -125,18 +183,35 @@ Defined in: node\_modules/typescript/lib/lib.es5.d.ts:1076
 
 ### showHelp
 
-> **showHelp**: `boolean`
+> **showHelp**: `NonNullable`\<`undefined` \| `false` \| `"full"` \| `"short"` \| `"default"`\>
 
-Defined in: node\_modules/@black-flag/core/dist/src/error.d.ts:77
+Defined in: node\_modules/@black-flag/core/dist/src/error.d.ts:97
 
-If `true`, help text will be sent to stderr _before this exception finishes
-bubbling_. Where the exception is thrown will determine which instance is
-responsible for error text generation.
+If `showHelp` is set to a string that isn't `"default"`, help text will be
+sent to stderr. Note that help text is always sent _before this exception
+finishes bubbling up to `ConfigureErrorHandlingEpilogue`_.
+
+Specifically, if `showHelp` is set to `"full"`, the full help text will be
+sent to stderr, including the entire `usage` string. If set to `"short"`
+(or `true`), the same help text will be sent to stderr except only the
+first line of usage will be included. In either case, help text will be
+sent to stderr regardless of the value of
+`ExecutionContext::state.showHelpOnFail`.
+
+Alternatively, if set to `"default"`, the value of
+`ExecutionContext::state.showHelpOnFail` will be used. And if set to
+`false`, no help text will be sent to stderr due to this error regardless
+of the value of `ExecutionContext::state.showHelpOnFail`.
+
+Note that, regardless of this `showHelp`, help text is always output when a
+parent command is invoked that (1) has one or more child commands and (2)
+lacks its own handler implementation or implements a handler that throws
+[CommandNotImplementedError](CommandNotImplementedError.md).
 
 #### Default
 
 ```ts
-false
+"default"
 ```
 
 #### Inherited from
@@ -161,7 +236,7 @@ Defined in: node\_modules/typescript/lib/lib.es5.d.ts:1078
 
 > **suggestedExitCode**: [`FrameworkExitCode`](../enumerations/FrameworkExitCode.md)
 
-Defined in: node\_modules/@black-flag/core/dist/src/error.d.ts:76
+Defined in: node\_modules/@black-flag/core/dist/src/error.d.ts:96
 
 The exit code that will be returned when the application exits, given
 nothing else goes wrong in the interim.

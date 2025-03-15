@@ -8,7 +8,7 @@
 
 > **isNullArguments**(`obj`): `obj is NullArguments`
 
-Defined in: node\_modules/@black-flag/core/dist/src/util.d.ts:162
+Defined in: node\_modules/@black-flag/core/dist/src/util.d.ts:12
 
 Type-guard for [NullArguments](../type-aliases/NullArguments.md).
 

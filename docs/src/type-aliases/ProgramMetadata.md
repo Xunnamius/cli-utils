@@ -8,7 +8,7 @@
 
 > **ProgramMetadata**: `object`
 
-Defined in: node\_modules/@black-flag/core/dist/types/program.d.ts:100
+Defined in: node\_modules/@black-flag/core/dist/src/types/program.d.ts:98
 
 Represents the meta information about a discovered command and its
 corresponding [Configuration](Configuration.md) object/file.
@@ -33,6 +33,13 @@ The basename of `filepath` with the trailing extension trimmed.
 
 Absolute filesystem path to the loaded configuration file.
 
+### fullUsageText
+
+> **fullUsageText**: `string`
+
+The full usage text computed from the command's `usage` value with all
+special tokens (e.g. "$0") replaced.
+
 ### hasChildren
 
 > **hasChildren**: `boolean`
@@ -44,8 +51,8 @@ least one child command.
 
 > **isImplemented**: `boolean`
 
-If `true`, this command exported neither a `command` string nor a `handler`
-function. Black Flag therefore considers this command "unimplemented".
+If `true`, this command exported a `handler` function. Black Flag therefore
+considers this command as "not unimplemented".
 
 When executed, unimplemented commands will show help text before throwing a
 context-specific error.

@@ -8,7 +8,7 @@
 
 > **Programs**\<`CustomCliArguments`, `CustomExecutionContext`\>: `{ [Descriptor in ProgramDescriptor]: DescriptorToProgram<Descriptor, CustomCliArguments, CustomExecutionContext> }`
 
-Defined in: node\_modules/@black-flag/core/dist/types/program.d.ts:93
+Defined in: node\_modules/@black-flag/core/dist/src/types/program.d.ts:93
 
 Represents the program types that represent every Black Flag command as
 aptly-named values in an object.

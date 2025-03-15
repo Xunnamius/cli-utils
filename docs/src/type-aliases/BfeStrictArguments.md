@@ -8,13 +8,14 @@
 
 > **BfeStrictArguments**\<`CustomCliArguments`, `CustomExecutionContext`\>: `OmitIndexSignature`\<[`Arguments`](Arguments.md)\<`CustomCliArguments`, `CustomExecutionContext`\>\> & [`FrameworkArguments`](FrameworkArguments.md)\<`CustomExecutionContext`\> & `object`
 
-Defined in: node\_modules/@black-flag/extensions/dist/src/index.d.ts:342
+Defined in: node\_modules/@black-flag/extensions/dist/packages/extensions/src/index.d.ts:343
 
-A stricter version of [Arguments](Arguments.md) that explicitly omits the fallback
-indexer for unrecognized arguments. Even though it is the runtime equivalent
-of [Arguments](Arguments.md), using this type allows intellisense to report
-bad/misspelled/missing arguments from `argv` in various places where it
-otherwise couldn't.
+A stricter version of Black Flag's
+[Arguments](https://github.com/Xunnamius/black-flag/blob/main/docs/api/src/exports/type-aliases/Arguments.md)
+type that explicitly omits the fallback indexers for unrecognized arguments.
+Even though it is the runtime equivalent of `Arguments`, using this type
+allows intellisense to report bad/misspelled/missing arguments from `argv` in
+various places where it otherwise couldn't.
 
 **This type is intended for intellisense purposes only.**
 

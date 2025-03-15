@@ -8,7 +8,7 @@
 
 > **PreExecutionContext**\<`CustomContext`\>: `CustomContext` & `object`
 
-Defined in: node\_modules/@black-flag/core/dist/types/program.d.ts:197
+Defined in: node\_modules/@black-flag/core/dist/src/types/program.d.ts:200
 
 Represents the pre-execution context that is the result of calling
 `configureProgram`.
@@ -28,11 +28,11 @@ ideal as an entry point for a CLI. See [runProgram](../functions/runProgram.md) 
 function that handles exceptions and sets the exit code for you.
 
 Note: when the special `GracefulEarlyExitError` exception is thrown _from
-within a command's handler or builder_, `Executor` will set
-`context.state.deepestParseResult` to `NullArguments` and
-`context.state.isGracefullyExiting` to `true`. Further, `Executor` **will
-not** re-throw the exception in this special case, returning
-`NullArguments` instead.
+within a command's handler or builder (or certain hooks)_, `Executor` will
+set `ExecutionContext::state.deepestParseResult` to `NullArguments` and
+`ExecutionContext::state.isGracefullyExiting` to `true`. Further,
+`Executor` **will not** re-throw the exception in this special case,
+returning `NullArguments` instead.
 
 ### executionContext
 

@@ -8,6 +8,6 @@
 
 > **ProgramType**: `"pure parent"` \| `"parent-child"` \| `"pure child"`
 
-Defined in: node\_modules/@black-flag/core/dist/types/program.d.ts:80
+Defined in: node\_modules/@black-flag/core/dist/src/types/program.d.ts:80
 
 Represents valid [Configuration](Configuration.md) module types that can be loaded.

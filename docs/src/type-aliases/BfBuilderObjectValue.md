@@ -8,7 +8,7 @@
 
 > **BfBuilderObjectValue**\<`CustomCliArguments`, `CustomExecutionContext`\>: [`BfBuilderObject`](BfBuilderObject.md)\<`CustomCliArguments`, `CustomExecutionContext`\>\[`string`\]
 
-Defined in: node\_modules/@black-flag/extensions/dist/src/index.d.ts:20
+Defined in: node\_modules/@black-flag/extensions/dist/packages/extensions/src/index.d.ts:20
 
 The object value type of a [BfBuilderObject](BfBuilderObject.md).
 

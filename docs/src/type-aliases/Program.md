@@ -8,7 +8,7 @@
 
 > **Program**\<`CustomCliArguments`, `CustomExecutionContext`\>: `Omit`\<`_Program`\<[`FrameworkArguments`](FrameworkArguments.md)\<`CustomExecutionContext`\> & `CustomCliArguments`\>, `"command"` \| `"onFinishCommand"` \| `"showHelpOnFail"` \| `"version"` \| `"help"` \| `"exitProcess"` \| `"commandDir"` \| `"parse"` \| `"parsed"` \| `"parseSync"` \| `"argv"`\> & `object`
 
-Defined in: node\_modules/@black-flag/core/dist/types/program.d.ts:31
+Defined in: node\_modules/@black-flag/core/dist/src/types/program.d.ts:30
 
 Represents a pre-configured yargs instance ready for argument parsing and
 execution.
@@ -22,10 +22,13 @@ by yargs but with several differences and should be preferred.
 
 > **showHelpOnFail**: (`enabled`) => [`Program`](Program.md)\<`CustomCliArguments`, `CustomExecutionContext`\>
 
-Like `yargs::showHelpOnFail` except (1) it also determines if help text is
-shown when executing an unimplemented parent command and (2) it has no
-second `message` parameter. If you want to output some specific error
-message, use a configuration hook or `yargs::epilogue`.
+Like `yargs::showHelpOnFail` except (1) it determines if the "full" or
+"short" help text is shown by default, (2) it determines if help text is
+shown when executing an unimplemented parent command, and (3) it has no
+second `message` parameter.
+
+If you want to output some specific error message instead, use a
+configuration hook or `yargs::epilogue`.
 
 Invoking this method will affect all programs in your command hierarchy,
 not just the program on which it was invoked.
@@ -34,7 +37,7 @@ not just the program on which it was invoked.
 
 ##### enabled
 
-`boolean`
+[`ExecutionContext`](ExecutionContext.md)\[`"state"`\]\[`"showHelpOnFail"`\]
 
 #### Returns
 
@@ -42,7 +45,7 @@ not just the program on which it was invoked.
 
 #### See
 
-\_Program.showHelpOnFail
+https://yargs.js.org/docs/#api-reference-showhelponfailenable-message
 
 ## Type Parameters
 

@@ -8,7 +8,7 @@
 
 > **BfeBuilderObjectValueExtensions**\<`CustomCliArguments`, `CustomExecutionContext`\>: `object`
 
-Defined in: node\_modules/@black-flag/extensions/dist/src/index.d.ts:43
+Defined in: node\_modules/@black-flag/extensions/dist/packages/extensions/src/index.d.ts:43
 
 An object containing only those properties recognized by
 BFE.
@@ -42,7 +42,7 @@ the other. Note that providing an array of one or more async check
 functions will result in them being awaited concurrently.
 
 See [the
-documentation](https://github.com/Xunnamius/black-flag-extensions?tab=readme-ov-file#check)
+documentation](https://github.com/Xunnamius/black-flag/tree/main/packages/extensions/README.md#check)
 for details.
 
 ### coerce?
@@ -89,7 +89,7 @@ specified value. Otherwise, a strict deep equality check is performed.
 However, unlike vanilla yargs and Black Flag, this default value is applied
 towards the end of BFE's execution, enabling its use alongside keys like
 `conflicts`. See [the
-documentation](https://github.com/Xunnamius/black-flag-extensions?tab=readme-ov-file#support-for-default-with-conflictsrequiresetc)
+documentation](https://github.com/Xunnamius/black-flag/tree/main/packages/extensions/README.md#support-for-default-with-conflictsrequiresetc)
 for details.
 
 Note also that a defaulted argument will not be coerced by the `coerce`
@@ -247,7 +247,7 @@ argument parsing, allowing you to describe the relationship between options
 and the suboptions whose configurations they determine.
 
 See [the
-documentation](https://github.com/Xunnamius/black-flag-extensions?tab=readme-ov-file#suboptionof)
+documentation](https://github.com/Xunnamius/black-flag/tree/main/packages/extensions/README.md#suboptionof)
 for details.
 
 For describing simpler implicative relations, see `implies`.

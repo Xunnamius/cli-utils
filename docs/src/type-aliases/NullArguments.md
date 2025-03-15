@@ -8,7 +8,7 @@
 
 > **NullArguments**\<`CustomExecutionContext`\>: `object` & [`FrameworkArguments`](FrameworkArguments.md)\<`CustomExecutionContext`\>
 
-Defined in: node\_modules/@black-flag/core/dist/types/program.d.ts:20
+Defined in: node\_modules/@black-flag/core/dist/src/types/program.d.ts:19
 
 Represents an empty or "null" `Arguments` object devoid of useful data.
 
@@ -24,7 +24,7 @@ yargs from returning a real `Arguments` parse result.
 
 ### $0
 
-> **$0**: `"<NullArguments: no parse result available due to exception>"`
+> **$0**: *typeof* [`nullArguments$0`](../variables/nullArguments$0.md)
 
 ## Type Parameters
 

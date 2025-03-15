@@ -8,7 +8,7 @@
 
 > **BfeCustomBuilderFunctionParameters**\<`CustomCliArguments`, `CustomExecutionContext`, `P`\>: `P` *extends* \[infer R, `...(infer S)`\] ? `S` *extends* \[infer T, `...(infer _U)`\] ? \[`R` & `object`, `T`, [`BfeStrictArguments`](BfeStrictArguments.md)\<`Partial`\<`CustomCliArguments`\>, `CustomExecutionContext`\> \| `undefined`\] : \[`R` & `object`, `...S`\] : `never`
 
-Defined in: node\_modules/@black-flag/extensions/dist/src/index.d.ts:361
+Defined in: node\_modules/@black-flag/extensions/dist/packages/extensions/src/index.d.ts:363
 
 A version of Black Flag's `builder` function parameters that exclude yargs
 methods that are not supported by BFE.
