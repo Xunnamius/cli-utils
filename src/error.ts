@@ -33,9 +33,6 @@ export const CliErrorMessage = {
     return `option "${name}" cannot have value "${String(value)}"${
       context ? ` ${context}` : ''
     }`;
-  },
-  RequiresMinArgs(name: string, min: number, given?: number, adjective?: string) {
-    return `${name} requires at least ${min} ${adjective ? `${adjective} ` : ''}argument${min === 1 ? '' : 's'}${given ? `, saw ${given}` : ''}`;
   }
 };
 
