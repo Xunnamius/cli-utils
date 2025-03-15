@@ -103,7 +103,7 @@
   "dependencies": {
     "@-xun/project-types": "^1.0.4",
     "@black-flag/core": "^2.0.0",
-    "@black-flag/extensions": "^1.0.2",
+    "@black-flag/extensions": "^2.0.0",
     "core-js": "^3.40.0",
     "rejoinder": "^1.2.5",
     "type-fest": "^4.35.0"
