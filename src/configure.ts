@@ -93,7 +93,7 @@ export function makeStandardConfigureErrorHandlingEpilogue(): ConfigureErrorHand
       ConfigureErrorHandlingEpilogue<StandardExecutionContext>
     >
   ) {
-    context.standardDebug.error(error);
+    context.standardDebug.error('%O', error);
 
     // ? Pretty print error output depending on how silent we're supposed to be
     if (message && !context.state.isSilenced) {
