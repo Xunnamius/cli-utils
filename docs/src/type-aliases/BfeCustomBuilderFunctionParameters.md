@@ -6,20 +6,26 @@
 
 # Type Alias: BfeCustomBuilderFunctionParameters\<CustomCliArguments, CustomExecutionContext, P\>
 
-> **BfeCustomBuilderFunctionParameters**\<`CustomCliArguments`, `CustomExecutionContext`, `P`\>: `P` *extends* \[infer R, `...(infer S)`\] ? `S` *extends* \[infer T, `...(infer _U)`\] ? \[`R` & `object`, `T`, [`BfeStrictArguments`](BfeStrictArguments.md)\<`Partial`\<`CustomCliArguments`\>, `CustomExecutionContext`\> \| `undefined`\] : \[`R` & `object`, `...S`\] : `never`
+> **BfeCustomBuilderFunctionParameters**\<`CustomCliArguments`, `CustomExecutionContext`, `P`\> = `P` *extends* \[infer R, `...(infer S)`\] ? `S` *extends* \[infer T, `...(infer _U)`\] ? \[`R` & `object`, `T`, [`BfeStrictArguments`](BfeStrictArguments.md)\<`Partial`\<`CustomCliArguments`\>, `CustomExecutionContext`\> \| `undefined`\] : \[`R` & `object`, `...S`\] : `never`
 
-Defined in: node\_modules/@black-flag/extensions/dist/packages/extensions/src/index.d.ts:363
+Defined in: node\_modules/@black-flag/extensions/dist/packages/extensions/src/index.d.ts:364
 
 A version of Black Flag's `builder` function parameters that exclude yargs
 methods that are not supported by BFE.
 
 ## Type Parameters
 
-• **CustomCliArguments** *extends* `Record`\<`string`, `unknown`\>
+### CustomCliArguments
 
-• **CustomExecutionContext** *extends* [`ExecutionContext`](ExecutionContext.md)
+`CustomCliArguments` *extends* `Record`\<`string`, `unknown`\>
 
-• **P** = `Parameters`\<[`BfBuilderFunction`](BfBuilderFunction.md)\<`CustomCliArguments`, `CustomExecutionContext`\>\>
+### CustomExecutionContext
+
+`CustomExecutionContext` *extends* [`ExecutionContext`](ExecutionContext.md)
+
+### P
+
+`P` = `Parameters`\<[`BfBuilderFunction`](BfBuilderFunction.md)\<`CustomCliArguments`, `CustomExecutionContext`\>\>
 
 ## See
 

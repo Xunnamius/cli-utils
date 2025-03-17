@@ -6,7 +6,7 @@
 
 # Type Alias: Arguments\<CustomCliArguments, CustomExecutionContext\>
 
-> **Arguments**\<`CustomCliArguments`, `CustomExecutionContext`\>: `_Arguments`\<[`FrameworkArguments`](FrameworkArguments.md)\<`CustomExecutionContext`\> & `CustomCliArguments`\>
+> **Arguments**\<`CustomCliArguments`, `CustomExecutionContext`\> = `_Arguments`\<[`FrameworkArguments`](FrameworkArguments.md)\<`CustomExecutionContext`\> & `CustomCliArguments`\>
 
 Defined in: node\_modules/@black-flag/core/dist/src/types/program.d.ts:11
 
@@ -16,6 +16,10 @@ arguments/properties specific to Black Flag, and an indexer falling back to
 
 ## Type Parameters
 
-• **CustomCliArguments** *extends* `Record`\<`string`, `unknown`\> = `Record`\<`string`, `unknown`\>
+### CustomCliArguments
 
-• **CustomExecutionContext** *extends* [`ExecutionContext`](ExecutionContext.md) = [`ExecutionContext`](ExecutionContext.md)
+`CustomCliArguments` *extends* `Record`\<`string`, `unknown`\> = `Record`\<`string`, `unknown`\>
+
+### CustomExecutionContext
+
+`CustomExecutionContext` *extends* [`ExecutionContext`](ExecutionContext.md) = [`ExecutionContext`](ExecutionContext.md)

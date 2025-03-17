@@ -6,7 +6,7 @@
 
 # Type Alias: MakeRunnerOptions
 
-> **MakeRunnerOptions**: `object` & \{ `configurationHooks`: `Promisable`\<[`ConfigurationHooks`](ConfigurationHooks.md)\>; `preExecutionContext`: `undefined`; \} \| \{ `configurationHooks`: `undefined`; `preExecutionContext`: `Promisable`\<[`PreExecutionContext`](PreExecutionContext.md)\>; \}
+> **MakeRunnerOptions** = `object` & \{ `configurationHooks`: `Promisable`\<[`ConfigurationHooks`](ConfigurationHooks.md)\>; `preExecutionContext`: `undefined`; \} \| \{ `configurationHooks`: `undefined`; `preExecutionContext`: `Promisable`\<[`PreExecutionContext`](PreExecutionContext.md)\>; \}
 
 Defined in: node\_modules/@black-flag/core/dist/src/index.d.ts:28
 

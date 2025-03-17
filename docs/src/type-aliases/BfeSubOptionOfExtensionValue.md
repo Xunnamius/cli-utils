@@ -6,24 +6,30 @@
 
 # Type Alias: BfeSubOptionOfExtensionValue\<CustomCliArguments, CustomExecutionContext\>
 
-> **BfeSubOptionOfExtensionValue**\<`CustomCliArguments`, `CustomExecutionContext`\>: `object`
+> **BfeSubOptionOfExtensionValue**\<`CustomCliArguments`, `CustomExecutionContext`\> = `object`
 
-Defined in: node\_modules/@black-flag/extensions/dist/packages/extensions/src/index.d.ts:284
+Defined in: node\_modules/@black-flag/extensions/dist/packages/extensions/src/index.d.ts:285
 
 The array element type of
 [BfeBuilderObjectValueExtensions.subOptionOf](BfeBuilderObjectValueExtensions.md#suboptionof).
 
 ## Type Parameters
 
-• **CustomCliArguments** *extends* `Record`\<`string`, `unknown`\>
+### CustomCliArguments
 
-• **CustomExecutionContext** *extends* [`ExecutionContext`](ExecutionContext.md)
+`CustomCliArguments` *extends* `Record`\<`string`, `unknown`\>
 
-## Type declaration
+### CustomExecutionContext
+
+`CustomExecutionContext` *extends* [`ExecutionContext`](ExecutionContext.md)
+
+## Properties
 
 ### update
 
 > **update**: (`oldOptionConfig`, `argv`) => [`BfeBuilderObjectValueWithoutSubOptionOfExtension`](BfeBuilderObjectValueWithoutSubOptionOfExtension.md)\<`CustomCliArguments`, `CustomExecutionContext`\> \| [`BfeBuilderObjectValueWithoutSubOptionOfExtension`](BfeBuilderObjectValueWithoutSubOptionOfExtension.md)\<`CustomCliArguments`, `CustomExecutionContext`\>
+
+Defined in: node\_modules/@black-flag/extensions/dist/packages/extensions/src/index.d.ts:315
 
 This function receives the current configuration for this option
 (`oldOptionConfig`) and the fully parsed `argv` (not including any default
@@ -39,9 +45,13 @@ return {
 }
 ```
 
+***
+
 ### when()
 
 > **when**: (`superOptionValue`, `argv`) => `boolean`
+
+Defined in: node\_modules/@black-flag/extensions/dist/packages/extensions/src/index.d.ts:299
 
 This function receives the `superOptionValue` of the so-called "super
 option" (i.e. `key` in `{ subOptionOf: { key: { when: ... }}}`), which you

@@ -6,7 +6,7 @@
 
 # Type Alias: ParentConfiguration\<CustomCliArguments, CustomExecutionContext\>
 
-> **ParentConfiguration**\<`CustomCliArguments`, `CustomExecutionContext`\>: `Partial`\<[`Configuration`](Configuration.md)\<`CustomCliArguments`, `CustomExecutionContext`\>\>
+> **ParentConfiguration**\<`CustomCliArguments`, `CustomExecutionContext`\> = `Partial`\<[`Configuration`](Configuration.md)\<`CustomCliArguments`, `CustomExecutionContext`\>\>
 
 Defined in: node\_modules/@black-flag/core/dist/src/types/module.d.ts:131
 
@@ -16,6 +16,10 @@ module files that will eventually get imported via auto-discovery.
 
 ## Type Parameters
 
-• **CustomCliArguments** *extends* `Record`\<`string`, `unknown`\> = `Record`\<`string`, `unknown`\>
+### CustomCliArguments
 
-• **CustomExecutionContext** *extends* [`ExecutionContext`](ExecutionContext.md) = [`ExecutionContext`](ExecutionContext.md)
+`CustomCliArguments` *extends* `Record`\<`string`, `unknown`\> = `Record`\<`string`, `unknown`\>
+
+### CustomExecutionContext
+
+`CustomExecutionContext` *extends* [`ExecutionContext`](ExecutionContext.md) = [`ExecutionContext`](ExecutionContext.md)

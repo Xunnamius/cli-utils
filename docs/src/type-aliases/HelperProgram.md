@@ -6,7 +6,7 @@
 
 # Type Alias: HelperProgram\<CustomCliArguments, CustomExecutionContext\>
 
-> **HelperProgram**\<`CustomCliArguments`, `CustomExecutionContext`\>: `Omit`\<[`Program`](Program.md)\<`CustomCliArguments`, `CustomExecutionContext`\>, `"demand"` \| `"demandCommand"` \| `"command"`\>
+> **HelperProgram**\<`CustomCliArguments`, `CustomExecutionContext`\> = `Omit`\<[`Program`](Program.md)\<`CustomCliArguments`, `CustomExecutionContext`\>, `"demand"` \| `"demandCommand"` \| `"command"`\>
 
 Defined in: node\_modules/@black-flag/core/dist/src/types/program.d.ts:72
 
@@ -14,6 +14,10 @@ Represents an "helper" [Program](Program.md) instance.
 
 ## Type Parameters
 
-• **CustomCliArguments** *extends* `Record`\<`string`, `unknown`\> = `Record`\<`string`, `unknown`\>
+### CustomCliArguments
 
-• **CustomExecutionContext** *extends* [`ExecutionContext`](ExecutionContext.md) = [`ExecutionContext`](ExecutionContext.md)
+`CustomCliArguments` *extends* `Record`\<`string`, `unknown`\> = `Record`\<`string`, `unknown`\>
+
+### CustomExecutionContext
+
+`CustomExecutionContext` *extends* [`ExecutionContext`](ExecutionContext.md) = [`ExecutionContext`](ExecutionContext.md)

@@ -6,9 +6,9 @@
 
 # Type Alias: BfBuilderObjectValue\<CustomCliArguments, CustomExecutionContext\>
 
-> **BfBuilderObjectValue**\<`CustomCliArguments`, `CustomExecutionContext`\>: [`BfBuilderObject`](BfBuilderObject.md)\<`CustomCliArguments`, `CustomExecutionContext`\>\[`string`\]
+> **BfBuilderObjectValue**\<`CustomCliArguments`, `CustomExecutionContext`\> = [`BfBuilderObject`](BfBuilderObject.md)\<`CustomCliArguments`, `CustomExecutionContext`\>\[`string`\]
 
-Defined in: node\_modules/@black-flag/extensions/dist/packages/extensions/src/index.d.ts:20
+Defined in: node\_modules/@black-flag/extensions/dist/packages/extensions/src/index.d.ts:21
 
 The object value type of a [BfBuilderObject](BfBuilderObject.md).
 
@@ -16,6 +16,10 @@ Equivalent to `yargs.Options` as of yargs@17.7.2.
 
 ## Type Parameters
 
-• **CustomCliArguments** *extends* `Record`\<`string`, `unknown`\>
+### CustomCliArguments
 
-• **CustomExecutionContext** *extends* [`ExecutionContext`](ExecutionContext.md)
+`CustomCliArguments` *extends* `Record`\<`string`, `unknown`\>
+
+### CustomExecutionContext
+
+`CustomExecutionContext` *extends* [`ExecutionContext`](ExecutionContext.md)

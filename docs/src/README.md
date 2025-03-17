@@ -83,6 +83,7 @@
 - [defaultUsageText](variables/defaultUsageText.md)
 - [defaultVersionOptionName](variables/defaultVersionOptionName.md)
 - [defaultVersionTextDescription](variables/defaultVersionTextDescription.md)
+- [hideBin](variables/hideBin.md)
 - [nullArguments$0](variables/nullArguments$0.md)
 
 ## Functions
@@ -96,7 +97,6 @@
 - [expectedHelpTextRegExp](functions/expectedHelpTextRegExp.md)
 - [getDeepestErrorCause](functions/getDeepestErrorCause.md)
 - [getInvocableExtendedHandler](functions/getInvocableExtendedHandler.md)
-- [hideBin](functions/hideBin.md)
 - [isArguments](functions/isArguments.md)
 - [isAssertionSystemError](functions/isAssertionSystemError.md)
 - [isCliError](functions/isCliError.md)
@@ -107,9 +107,4 @@
 - [makeRunner](functions/makeRunner.md)
 - [runProgram](functions/runProgram.md)
 - [withBuilderExtensions](functions/withBuilderExtensions.md)
-
-## References
-
-### withUsageExtensions
-
-Renames and re-exports [withStandardUsage](extensions/functions/withStandardUsage.md)
+- [withUsageExtensions](functions/withUsageExtensions.md)

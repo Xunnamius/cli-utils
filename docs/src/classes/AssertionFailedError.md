@@ -18,7 +18,7 @@ Represents a failed sanity check.
 
 ### new AssertionFailedError()
 
-> **new AssertionFailedError**(`error`, `options`?): [`AssertionFailedError`](AssertionFailedError.md)
+> **new AssertionFailedError**(`error`, `options`?): `AssertionFailedError`
 
 Defined in: node\_modules/@black-flag/core/dist/src/error.d.ts:150
 
@@ -36,15 +36,15 @@ Represents a failed sanity check.
 
 #### Returns
 
-[`AssertionFailedError`](AssertionFailedError.md)
+`AssertionFailedError`
 
 #### Overrides
 
-[`CliError`](CliError.md).[`constructor`](CliError.md#constructors)
+[`CliError`](CliError.md).[`constructor`](CliError.md#constructor)
 
 ### new AssertionFailedError()
 
-> **new AssertionFailedError**(`message`, `options`?): [`AssertionFailedError`](AssertionFailedError.md)
+> **new AssertionFailedError**(`message`, `options`?): `AssertionFailedError`
 
 Defined in: node\_modules/@black-flag/core/dist/src/error.d.ts:151
 
@@ -60,15 +60,15 @@ Defined in: node\_modules/@black-flag/core/dist/src/error.d.ts:151
 
 #### Returns
 
-[`AssertionFailedError`](AssertionFailedError.md)
+`AssertionFailedError`
 
 #### Overrides
 
-[`CliError`](CliError.md).[`constructor`](CliError.md#constructors)
+[`CliError`](CliError.md).[`constructor`](CliError.md#constructor)
 
 ### new AssertionFailedError()
 
-> **new AssertionFailedError**(`errorOrMessage`?, `options`?): [`AssertionFailedError`](AssertionFailedError.md)
+> **new AssertionFailedError**(`errorOrMessage`?, `options`?): `AssertionFailedError`
 
 Defined in: node\_modules/@black-flag/core/dist/src/error.d.ts:152
 
@@ -84,7 +84,7 @@ Defined in: node\_modules/@black-flag/core/dist/src/error.d.ts:152
 
 #### Returns
 
-[`AssertionFailedError`](AssertionFailedError.md)
+`AssertionFailedError`
 
 #### Overrides
 
@@ -100,7 +100,7 @@ Defined in: node\_modules/@black-flag/core/dist/src/error.d.ts:146
 
 #### Overrides
 
-[`CliError`](CliError.md).[`[$type]`](CliError.md#$type)
+[`CliError`](CliError.md).[`[$type]`](CliError.md#type)
 
 ***
 
@@ -165,7 +165,7 @@ Defined in: node\_modules/typescript/lib/lib.es5.d.ts:1077
 
 #### Inherited from
 
-[`CliError`](CliError.md).[`message`](CliError.md#message-1)
+[`CliError`](CliError.md).[`message`](CliError.md#message)
 
 ***
 

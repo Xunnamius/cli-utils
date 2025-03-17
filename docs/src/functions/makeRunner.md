@@ -37,7 +37,9 @@ actual thrown error, set `makeRunner`'s `errorHandlingBehavior` option to
 
 ## Type Parameters
 
-• **CustomCliArguments** *extends* `Record`\<`string`, `unknown`\> = `Record`\<`string`, `unknown`\>
+### CustomCliArguments
+
+`CustomCliArguments` *extends* `Record`\<`string`, `unknown`\> = `Record`\<`string`, `unknown`\>
 
 ## Parameters
 

@@ -6,18 +6,22 @@
 
 # Type Alias: BfeBuilderObject\<CustomCliArguments, CustomExecutionContext\>
 
-> **BfeBuilderObject**\<`CustomCliArguments`, `CustomExecutionContext`\>: `object`
+> **BfeBuilderObject**\<`CustomCliArguments`, `CustomExecutionContext`\> = `object`
 
-Defined in: node\_modules/@black-flag/extensions/dist/packages/extensions/src/index.d.ts:29
+Defined in: node\_modules/@black-flag/extensions/dist/packages/extensions/src/index.d.ts:30
 
 A version of the object type of the `builder` export accepted by Black Flag
 that supports BFE's additional functionality.
 
 ## Type Parameters
 
-• **CustomCliArguments** *extends* `Record`\<`string`, `unknown`\>
+### CustomCliArguments
 
-• **CustomExecutionContext** *extends* [`ExecutionContext`](ExecutionContext.md)
+`CustomCliArguments` *extends* `Record`\<`string`, `unknown`\>
+
+### CustomExecutionContext
+
+`CustomExecutionContext` *extends* [`ExecutionContext`](ExecutionContext.md)
 
 ## Index Signature
 

@@ -6,26 +6,34 @@
 
 # Function: getInvocableExtendedHandler()
 
-> **getInvocableExtendedHandler**\<`CustomCliArguments`, `CustomExecutionContext`\>(`maybeCommand`, `context`): `Promise`\<(`argv_`) => `Promise`\<`void`\>\>
+> **getInvocableExtendedHandler**\<`CustomCliArguments`, `CustomExecutionContext`\>(`maybeCommand`, `context`): `Promise`\<(`argv`) => `Promise`\<`void`\>\>
 
-Defined in: node\_modules/@black-flag/extensions/dist/packages/extensions/src/index.d.ts:491
+Defined in: node\_modules/@black-flag/extensions/dist/packages/extensions/src/index.d.ts:511
 
 This function returns a version of `maybeCommand`'s handler function that is
 ready to invoke immediately. It can be used with both BFE and normal Black
 Flag command exports.
 
 It returns a handler that expects to be passed a "reified argv," i.e. the
-object given to the command handler after all checks have passed and all
-updates to argv have been applied (including `subOptionOf` and BFE's
+object normally given to the command handler after all checks have passed and
+all updates to argv have been applied (including `subOptionOf` and BFE's
 `implies`).
 
 For this reason, invoking the returned handler will not run any BF or BFE
 builder configurations on the given argv object. **Whatever you pass the
-returned handler will be re-gifted to the command's handler as-is and without
-correctness checks.**
+returned handler function will be (safely) deep cloned and then re-gifted to
+the command's handler _without_ any correctness checks.**
 
 Use `CustomCliArguments` (and `CustomExecutionContext`) to assert the
 expected shape of the "reified argv".
+
+Note that, like the `argv` passed to the returned handler function, the
+`context` argument passed to this function will be (safely) deep cloned,
+meaning any context changes effected by the handler will not persist outside
+of that handler's scope.
+
+Also note that the `$executionContext` key, if included in `argv`, will be
+ignored.
 
 See [the
 documentation](https://github.com/Xunnamius/black-flag/blob/main/packages/extensions/README.md#getinvocableextendedhandler)
@@ -33,9 +41,13 @@ for more details.
 
 ## Type Parameters
 
-• **CustomCliArguments** *extends* `Record`\<`string`, `unknown`\>
+### CustomCliArguments
 
-• **CustomExecutionContext** *extends* [`ExecutionContext`](../type-aliases/ExecutionContext.md)
+`CustomCliArguments` *extends* `Record`\<`string`, `unknown`\>
+
+### CustomExecutionContext
+
+`CustomExecutionContext` *extends* [`ExecutionContext`](../type-aliases/ExecutionContext.md)
 
 ## Parameters
 
@@ -49,4 +61,4 @@ for more details.
 
 ## Returns
 
-`Promise`\<(`argv_`) => `Promise`\<`void`\>\>
+`Promise`\<(`argv`) => `Promise`\<`void`\>\>

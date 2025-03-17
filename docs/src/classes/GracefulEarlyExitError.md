@@ -23,7 +23,7 @@ ignored.
 
 ### new GracefulEarlyExitError()
 
-> **new GracefulEarlyExitError**(`error`?, `options`?): [`GracefulEarlyExitError`](GracefulEarlyExitError.md)
+> **new GracefulEarlyExitError**(`error`?, `options`?): `GracefulEarlyExitError`
 
 Defined in: node\_modules/@black-flag/core/dist/src/error.d.ts:140
 
@@ -46,11 +46,11 @@ ignored.
 
 #### Returns
 
-[`GracefulEarlyExitError`](GracefulEarlyExitError.md)
+`GracefulEarlyExitError`
 
 #### Overrides
 
-[`CliError`](CliError.md).[`constructor`](CliError.md#constructors)
+[`CliError`](CliError.md).[`constructor`](CliError.md#constructor)
 
 ## Properties
 
@@ -62,7 +62,7 @@ Defined in: node\_modules/@black-flag/core/dist/src/error.d.ts:131
 
 #### Overrides
 
-[`CliError`](CliError.md).[`[$type]`](CliError.md#$type)
+[`CliError`](CliError.md).[`[$type]`](CliError.md#type)
 
 ***
 
@@ -127,7 +127,7 @@ Defined in: node\_modules/typescript/lib/lib.es5.d.ts:1077
 
 #### Inherited from
 
-[`CliError`](CliError.md).[`message`](CliError.md#message-1)
+[`CliError`](CliError.md).[`message`](CliError.md#message)
 
 ***
 

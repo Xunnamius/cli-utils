@@ -18,7 +18,7 @@ Represents trying to execute a CLI command that has not yet been implemented.
 
 ### new CommandNotImplementedError()
 
-> **new CommandNotImplementedError**(`error`?, `options`?): [`CommandNotImplementedError`](CommandNotImplementedError.md)
+> **new CommandNotImplementedError**(`error`?, `options`?): `CommandNotImplementedError`
 
 Defined in: node\_modules/@black-flag/core/dist/src/error.d.ts:120
 
@@ -37,11 +37,11 @@ implemented.
 
 #### Returns
 
-[`CommandNotImplementedError`](CommandNotImplementedError.md)
+`CommandNotImplementedError`
 
 #### Overrides
 
-[`CliError`](CliError.md).[`constructor`](CliError.md#constructors)
+[`CliError`](CliError.md).[`constructor`](CliError.md#constructor)
 
 ## Properties
 
@@ -53,7 +53,7 @@ Defined in: node\_modules/@black-flag/core/dist/src/error.d.ts:115
 
 #### Overrides
 
-[`CliError`](CliError.md).[`[$type]`](CliError.md#$type)
+[`CliError`](CliError.md).[`[$type]`](CliError.md#type)
 
 ***
 
@@ -118,7 +118,7 @@ Defined in: node\_modules/typescript/lib/lib.es5.d.ts:1077
 
 #### Inherited from
 
-[`CliError`](CliError.md).[`message`](CliError.md#message-1)
+[`CliError`](CliError.md).[`message`](CliError.md#message)
 
 ***
 
@@ -159,7 +159,7 @@ of the value of `ExecutionContext::state.showHelpOnFail`.
 Note that, regardless of this `showHelp`, help text is always output when a
 parent command is invoked that (1) has one or more child commands and (2)
 lacks its own handler implementation or implements a handler that throws
-[CommandNotImplementedError](CommandNotImplementedError.md).
+CommandNotImplementedError.
 
 #### Default
 

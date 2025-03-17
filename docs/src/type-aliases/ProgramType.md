@@ -6,7 +6,7 @@
 
 # Type Alias: ProgramType
 
-> **ProgramType**: `"pure parent"` \| `"parent-child"` \| `"pure child"`
+> **ProgramType** = `"pure parent"` \| `"parent-child"` \| `"pure child"`
 
 Defined in: node\_modules/@black-flag/core/dist/src/types/program.d.ts:80
 

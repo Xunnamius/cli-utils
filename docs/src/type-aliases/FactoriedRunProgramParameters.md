@@ -6,7 +6,7 @@
 
 # Type Alias: FactoriedRunProgramParameters
 
-> **FactoriedRunProgramParameters**: [`RunProgramParameters`](RunProgramParameters.md) *extends* \[infer \_, `...(infer Tail)`\] ? `Tail` : \[\]
+> **FactoriedRunProgramParameters** = [`RunProgramParameters`](RunProgramParameters.md) *extends* \[infer \_, `...(infer Tail)`\] ? `Tail` : \[\]
 
 Defined in: node\_modules/@black-flag/core/dist/src/index.d.ts:24
 

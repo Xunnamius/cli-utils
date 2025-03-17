@@ -6,9 +6,9 @@
 
 # Type Alias: BfeBuilderObjectValueExtensionObject
 
-> **BfeBuilderObjectValueExtensionObject**: `Record`\<`string`, `unknown`\>
+> **BfeBuilderObjectValueExtensionObject** = `Record`\<`string`, `unknown`\>
 
-Defined in: node\_modules/@black-flag/extensions/dist/packages/extensions/src/index.d.ts:262
+Defined in: node\_modules/@black-flag/extensions/dist/packages/extensions/src/index.d.ts:263
 
 The object type of a [BfeBuilderObjectValueExtensions](BfeBuilderObjectValueExtensions.md).
 

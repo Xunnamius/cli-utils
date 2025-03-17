@@ -8,7 +8,7 @@
 
 > **withBuilderExtensions**\<`CustomCliArguments`, `CustomExecutionContext`\>(`customBuilder`?, `__namedParameters`?): [`WithBuilderExtensionsReturnType`](../type-aliases/WithBuilderExtensionsReturnType.md)\<`CustomCliArguments`, `CustomExecutionContext`\>
 
-Defined in: node\_modules/@black-flag/extensions/dist/packages/extensions/src/index.d.ts:427
+Defined in: node\_modules/@black-flag/extensions/dist/packages/extensions/src/index.d.ts:438
 
 This function enables several additional options-related units of
 functionality via analysis of the returned options configuration object and
@@ -16,9 +16,13 @@ the parsed command line arguments (argv).
 
 ## Type Parameters
 
-• **CustomCliArguments** *extends* `Record`\<`string`, `unknown`\>
+### CustomCliArguments
 
-• **CustomExecutionContext** *extends* [`ExecutionContext`](../type-aliases/ExecutionContext.md)
+`CustomCliArguments` *extends* `Record`\<`string`, `unknown`\>
+
+### CustomExecutionContext
+
+`CustomExecutionContext` *extends* [`ExecutionContext`](../type-aliases/ExecutionContext.md)
 
 ## Parameters
 

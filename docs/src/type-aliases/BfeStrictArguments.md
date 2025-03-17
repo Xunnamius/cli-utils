@@ -6,9 +6,9 @@
 
 # Type Alias: BfeStrictArguments\<CustomCliArguments, CustomExecutionContext\>
 
-> **BfeStrictArguments**\<`CustomCliArguments`, `CustomExecutionContext`\>: `OmitIndexSignature`\<[`Arguments`](Arguments.md)\<`CustomCliArguments`, `CustomExecutionContext`\>\> & [`FrameworkArguments`](FrameworkArguments.md)\<`CustomExecutionContext`\> & `object`
+> **BfeStrictArguments**\<`CustomCliArguments`, `CustomExecutionContext`\> = `OmitIndexSignature`\<[`Arguments`](Arguments.md)\<`CustomCliArguments`, `CustomExecutionContext`\>\> & [`FrameworkArguments`](FrameworkArguments.md)\<`CustomExecutionContext`\> & `object`
 
-Defined in: node\_modules/@black-flag/extensions/dist/packages/extensions/src/index.d.ts:343
+Defined in: node\_modules/@black-flag/extensions/dist/packages/extensions/src/index.d.ts:344
 
 A stricter version of Black Flag's
 [Arguments](https://github.com/Xunnamius/black-flag/blob/main/docs/api/src/exports/type-aliases/Arguments.md)
@@ -27,6 +27,10 @@ various places where it otherwise couldn't.
 
 ## Type Parameters
 
-• **CustomCliArguments** *extends* `Record`\<`string`, `unknown`\>
+### CustomCliArguments
 
-• **CustomExecutionContext** *extends* [`ExecutionContext`](ExecutionContext.md)
+`CustomCliArguments` *extends* `Record`\<`string`, `unknown`\>
+
+### CustomExecutionContext
+
+`CustomExecutionContext` *extends* [`ExecutionContext`](ExecutionContext.md)

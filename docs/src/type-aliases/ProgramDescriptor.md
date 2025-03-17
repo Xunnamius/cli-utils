@@ -6,7 +6,7 @@
 
 # Type Alias: ProgramDescriptor
 
-> **ProgramDescriptor**: `"effector"` \| `"helper"` \| `"router"`
+> **ProgramDescriptor** = `"effector"` \| `"helper"` \| `"router"`
 
 Defined in: node\_modules/@black-flag/core/dist/src/types/program.d.ts:84
 

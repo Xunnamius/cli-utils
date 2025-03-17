@@ -8,7 +8,7 @@
 
 > **withStandardBuilder**\<`CustomCliArguments`, `CustomExecutionContext`\>(`customBuilder`?, `__namedParameters`?): [`WithBuilderExtensionsReturnType`](../../type-aliases/WithBuilderExtensionsReturnType.md)\<`CustomCliArguments`, `CustomExecutionContext`\>
 
-Defined in: [src/extensions.ts:171](https://github.com/Xunnamius/cli-utils/blob/c7a284e51ef5349c2f43c26fe07feb15a870a5a3/src/extensions.ts#L171)
+Defined in: [src/extensions.ts:171](https://github.com/Xunnamius/cli-utils/blob/682abac4b6c3e5d4332a000231005349474476be/src/extensions.ts#L171)
 
 This function enables several options-related units of functionality
 considered standard across [Xunnamius](https://github.com/Xunnamius)'s CLI
@@ -32,9 +32,13 @@ values will be shallowly merged.
 
 ## Type Parameters
 
-• **CustomCliArguments** *extends* [`StandardCommonCliArguments`](../type-aliases/StandardCommonCliArguments.md)
+### CustomCliArguments
 
-• **CustomExecutionContext** *extends* [`StandardExecutionContext`](../type-aliases/StandardExecutionContext.md)
+`CustomCliArguments` *extends* [`StandardCommonCliArguments`](../type-aliases/StandardCommonCliArguments.md)
+
+### CustomExecutionContext
+
+`CustomExecutionContext` *extends* [`StandardExecutionContext`](../type-aliases/StandardExecutionContext.md)
 
 ## Parameters
 
@@ -44,7 +48,7 @@ values will be shallowly merged.
 
 ### \_\_namedParameters?
 
-`Omit`\<[`WithBuilderExtensionsConfig`](../../type-aliases/WithBuilderExtensionsConfig.md)\<`CustomCliArguments`\>, `"commonOptions"`\> & `object` = `{}`
+`Omit`\<[`WithBuilderExtensionsConfig`](../../type-aliases/WithBuilderExtensionsConfig.md)\<`CustomCliArguments`\>, `"commonOptions"` \| `"enableAutomaticSorting"`\> & `object` = `{}`
 
 ## Returns
 

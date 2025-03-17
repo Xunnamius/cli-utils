@@ -31,7 +31,7 @@ can be used as a simple wrapper around other errors.
 
 ### new CliError()
 
-> **new CliError**(`reason`?, `options`?): [`CliError`](CliError.md)
+> **new CliError**(`reason`?, `options`?): `CliError`
 
 Defined in: node\_modules/@black-flag/core/dist/src/error.d.ts:104
 
@@ -50,7 +50,7 @@ other context.
 
 #### Returns
 
-[`CliError`](CliError.md)
+`CliError`
 
 #### Overrides
 
@@ -58,7 +58,7 @@ other context.
 
 ### new CliError()
 
-> **new CliError**(`reason`, `options`, `message`, `superOptions`): [`CliError`](CliError.md)
+> **new CliError**(`reason`, `options`, `message`, `superOptions`): `CliError`
 
 Defined in: node\_modules/@black-flag/core/dist/src/error.d.ts:109
 
@@ -85,7 +85,7 @@ via `super`.
 
 #### Returns
 
-[`CliError`](CliError.md)
+`CliError`
 
 #### Overrides
 

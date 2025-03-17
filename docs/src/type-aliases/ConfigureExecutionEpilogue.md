@@ -6,7 +6,7 @@
 
 # Type Alias: ConfigureExecutionEpilogue()\<CustomContext\>
 
-> **ConfigureExecutionEpilogue**\<`CustomContext`\>: (`argv`, `context`) => `Promisable`\<[`Arguments`](Arguments.md)\>
+> **ConfigureExecutionEpilogue**\<`CustomContext`\> = (`argv`, `context`) => `Promisable`\<[`Arguments`](Arguments.md)\>
 
 Defined in: node\_modules/@black-flag/core/dist/src/types/configure.d.ts:63
 
@@ -24,7 +24,9 @@ text to stderr regardless of error type.
 
 ## Type Parameters
 
-• **CustomContext** *extends* [`ExecutionContext`](ExecutionContext.md) = [`ExecutionContext`](ExecutionContext.md)
+### CustomContext
+
+`CustomContext` *extends* [`ExecutionContext`](ExecutionContext.md) = [`ExecutionContext`](ExecutionContext.md)
 
 ## Parameters
 

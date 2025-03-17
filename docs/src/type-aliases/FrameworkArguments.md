@@ -6,7 +6,7 @@
 
 # Type Alias: FrameworkArguments\<CustomExecutionContext\>
 
-> **FrameworkArguments**\<`CustomExecutionContext`\>: `object`
+> **FrameworkArguments**\<`CustomExecutionContext`\> = `object`
 
 Defined in: node\_modules/@black-flag/core/dist/src/types/program.d.ts:171
 
@@ -20,10 +20,14 @@ you.
 
 ## Type Parameters
 
-• **CustomExecutionContext** *extends* [`ExecutionContext`](ExecutionContext.md) = [`ExecutionContext`](ExecutionContext.md)
+### CustomExecutionContext
 
-## Type declaration
+`CustomExecutionContext` *extends* [`ExecutionContext`](ExecutionContext.md) = [`ExecutionContext`](ExecutionContext.md)
+
+## Properties
 
 ### \[$executionContext\]
 
 > **\[$executionContext\]**: `CustomExecutionContext`
+
+Defined in: node\_modules/@black-flag/core/dist/src/types/program.d.ts:172

@@ -6,14 +6,18 @@
 
 # Type Alias: BfBuilderObject\<CustomCliArguments, CustomExecutionContext\>
 
-> **BfBuilderObject**\<`CustomCliArguments`, `CustomExecutionContext`\>: `Exclude`\<[`Configuration`](Configuration.md)\<`CustomCliArguments`, `CustomExecutionContext`\>\[`"builder"`\], `Function`\>
+> **BfBuilderObject**\<`CustomCliArguments`, `CustomExecutionContext`\> = `Exclude`\<[`Configuration`](Configuration.md)\<`CustomCliArguments`, `CustomExecutionContext`\>\[`"builder"`\], `Function`\>
 
-Defined in: node\_modules/@black-flag/extensions/dist/packages/extensions/src/index.d.ts:14
+Defined in: node\_modules/@black-flag/extensions/dist/packages/extensions/src/index.d.ts:15
 
 The object type of the `builder` export accepted by Black Flag.
 
 ## Type Parameters
 
-• **CustomCliArguments** *extends* `Record`\<`string`, `unknown`\>
+### CustomCliArguments
 
-• **CustomExecutionContext** *extends* [`ExecutionContext`](ExecutionContext.md)
+`CustomCliArguments` *extends* `Record`\<`string`, `unknown`\>
+
+### CustomExecutionContext
+
+`CustomExecutionContext` *extends* [`ExecutionContext`](ExecutionContext.md)

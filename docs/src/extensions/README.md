@@ -20,4 +20,9 @@
 ## Functions
 
 - [withStandardBuilder](functions/withStandardBuilder.md)
-- [withStandardUsage](functions/withStandardUsage.md)
+
+## References
+
+### withStandardUsage
+
+Renames and re-exports [withUsageExtensions](../functions/withUsageExtensions.md)

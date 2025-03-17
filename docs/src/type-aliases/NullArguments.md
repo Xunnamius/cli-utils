@@ -6,7 +6,7 @@
 
 # Type Alias: NullArguments\<CustomExecutionContext\>
 
-> **NullArguments**\<`CustomExecutionContext`\>: `object` & [`FrameworkArguments`](FrameworkArguments.md)\<`CustomExecutionContext`\>
+> **NullArguments**\<`CustomExecutionContext`\> = `object` & [`FrameworkArguments`](FrameworkArguments.md)\<`CustomExecutionContext`\>
 
 Defined in: node\_modules/@black-flag/core/dist/src/types/program.d.ts:19
 
@@ -28,4 +28,6 @@ yargs from returning a real `Arguments` parse result.
 
 ## Type Parameters
 
-• **CustomExecutionContext** *extends* [`ExecutionContext`](ExecutionContext.md) = [`ExecutionContext`](ExecutionContext.md)
+### CustomExecutionContext
+
+`CustomExecutionContext` *extends* [`ExecutionContext`](ExecutionContext.md) = [`ExecutionContext`](ExecutionContext.md)

@@ -6,7 +6,7 @@
 
 # Type Alias: ConfigureArguments()\<CustomContext\>
 
-> **ConfigureArguments**\<`CustomContext`\>: (`rawArgv`, `context`) => `Promisable`\<*typeof* `process.argv`\>
+> **ConfigureArguments**\<`CustomContext`\> = (`rawArgv`, `context`) => `Promisable`\<*typeof* `process.argv`\>
 
 Defined in: node\_modules/@black-flag/core/dist/src/types/configure.d.ts:49
 
@@ -22,7 +22,9 @@ text to stderr regardless of error type.
 
 ## Type Parameters
 
-• **CustomContext** *extends* [`ExecutionContext`](ExecutionContext.md) = [`ExecutionContext`](ExecutionContext.md)
+### CustomContext
+
+`CustomContext` *extends* [`ExecutionContext`](ExecutionContext.md) = [`ExecutionContext`](ExecutionContext.md)
 
 ## Parameters
 

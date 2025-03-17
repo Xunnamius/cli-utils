@@ -6,9 +6,9 @@
 
 # Type Alias: WithHandlerExtensions()\<CustomCliArguments, CustomExecutionContext\>
 
-> **WithHandlerExtensions**\<`CustomCliArguments`, `CustomExecutionContext`\>: (`customHandler`?) => [`Configuration`](Configuration.md)\<`CustomCliArguments`, `CustomExecutionContext`\>\[`"handler"`\]
+> **WithHandlerExtensions**\<`CustomCliArguments`, `CustomExecutionContext`\> = (`customHandler`?) => [`Configuration`](Configuration.md)\<`CustomCliArguments`, `CustomExecutionContext`\>\[`"handler"`\]
 
-Defined in: node\_modules/@black-flag/extensions/dist/packages/extensions/src/index.d.ts:385
+Defined in: node\_modules/@black-flag/extensions/dist/packages/extensions/src/index.d.ts:386
 
 This function implements several additional optionals-related units of
 functionality. The return value of this function is meant to take the place
@@ -20,13 +20,17 @@ returned by [withBuilderExtensions](../functions/withBuilderExtensions.md).
 Note that `customHandler` provides a stricter constraint than Black Flag's
 `handler` command export in that `customHandler`'s `argv` parameter type
 explicitly omits the fallback indexer for unrecognized arguments. This
-means all possible arguments must be included in [CustomCliArguments](WithHandlerExtensions.md).
+means all possible arguments must be included in [CustomCliArguments](#customcliarguments).
 
 ## Type Parameters
 
-• **CustomCliArguments** *extends* `Record`\<`string`, `unknown`\>
+### CustomCliArguments
 
-• **CustomExecutionContext** *extends* [`ExecutionContext`](ExecutionContext.md)
+`CustomCliArguments` *extends* `Record`\<`string`, `unknown`\>
+
+### CustomExecutionContext
+
+`CustomExecutionContext` *extends* [`ExecutionContext`](ExecutionContext.md)
 
 ## Parameters
 

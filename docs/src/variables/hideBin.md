@@ -4,21 +4,11 @@
 
 [@-xun/cli](../../README.md) / [src](../README.md) / hideBin
 
-# Function: hideBin()
+# Variable: hideBin
 
-> **hideBin**(`argv`): `string`[]
+> `const` **hideBin**: *typeof* `hideBin_`
 
 Defined in: node\_modules/@black-flag/core/dist/src/exports/util.d.ts:11
-
-## Parameters
-
-### argv
-
-`string`[]
-
-## Returns
-
-`string`[]
 
 ## See
 

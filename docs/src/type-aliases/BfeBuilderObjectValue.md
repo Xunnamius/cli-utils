@@ -6,14 +6,18 @@
 
 # Type Alias: BfeBuilderObjectValue\<CustomCliArguments, CustomExecutionContext\>
 
-> **BfeBuilderObjectValue**\<`CustomCliArguments`, `CustomExecutionContext`\>: [`BfeBuilderObjectValueWithoutExtensions`](BfeBuilderObjectValueWithoutExtensions.md) & [`BfeBuilderObjectValueExtensions`](BfeBuilderObjectValueExtensions.md)\<`CustomCliArguments`, `CustomExecutionContext`\>
+> **BfeBuilderObjectValue**\<`CustomCliArguments`, `CustomExecutionContext`\> = [`BfeBuilderObjectValueWithoutExtensions`](BfeBuilderObjectValueWithoutExtensions.md) & [`BfeBuilderObjectValueExtensions`](BfeBuilderObjectValueExtensions.md)\<`CustomCliArguments`, `CustomExecutionContext`\>
 
-Defined in: node\_modules/@black-flag/extensions/dist/packages/extensions/src/index.d.ts:35
+Defined in: node\_modules/@black-flag/extensions/dist/packages/extensions/src/index.d.ts:36
 
 The object value type of a [BfeBuilderObject](BfeBuilderObject.md).
 
 ## Type Parameters
 
-• **CustomCliArguments** *extends* `Record`\<`string`, `unknown`\>
+### CustomCliArguments
 
-• **CustomExecutionContext** *extends* [`ExecutionContext`](ExecutionContext.md)
+`CustomCliArguments` *extends* `Record`\<`string`, `unknown`\>
+
+### CustomExecutionContext
+
+`CustomExecutionContext` *extends* [`ExecutionContext`](ExecutionContext.md)

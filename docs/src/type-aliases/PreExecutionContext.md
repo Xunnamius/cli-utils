@@ -6,7 +6,7 @@
 
 # Type Alias: PreExecutionContext\<CustomContext\>
 
-> **PreExecutionContext**\<`CustomContext`\>: `CustomContext` & `object`
+> **PreExecutionContext**\<`CustomContext`\> = `CustomContext` & `object`
 
 Defined in: node\_modules/@black-flag/core/dist/src/types/program.d.ts:200
 
@@ -52,4 +52,6 @@ instances belonging to the root command.
 
 ## Type Parameters
 
-• **CustomContext** *extends* [`ExecutionContext`](ExecutionContext.md) = [`ExecutionContext`](ExecutionContext.md)
+### CustomContext
+
+`CustomContext` *extends* [`ExecutionContext`](ExecutionContext.md) = [`ExecutionContext`](ExecutionContext.md)

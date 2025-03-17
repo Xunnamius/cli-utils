@@ -6,7 +6,7 @@
 
 # Type Alias: Configuration\<CustomCliArguments, CustomExecutionContext\>
 
-> **Configuration**\<`CustomCliArguments`, `CustomExecutionContext`\>: `object`
+> **Configuration**\<`CustomCliArguments`, `CustomExecutionContext`\> = `object`
 
 Defined in: node\_modules/@black-flag/core/dist/src/types/module.d.ts:9
 
@@ -16,15 +16,21 @@ subtype of this interface.
 
 ## Type Parameters
 
-• **CustomCliArguments** *extends* `Record`\<`string`, `unknown`\> = `Record`\<`string`, `unknown`\>
+### CustomCliArguments
 
-• **CustomExecutionContext** *extends* [`ExecutionContext`](ExecutionContext.md) = [`ExecutionContext`](ExecutionContext.md)
+`CustomCliArguments` *extends* `Record`\<`string`, `unknown`\> = `Record`\<`string`, `unknown`\>
 
-## Type declaration
+### CustomExecutionContext
+
+`CustomExecutionContext` *extends* [`ExecutionContext`](ExecutionContext.md) = [`ExecutionContext`](ExecutionContext.md)
+
+## Properties
 
 ### aliases
 
 > **aliases**: `string`[]
+
+Defined in: node\_modules/@black-flag/core/dist/src/types/module.d.ts:24
 
 An array of `command` aliases [as
 interpreted](https://github.com/yargs/yargs/pull/647) by
@@ -32,7 +38,7 @@ interpreted](https://github.com/yargs/yargs/pull/647) by
 
 **WARNING: positional arguments ARE NOT ALLOWED HERE** and including them
 will lead to strange behavior! If you want to add positional arguments,
-export [Configuration.command](Configuration.md#command) instead.
+export [Configuration.command](#command) instead.
 
 Note: when a command file is interpreted as a [RootConfiguration](RootConfiguration.md),
 `aliases` is effectively ignored.
@@ -43,9 +49,13 @@ Note: when a command file is interpreted as a [RootConfiguration](RootConfigurat
 []
 ```
 
+***
+
 ### builder
 
 > **builder**: \{\} \| (`blackFlag`, `helpOrVersionSet`, `argv`?) => `undefined` \| [`EffectorProgram`](EffectorProgram.md)\<`CustomCliArguments`, `CustomExecutionContext`\> \| \{\} \| `_Program`
+
+Defined in: node\_modules/@black-flag/core/dist/src/types/module.d.ts:47
 
 An object containing yargs options configuration or a function that will
 receive the current Black Flag program. Unlike with vanilla yargs, you do
@@ -56,11 +66,11 @@ you.
 
 Note 1: **if `builder` is a function, it cannot be async or return a
 promise** due to a yargs bug present at time of writing. However, a
-[Configuration](Configuration.md) module can export an async function, so hoist any
+Configuration module can export an async function, so hoist any
 async logic out of the builder function to work around this bug for now.
 
 Note 2: if positional arguments are given and your command accepts them
-(i.e. provided via [Configuration.command](Configuration.md#command) and configured via
+(i.e. provided via [Configuration.command](#command) and configured via
 `yargs::positional`), they are only accessible from `argv?._` (`builder`'s
 third parameter). This is because positional arguments, while fully
 supported by Black Flag, **are parsed and validated _after_ `builder` is
@@ -72,9 +82,13 @@ first invoked** and so aren't available until a little later.
 {}
 ```
 
+***
+
 ### command
 
 > **command**: `"$0"` \| `` `$0 ${string}` ``
+
+Defined in: node\_modules/@black-flag/core/dist/src/types/module.d.ts:64
 
 The command as interpreted by yargs. Must always begin with `$0`. May
 contain positional arguments declared using the [`yargs::command`
@@ -82,8 +96,8 @@ DSL](https://github.com/yargs/yargs/blob/main/docs/advanced.md#positional-argume
 
 It is usually unnecessary to change or use this property if you're not
 using positional arguments. If you want to change your command's name, use
-[Configuration.name](Configuration.md#name). If you want to change the usage text, use
-[Configuration.usage](Configuration.md#usage).
+[Configuration.name](#name). If you want to change the usage text, use
+[Configuration.usage](#usage).
 
 #### Default
 
@@ -91,9 +105,13 @@ using positional arguments. If you want to change your command's name, use
 "$0"
 ```
 
+***
+
 ### deprecated
 
 > **deprecated**: `string` \| `boolean`
+
+Defined in: node\_modules/@black-flag/core/dist/src/types/module.d.ts:72
 
 If truthy, the command will be considered "deprecated" by yargs. If
 `deprecated` is a string, it will additionally be treated as a deprecation
@@ -105,9 +123,13 @@ message that will appear alongside the command in help text.
 false
 ```
 
+***
+
 ### description
 
 > **description**: `string` \| `false`
+
+Defined in: node\_modules/@black-flag/core/dist/src/types/module.d.ts:79
 
 The description for the command in help text. If `false`, the command will
 be considered "hidden" by yargs.
@@ -118,9 +140,13 @@ be considered "hidden" by yargs.
 ""
 ```
 
+***
+
 ### handler()
 
 > **handler**: (`argv`) => `Promisable`\<`void`\>
+
+Defined in: node\_modules/@black-flag/core/dist/src/types/module.d.ts:89
 
 A function called when this command is invoked. It will receive an object
 of parsed arguments.
@@ -144,9 +170,13 @@ If `undefined`, the command will be considered "unimplemented" and a
 undefined
 ```
 
+***
+
 ### name
 
 > **name**: `string`
+
+Defined in: node\_modules/@black-flag/core/dist/src/types/module.d.ts:99
 
 The name of the command. Any spaces will be replaced with hyphens.
 Including a character that yargs does not consider valid for a
@@ -156,9 +186,13 @@ Defaults to the filename containing the configuration, excluding its
 extension, or the directory name (with spaces replaced) if the
 filename without extension is "index".
 
+***
+
 ### usage
 
 > **usage**: `string`
+
+Defined in: node\_modules/@black-flag/core/dist/src/types/module.d.ts:118
 
 Set a usage message shown at the top of the command's help text.
 

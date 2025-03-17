@@ -6,9 +6,9 @@
 
 # Type Alias: BfeBuilderFunction()\<CustomCliArguments, CustomExecutionContext\>
 
-> **BfeBuilderFunction**\<`CustomCliArguments`, `CustomExecutionContext`\>: (...`args`) => [`BfBuilderObject`](BfBuilderObject.md)\<`CustomCliArguments`, `CustomExecutionContext`\>
+> **BfeBuilderFunction**\<`CustomCliArguments`, `CustomExecutionContext`\> = (...`args`) => [`BfBuilderObject`](BfBuilderObject.md)\<`CustomCliArguments`, `CustomExecutionContext`\>
 
-Defined in: node\_modules/@black-flag/extensions/dist/packages/extensions/src/index.d.ts:332
+Defined in: node\_modules/@black-flag/extensions/dist/packages/extensions/src/index.d.ts:333
 
 This function implements several additional optionals-related units of
 functionality. This function is meant to take the place of a command's
@@ -19,9 +19,13 @@ returned by [withBuilderExtensions](../functions/withBuilderExtensions.md).
 
 ## Type Parameters
 
-• **CustomCliArguments** *extends* `Record`\<`string`, `unknown`\>
+### CustomCliArguments
 
-• **CustomExecutionContext** *extends* [`ExecutionContext`](ExecutionContext.md)
+`CustomCliArguments` *extends* `Record`\<`string`, `unknown`\>
+
+### CustomExecutionContext
+
+`CustomExecutionContext` *extends* [`ExecutionContext`](ExecutionContext.md)
 
 ## Parameters
 

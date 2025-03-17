@@ -1,14 +1,14 @@
-[**@-xun/cli**](../../../README.md)
+[**@-xun/cli**](../../README.md)
 
 ***
 
-[@-xun/cli](../../../README.md) / [src/extensions](../README.md) / withStandardUsage
+[@-xun/cli](../../README.md) / [src](../README.md) / withUsageExtensions
 
-# Function: withStandardUsage()
+# Function: withUsageExtensions()
 
-> **withStandardUsage**(`altDescription`?, `__namedParameters`?): `string`
+> **withUsageExtensions**(`altDescription`?, `__namedParameters`?): `string`
 
-Defined in: node\_modules/@black-flag/extensions/dist/packages/extensions/src/index.d.ts:437
+Defined in: node\_modules/@black-flag/extensions/dist/packages/extensions/src/index.d.ts:449
 
 Generate command usage text consistently yet flexibly.
 

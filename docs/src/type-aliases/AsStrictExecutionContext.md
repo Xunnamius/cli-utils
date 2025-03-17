@@ -6,9 +6,9 @@
 
 # Type Alias: AsStrictExecutionContext\<CustomExecutionContext\>
 
-> **AsStrictExecutionContext**\<`CustomExecutionContext`\>: `OmitIndexSignature`\<`Exclude`\<`CustomExecutionContext`, `"state"`\>\> & `OmitIndexSignature`\<`CustomExecutionContext`\[`"state"`\]\>
+> **AsStrictExecutionContext**\<`CustomExecutionContext`\> = `OmitIndexSignature`\<`Exclude`\<`CustomExecutionContext`, `"state"`\>\> & `OmitIndexSignature`\<`CustomExecutionContext`\[`"state"`\]\>
 
-Defined in: node\_modules/@black-flag/extensions/dist/packages/extensions/src/index.d.ts:356
+Defined in: node\_modules/@black-flag/extensions/dist/packages/extensions/src/index.d.ts:357
 
 A stricter version of Black Flag's
 [ExecutionContext](https://github.com/Xunnamius/black-flag/blob/main/docs/api/src/exports/util/type-aliases/ExecutionContext.md)
@@ -21,4 +21,6 @@ type allows intellisense to report bad/misspelled/missing arguments from
 
 ## Type Parameters
 
-• **CustomExecutionContext** *extends* [`ExecutionContext`](ExecutionContext.md)
+### CustomExecutionContext
+
+`CustomExecutionContext` *extends* [`ExecutionContext`](ExecutionContext.md)

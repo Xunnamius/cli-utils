@@ -6,7 +6,7 @@
 
 # Type Alias: ConfigureErrorHandlingEpilogue()\<CustomContext\>
 
-> **ConfigureErrorHandlingEpilogue**\<`CustomContext`\>: (`meta`, `argv`, `context`) => `Promisable`\<`void`\>
+> **ConfigureErrorHandlingEpilogue**\<`CustomContext`\> = (`meta`, `argv`, `context`) => `Promisable`\<`void`\>
 
 Defined in: node\_modules/@black-flag/core/dist/src/types/configure.d.ts:77
 
@@ -24,7 +24,9 @@ an argument parsing/validation error.
 
 ## Type Parameters
 
-• **CustomContext** *extends* [`ExecutionContext`](ExecutionContext.md) = [`ExecutionContext`](ExecutionContext.md)
+### CustomContext
+
+`CustomContext` *extends* [`ExecutionContext`](ExecutionContext.md) = [`ExecutionContext`](ExecutionContext.md)
 
 ## Parameters
 

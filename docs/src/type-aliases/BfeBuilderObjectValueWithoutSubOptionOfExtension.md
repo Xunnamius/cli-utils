@@ -6,15 +6,19 @@
 
 # Type Alias: BfeBuilderObjectValueWithoutSubOptionOfExtension\<CustomCliArguments, CustomExecutionContext\>
 
-> **BfeBuilderObjectValueWithoutSubOptionOfExtension**\<`CustomCliArguments`, `CustomExecutionContext`\>: `Omit`\<[`BfeBuilderObjectValue`](BfeBuilderObjectValue.md)\<`CustomCliArguments`, `CustomExecutionContext`\>, `"subOptionOf"`\>
+> **BfeBuilderObjectValueWithoutSubOptionOfExtension**\<`CustomCliArguments`, `CustomExecutionContext`\> = `Omit`\<[`BfeBuilderObjectValue`](BfeBuilderObjectValue.md)\<`CustomCliArguments`, `CustomExecutionContext`\>, `"subOptionOf"`\>
 
-Defined in: node\_modules/@black-flag/extensions/dist/packages/extensions/src/index.d.ts:279
+Defined in: node\_modules/@black-flag/extensions/dist/packages/extensions/src/index.d.ts:280
 
 A [BfeBuilderObjectValue](BfeBuilderObjectValue.md) instance with the `subOptionOf` BFE key
 omitted.
 
 ## Type Parameters
 
-• **CustomCliArguments** *extends* `Record`\<`string`, `unknown`\>
+### CustomCliArguments
 
-• **CustomExecutionContext** *extends* [`ExecutionContext`](ExecutionContext.md)
+`CustomCliArguments` *extends* `Record`\<`string`, `unknown`\>
+
+### CustomExecutionContext
+
+`CustomExecutionContext` *extends* [`ExecutionContext`](ExecutionContext.md)

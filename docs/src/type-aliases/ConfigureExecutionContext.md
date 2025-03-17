@@ -6,7 +6,7 @@
 
 # Type Alias: ConfigureExecutionContext()\<CustomContext\>
 
-> **ConfigureExecutionContext**\<`CustomContext`\>: (`context`) => `Promisable`\<`CustomContext`\>
+> **ConfigureExecutionContext**\<`CustomContext`\> = (`context`) => `Promisable`\<`CustomContext`\>
 
 Defined in: node\_modules/@black-flag/core/dist/src/types/configure.d.ts:18
 
@@ -25,7 +25,9 @@ regardless of error type.
 
 ## Type Parameters
 
-• **CustomContext** *extends* [`ExecutionContext`](ExecutionContext.md) = [`ExecutionContext`](ExecutionContext.md)
+### CustomContext
+
+`CustomContext` *extends* [`ExecutionContext`](ExecutionContext.md) = [`ExecutionContext`](ExecutionContext.md)
 
 ## Parameters
 
