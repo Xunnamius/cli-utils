@@ -177,8 +177,22 @@ export function withStandardBuilder<
   >[0],
   {
     additionalCommonOptions = [],
-    disableAutomaticGrouping
-  }: Omit<WithBuilderExtensionsConfig<CustomCliArguments>, 'commonOptions'> & {
+    disableAutomaticGrouping = false,
+    disableAutomaticSorting = false
+  }: Omit<
+    WithBuilderExtensionsConfig<CustomCliArguments>,
+    'commonOptions' | 'enableAutomaticSorting'
+  > & {
+    /**
+     * Set to `true` to disable BFE's support for automatic sorting of options.
+     *
+     * See [the
+     * documentation](https://github.com/Xunnamius/black-flag/blob/main/packages/extensions/README.md#automatic-sorting-of-options)
+     * for details.
+     *
+     * @default false
+     */
+    disableAutomaticSorting?: boolean;
     /**
      * An array of zero or more options that should be grouped under _"Common
      * Options"_ when [automatic grouping of related
@@ -295,7 +309,11 @@ export function withStandardBuilder<
         ...customCliArguments
       } as BfeBuilderObject<CustomCliArguments, CustomExecutionContext>;
     },
-    { commonOptions: allCommonOptionNames, disableAutomaticGrouping }
+    {
+      commonOptions: allCommonOptionNames,
+      disableAutomaticGrouping,
+      enableAutomaticSorting: !disableAutomaticSorting
+    }
   );
 
   wsbDebug('exited withStandardBuilder function');

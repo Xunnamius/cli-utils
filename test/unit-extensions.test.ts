@@ -168,14 +168,79 @@ describe('::withStandardBuilder', () => {
   it('disableAutomaticGrouping is passed through', async () => {
     expect.hasAssertions();
 
-    const group = jest.fn();
-    const [blackFlag, argv] = makeMocks();
-    const [builder] = withStandardBuilder({ x: {}, y: {} });
+    {
+      const group = jest.fn();
+      const [blackFlag, argv] = makeMocks({ group });
+      const [builder] = withStandardBuilder({ x: {}, y: {} });
 
-    builder(blackFlag, false, undefined);
-    builder(blackFlag, false, argv);
+      builder(blackFlag, false, undefined);
+      builder(blackFlag, false, argv);
 
-    expect(group.mock.calls).toStrictEqual([]);
+      expect(group).toHaveBeenCalled();
+    }
+
+    {
+      const group = jest.fn();
+      const [blackFlag, argv] = makeMocks({ group });
+      const [builder] = withStandardBuilder(
+        { x: {}, y: {} },
+        { disableAutomaticGrouping: true }
+      );
+
+      builder(blackFlag, false, undefined);
+      builder(blackFlag, false, argv);
+
+      expect(group).not.toHaveBeenCalled();
+    }
+  });
+
+  it('disableAutomaticSorting is passed through', async () => {
+    expect.hasAssertions();
+
+    {
+      const [blackFlag, argv] = makeMocks();
+      const [builder] = withStandardBuilder({ y: {}, x: {} });
+
+      expect(Object.keys(builder(blackFlag, false, undefined))).toStrictEqual([
+        'hush',
+        'quiet',
+        'silent',
+        'x',
+        'y'
+      ]);
+
+      expect(Object.keys(builder(blackFlag, false, argv))).toStrictEqual([
+        'hush',
+        'quiet',
+        'silent',
+        'x',
+        'y'
+      ]);
+    }
+
+    {
+      const [blackFlag, argv] = makeMocks();
+      const [builder] = withStandardBuilder(
+        { y: {}, x: {} },
+        { disableAutomaticSorting: true }
+      );
+
+      expect(Object.keys(builder(blackFlag, false, undefined))).toStrictEqual([
+        'hush',
+        'quiet',
+        'silent',
+        'y',
+        'x'
+      ]);
+
+      expect(Object.keys(builder(blackFlag, false, argv))).toStrictEqual([
+        'hush',
+        'quiet',
+        'silent',
+        'y',
+        'x'
+      ]);
+    }
   });
 
   it('silent, quiet, and hush properly imply one-another and update state', async () => {
