@@ -10,7 +10,7 @@
 
 > **softAssert**(`message`): `never`
 
-Defined in: [src/error.ts:46](https://github.com/Xunnamius/cli-utils/blob/682abac4b6c3e5d4332a000231005349474476be/src/error.ts#L46)
+Defined in: [src/error.ts:46](https://github.com/Xunnamius/cli-utils/blob/f6fb27d968b4a76d51942bf6bd7e72fa69147ef1/src/error.ts#L46)
 
 Throw a [CliError](../../classes/CliError.md) with the given string message, which
 causes Black Flag to exit with the [FrameworkExitCode.DefaultError](../../enumerations/FrameworkExitCode.md#defaulterror)
@@ -32,7 +32,7 @@ Use this function to assert end user error.
 
 > **softAssert**(`value`, `message`): `asserts value`
 
-Defined in: [src/error.ts:54](https://github.com/Xunnamius/cli-utils/blob/682abac4b6c3e5d4332a000231005349474476be/src/error.ts#L54)
+Defined in: [src/error.ts:54](https://github.com/Xunnamius/cli-utils/blob/f6fb27d968b4a76d51942bf6bd7e72fa69147ef1/src/error.ts#L54)
 
 If `value` is falsy, throw a [CliError](../../classes/CliError.md) with the given string message,
 which causes Black Flag to exit with the

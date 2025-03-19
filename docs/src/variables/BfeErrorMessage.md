@@ -248,12 +248,6 @@ A collection of possible error and warning messages.
 
 `string`
 
-### IllegalExplicitlyUndefinedDefault()
-
-#### Returns
-
-`string`
-
 ### IllegalHandlerInvocation()
 
 #### Returns

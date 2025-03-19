@@ -8,7 +8,7 @@
 
 > **BfeBuilderObjectValue**\<`CustomCliArguments`, `CustomExecutionContext`\> = [`BfeBuilderObjectValueWithoutExtensions`](BfeBuilderObjectValueWithoutExtensions.md) & [`BfeBuilderObjectValueExtensions`](BfeBuilderObjectValueExtensions.md)\<`CustomCliArguments`, `CustomExecutionContext`\>
 
-Defined in: node\_modules/@black-flag/extensions/dist/packages/extensions/src/index.d.ts:36
+Defined in: node\_modules/@black-flag/extensions/dist/packages/extensions/src/index.d.ts:37
 
 The object value type of a [BfeBuilderObject](BfeBuilderObject.md).
 

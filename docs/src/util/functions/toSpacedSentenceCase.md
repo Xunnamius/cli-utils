@@ -8,7 +8,7 @@
 
 > **toSpacedSentenceCase**(`str`): `string`
 
-Defined in: [src/util.ts:11](https://github.com/Xunnamius/cli-utils/blob/682abac4b6c3e5d4332a000231005349474476be/src/util.ts#L11)
+Defined in: [src/util.ts:11](https://github.com/Xunnamius/cli-utils/blob/f6fb27d968b4a76d51942bf6bd7e72fa69147ef1/src/util.ts#L11)
 
 Upper-cases the first letter of `str` wrt spaces (underscores).
 

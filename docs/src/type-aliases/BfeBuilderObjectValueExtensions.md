@@ -8,7 +8,7 @@
 
 > **BfeBuilderObjectValueExtensions**\<`CustomCliArguments`, `CustomExecutionContext`\> = `object`
 
-Defined in: node\_modules/@black-flag/extensions/dist/packages/extensions/src/index.d.ts:44
+Defined in: node\_modules/@black-flag/extensions/dist/packages/extensions/src/index.d.ts:45
 
 An object containing only those properties recognized by
 BFE.
@@ -32,10 +32,10 @@ This type + [BfeBuilderObjectValueWithoutExtensions](BfeBuilderObjectValueWithou
 
 > `optional` **check**: [`BfeCheckFunction`](BfeCheckFunction.md)\<`CustomCliArguments`, `CustomExecutionContext`\> \| [`BfeCheckFunction`](BfeCheckFunction.md)\<`CustomCliArguments`, `CustomExecutionContext`\>[]
 
-Defined in: node\_modules/@black-flag/extensions/dist/packages/extensions/src/index.d.ts:210
+Defined in: node\_modules/@black-flag/extensions/dist/packages/extensions/src/index.d.ts:216
 
 `check` is the declarative option-specific version of vanilla yargs's
-`yargs::check()`. Also supports async and promise-returning functions.
+`yargs::check()`. It also supports async and promise-returning functions.
 
 This function receives the `currentArgumentValue`, which you are free to
 type as you please, and the fully parsed `argv`. If this function throws,
@@ -47,6 +47,11 @@ You may also pass an array of check functions, each being executed after
 the other. Note that providing an array of one or more async check
 functions will result in them being awaited concurrently.
 
+Note that `check` runs _at the very end of Black Flag's second parsing
+pass_, meaning it runs _after_ things like `coerce` and `subOptionOf`, and
+therefore receives the _final_ version of `argv` (the one passed to a
+command's `handler`).
+
 See [the
 documentation](https://github.com/Xunnamius/black-flag/tree/main/packages/extensions/README.md#check)
 for details.
@@ -57,7 +62,7 @@ for details.
 
 > `optional` **coerce**: [`BfGenericBuilderObjectValue`](BfGenericBuilderObjectValue.md)\[`"coerce"`\]
 
-Defined in: node\_modules/@black-flag/extensions/dist/packages/extensions/src/index.d.ts:250
+Defined in: node\_modules/@black-flag/extensions/dist/packages/extensions/src/index.d.ts:256
 
 `coerce` transforms an original `argv` value into another one. This is
 equivalent to `coerce` from vanilla yargs.
@@ -76,7 +81,7 @@ yargs behavior.
 
 > `optional` **conflicts**: [`BfeBuilderObjectValueExtensionValue`](BfeBuilderObjectValueExtensionValue.md)
 
-Defined in: node\_modules/@black-flag/extensions/dist/packages/extensions/src/index.d.ts:78
+Defined in: node\_modules/@black-flag/extensions/dist/packages/extensions/src/index.d.ts:79
 
 `conflicts` enables checks to ensure the specified arguments, or
 argument-value pairs, are _never_ given conditioned on the existence of
@@ -99,7 +104,7 @@ specified value. Otherwise, a strict deep equality check is performed.
 
 > `optional` **default**: `unknown`
 
-Defined in: node\_modules/@black-flag/extensions/dist/packages/extensions/src/index.d.ts:237
+Defined in: node\_modules/@black-flag/extensions/dist/packages/extensions/src/index.d.ts:243
 
 `default` will set a default value for an argument. This is equivalent to
 `default` from vanilla yargs.
@@ -120,7 +125,7 @@ yargs behavior.
 
 > `optional` **demandThisOption**: [`BfGenericBuilderObjectValue`](BfGenericBuilderObjectValue.md)\[`"demandOption"`\]
 
-Defined in: node\_modules/@black-flag/extensions/dist/packages/extensions/src/index.d.ts:108
+Defined in: node\_modules/@black-flag/extensions/dist/packages/extensions/src/index.d.ts:109
 
 `demandThisOption` enables checks to ensure an argument is always given.
 This is equivalent to `demandOption` from vanilla yargs. For example:
@@ -138,7 +143,7 @@ This is equivalent to `demandOption` from vanilla yargs. For example:
 
 > `optional` **demandThisOptionIf**: [`BfeBuilderObjectValueExtensionValue`](BfeBuilderObjectValueExtensionValue.md)
 
-Defined in: node\_modules/@black-flag/extensions/dist/packages/extensions/src/index.d.ts:96
+Defined in: node\_modules/@black-flag/extensions/dist/packages/extensions/src/index.d.ts:97
 
 `demandThisOptionIf` enables checks to ensure an argument is given when at
 least one of the specified groups of arguments, or argument-value pairs, is
@@ -162,7 +167,7 @@ specified value. Otherwise, a strict deep equality check is performed.
 
 > `optional` **demandThisOptionOr**: [`BfeBuilderObjectValueExtensionValue`](BfeBuilderObjectValueExtensionValue.md)
 
-Defined in: node\_modules/@black-flag/extensions/dist/packages/extensions/src/index.d.ts:126
+Defined in: node\_modules/@black-flag/extensions/dist/packages/extensions/src/index.d.ts:127
 
 `demandThisOptionOr` enables non-optional inclusive disjunction checks per
 group. Put another way, `demandThisOptionOr` enforces a "logical or"
@@ -186,7 +191,7 @@ specified value. Otherwise, a strict deep equality check is performed.
 
 > `optional` **demandThisOptionXor**: [`BfeBuilderObjectValueExtensionValue`](BfeBuilderObjectValueExtensionValue.md)
 
-Defined in: node\_modules/@black-flag/extensions/dist/packages/extensions/src/index.d.ts:147
+Defined in: node\_modules/@black-flag/extensions/dist/packages/extensions/src/index.d.ts:148
 
 `demandThisOptionXor` enables non-optional exclusive disjunction checks per
 exclusivity group. Put another way, `demandThisOptionXor` enforces mutual
@@ -213,7 +218,7 @@ specified value. Otherwise, a strict deep equality check is performed.
 
 > `optional` **implies**: `Exclude`\<[`BfeBuilderObjectValueExtensionValue`](BfeBuilderObjectValueExtensionValue.md), `string` \| `unknown`[]\> \| `Exclude`\<[`BfeBuilderObjectValueExtensionValue`](BfeBuilderObjectValueExtensionValue.md), `string` \| `unknown`[]\>[]
 
-Defined in: node\_modules/@black-flag/extensions/dist/packages/extensions/src/index.d.ts:171
+Defined in: node\_modules/@black-flag/extensions/dist/packages/extensions/src/index.d.ts:172
 
 `implies` will set default values for the specified arguments conditioned
 on the existence of another argument. These implied defaults will override
@@ -245,7 +250,7 @@ strings. For example:
 
 > `optional` **looseImplications**: `boolean`
 
-Defined in: node\_modules/@black-flag/extensions/dist/packages/extensions/src/index.d.ts:180
+Defined in: node\_modules/@black-flag/extensions/dist/packages/extensions/src/index.d.ts:181
 
 When `looseImplications` is set to `true`, any implied arguments, when
 explicitly given on the command line, will _override_ their configured
@@ -267,7 +272,7 @@ false
 
 > `optional` **requires**: [`BfeBuilderObjectValueExtensionValue`](BfeBuilderObjectValueExtensionValue.md)
 
-Defined in: node\_modules/@black-flag/extensions/dist/packages/extensions/src/index.d.ts:61
+Defined in: node\_modules/@black-flag/extensions/dist/packages/extensions/src/index.d.ts:62
 
 `requires` enables checks to ensure the specified arguments, or
 argument-value pairs, are given conditioned on the existence of another
@@ -290,7 +295,7 @@ specified value. Otherwise, a strict deep equality check is performed.
 
 > `optional` **subOptionOf**: `Record`\<`string`, [`BfeSubOptionOfExtensionValue`](BfeSubOptionOfExtensionValue.md)\<`CustomCliArguments`, `CustomExecutionContext`\> \| [`BfeSubOptionOfExtensionValue`](BfeSubOptionOfExtensionValue.md)\<`CustomCliArguments`, `CustomExecutionContext`\>[]\>
 
-Defined in: node\_modules/@black-flag/extensions/dist/packages/extensions/src/index.d.ts:222
+Defined in: node\_modules/@black-flag/extensions/dist/packages/extensions/src/index.d.ts:228
 
 `subOptionOf` is declarative sugar around Black Flag's support for double
 argument parsing, allowing you to describe the relationship between options
@@ -308,7 +313,7 @@ For describing simpler implicative relations, see `implies`.
 
 > `optional` **vacuousImplications**: `boolean`
 
-Defined in: node\_modules/@black-flag/extensions/dist/packages/extensions/src/index.d.ts:191
+Defined in: node\_modules/@black-flag/extensions/dist/packages/extensions/src/index.d.ts:192
 
 When `vacuousImplications` is set to `true` and the option is also
 configured as a "boolean" type, the implications configured via `implies`

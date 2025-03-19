@@ -8,6 +8,6 @@
 
 > **BfGenericBuilderObjectValue** = [`BfBuilderObjectValue`](BfBuilderObjectValue.md)\<`Record`\<`string`, `unknown`\>, [`ExecutionContext`](ExecutionContext.md)\>
 
-Defined in: node\_modules/@black-flag/extensions/dist/packages/extensions/src/index.d.ts:25
+Defined in: node\_modules/@black-flag/extensions/dist/packages/extensions/src/index.d.ts:26
 
 The generic object value type of a [BfBuilderObject](BfBuilderObject.md).

@@ -8,7 +8,7 @@
 
 > **WithHandlerExtensions**\<`CustomCliArguments`, `CustomExecutionContext`\> = (`customHandler`?) => [`Configuration`](Configuration.md)\<`CustomCliArguments`, `CustomExecutionContext`\>\[`"handler"`\]
 
-Defined in: node\_modules/@black-flag/extensions/dist/packages/extensions/src/index.d.ts:386
+Defined in: node\_modules/@black-flag/extensions/dist/packages/extensions/src/index.d.ts:392
 
 This function implements several additional optionals-related units of
 functionality. The return value of this function is meant to take the place

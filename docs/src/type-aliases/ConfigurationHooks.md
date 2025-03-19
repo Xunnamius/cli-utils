@@ -106,7 +106,7 @@ This function is called once towards the end of the execution of
 have been executed, and should apply any final configurations to the
 programs that constitute the command line interface.
 
-All commands and sub-commands known to Black Flag are available in the
+All commands and subcommands known to Black Flag are available in the
 [ExecutionContext.commands](ExecutionContext.md#commands) map, which can be accessed from the
 `context` parameter or from the [Arguments](Arguments.md) object returned by
 `Program::parseAsync` etc.

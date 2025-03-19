@@ -8,7 +8,7 @@
 
 > **WithBuilderExtensionsConfig**\<`CustomCliArguments`\> = `object`
 
-Defined in: node\_modules/@black-flag/extensions/dist/packages/extensions/src/index.d.ts:396
+Defined in: node\_modules/@black-flag/extensions/dist/packages/extensions/src/index.d.ts:402
 
 A configuration object that further configures the behavior of
 [withBuilderExtensions](../functions/withBuilderExtensions.md).
@@ -25,7 +25,7 @@ A configuration object that further configures the behavior of
 
 > `optional` **commonOptions**: readonly `LiteralUnion`\<keyof `CustomCliArguments` \| `"help"` \| `"version"`, `string`\>[]
 
-Defined in: node\_modules/@black-flag/extensions/dist/packages/extensions/src/index.d.ts:429
+Defined in: node\_modules/@black-flag/extensions/dist/packages/extensions/src/index.d.ts:435
 
 An array of zero or more string keys of `CustomCliArguments`, with the
 optional addition of `'help'` and `'version'`, that should be grouped under
@@ -47,7 +47,7 @@ This setting is ignored if `disableAutomaticGrouping === true`.
 
 > `optional` **disableAutomaticGrouping**: `boolean`
 
-Defined in: node\_modules/@black-flag/extensions/dist/packages/extensions/src/index.d.ts:407
+Defined in: node\_modules/@black-flag/extensions/dist/packages/extensions/src/index.d.ts:413
 
 Set to `true` to disable BFE's support for automatic grouping of related
 options.
@@ -68,7 +68,7 @@ false
 
 > `optional` **enableAutomaticSorting**: `boolean`
 
-Defined in: node\_modules/@black-flag/extensions/dist/packages/extensions/src/index.d.ts:417
+Defined in: node\_modules/@black-flag/extensions/dist/packages/extensions/src/index.d.ts:423
 
 Set to `true` to enable BFE's support for automatic sorting of options.
 

@@ -8,7 +8,7 @@
 
 > **BfBuilderFunction**\<`CustomCliArguments`, `CustomExecutionContext`\> = `Extract`\<[`Configuration`](Configuration.md)\<`CustomCliArguments`, `CustomExecutionContext`\>\[`"builder"`\], `Function`\>
 
-Defined in: node\_modules/@black-flag/extensions/dist/packages/extensions/src/index.d.ts:11
+Defined in: node\_modules/@black-flag/extensions/dist/packages/extensions/src/index.d.ts:12
 
 The function type of the `builder` export accepted by Black Flag.
 
