@@ -1,13 +1,7 @@
 import { $executionContext } from '@black-flag/core';
 import { CommandNotImplementedError } from '@black-flag/core/util';
 import { $artificiallyInvoked, withBuilderExtensions } from '@black-flag/extensions';
-
-import {
-  createDebugLogger,
-  disableLoggingByTag,
-  enableLoggingByTag,
-  getDisabledTags
-} from 'rejoinder';
+import { createDebugLogger, disableLoggingByTag, getDisabledTags } from 'rejoinder';
 
 import { globalDebuggerNamespace } from 'universe:constant.ts';
 import { LogTag } from 'universe:logging.ts';
@@ -366,9 +360,7 @@ export function withStandardBuilder<
           debug('quiet: %O', quiet);
           debug('silent: %O', silent);
           debug('disabledTags: %O', originallyDisabledTags);
-          debug('wasArtificiallyInvoked: %O', wasArtificiallyInvoked);
-
-          const originalState = { ...state };
+          debug('wasArtificiallyInvoked (unused): %O', wasArtificiallyInvoked);
 
           if (silent) {
             tagsSet.add(LogTag.IF_NOT_SILENCED);
@@ -388,39 +380,8 @@ export function withStandardBuilder<
 
           disableLoggingByTag({ tags: Array.from(tagsSet) });
 
-          try {
-            debug('invoking customHandler (or defaultHandler if undefined)');
-            await (customHandler ?? defaultHandler)(argv);
-          } finally {
-            if (wasArtificiallyInvoked) {
-              debug('undoing state changes due to artificial invocation');
-
-              if (silent) {
-                if (!originallyDisabledTags.includes(LogTag.IF_NOT_SILENCED)) {
-                  enableLoggingByTag({ tags: [LogTag.IF_NOT_SILENCED] });
-                }
-
-                state.isSilenced = originalState.isSilenced;
-                state.showHelpOnFail = originalState.showHelpOnFail;
-              }
-
-              if (quiet) {
-                if (!originallyDisabledTags.includes(LogTag.IF_NOT_QUIETED)) {
-                  enableLoggingByTag({ tags: [LogTag.IF_NOT_QUIETED] });
-                }
-
-                state.isQuieted = originalState.isQuieted;
-              }
-
-              if (hush) {
-                if (!originallyDisabledTags.includes(LogTag.IF_NOT_HUSHED)) {
-                  enableLoggingByTag({ tags: [LogTag.IF_NOT_HUSHED] });
-                }
-
-                state.isHushed = originalState.isHushed;
-              }
-            }
-          }
+          debug('invoking customHandler (or defaultHandler if undefined)');
+          await (customHandler ?? defaultHandler)(argv);
         })(rawArgv);
 
         debug('exited withStandardHandler wrapper');
