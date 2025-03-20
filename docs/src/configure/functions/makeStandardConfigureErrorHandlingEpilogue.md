@@ -8,7 +8,7 @@
 
 > **makeStandardConfigureErrorHandlingEpilogue**(): [`ConfigureErrorHandlingEpilogue`](../../type-aliases/ConfigureErrorHandlingEpilogue.md)\<[`StandardExecutionContext`](../../extensions/type-aliases/StandardExecutionContext.md)\>
 
-Defined in: [src/configure.ts:90](https://github.com/Xunnamius/cli-utils/blob/f6fb27d968b4a76d51942bf6bd7e72fa69147ef1/src/configure.ts#L90)
+Defined in: [src/configure.ts:90](https://github.com/Xunnamius/cli-utils/blob/db90a9246019c35815e35a939ad044a617c9f935/src/configure.ts#L90)
 
 Returns a [ConfigureErrorHandlingEpilogue](../../type-aliases/ConfigureErrorHandlingEpilogue.md) instance considered standard
 across [Xunnamius](https://github.com/Xunnamius)'s CLI projects.

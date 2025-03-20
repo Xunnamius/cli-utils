@@ -8,7 +8,7 @@
 
 > `const` **standardCommonCliArguments**: `object`
 
-Defined in: [src/extensions.ts:111](https://github.com/Xunnamius/cli-utils/blob/f6fb27d968b4a76d51942bf6bd7e72fa69147ef1/src/extensions.ts#L111)
+Defined in: [src/extensions.ts:111](https://github.com/Xunnamius/cli-utils/blob/db90a9246019c35815e35a939ad044a617c9f935/src/extensions.ts#L111)
 
 This [BfeBuilderObject](../../type-aliases/BfeBuilderObject.md) instance describes the CLI arguments available
 in the `argv` object of any command that uses [withStandardBuilder](../functions/withStandardBuilder.md) to
