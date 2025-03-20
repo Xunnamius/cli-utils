@@ -104,7 +104,7 @@
     "@-xun/project-types": "^1.0.4",
     "@black-flag/checks": "^1.0.1",
     "@black-flag/core": "^2.0.2",
-    "@black-flag/extensions": "^2.2.0",
+    "@black-flag/extensions": "^2.2.1",
     "core-js": "^3.41.0",
     "rejoinder": "^1.2.5",
     "type-fest": "^4.37.0"
