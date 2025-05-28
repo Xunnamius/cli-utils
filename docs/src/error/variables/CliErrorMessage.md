@@ -8,13 +8,15 @@
 
 > `const` **CliErrorMessage**: `object`
 
-Defined in: [src/error.ts:19](https://github.com/Xunnamius/cli-utils/blob/db90a9246019c35815e35a939ad044a617c9f935/src/error.ts#L19)
+Defined in: [src/error.ts:19](https://github.com/Xunnamius/cli-utils/blob/9f931815fdc9c2ac298ecaacf937edd135e18759/src/error.ts#L19)
 
 A collection of possible error and warning messages.
 
 ## Type declaration
 
 ### BadOptionValue()
+
+> **BadOptionValue**(`name`, `value`, `context?`): `string`
 
 #### Parameters
 
@@ -36,6 +38,8 @@ A collection of possible error and warning messages.
 
 ### CommandDidNotComplete()
 
+> **CommandDidNotComplete**(`command`): `string`
+
 #### Parameters
 
 ##### command
@@ -48,11 +52,15 @@ A collection of possible error and warning messages.
 
 ### GuruMeditation()
 
+> **GuruMeditation**(): `string`
+
 #### Returns
 
 `string`
 
 ### IgnoredOptions()
+
+> **IgnoredOptions**(`args`): `string`
 
 #### Parameters
 
@@ -65,6 +73,8 @@ A collection of possible error and warning messages.
 `string`
 
 ### UnsupportedCommand()
+
+> **UnsupportedCommand**(): `string`
 
 #### Returns
 

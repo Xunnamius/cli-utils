@@ -20,7 +20,7 @@ A Black Flag check that passes when each element in the array is unique.
 
 ## Returns
 
-`Function`
+> (`currentArg`): `string` \| `true`
 
 ### Parameters
 

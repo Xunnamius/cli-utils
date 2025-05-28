@@ -6,9 +6,9 @@
 
 # Type Alias: Executor()
 
-> **Executor** = (`rawArgv`?) => `Promise`\<[`Arguments`](Arguments.md)\>
+> **Executor** = (`rawArgv?`) => `Promise`\<[`Arguments`](Arguments.md)\>
 
-Defined in: node\_modules/@black-flag/core/dist/src/types/program.d.ts:191
+Defined in: node\_modules/@black-flag/core/dist/src/types/program.d.ts:193
 
 This function accepts an optional `rawArgv` array that defaults to
 `yargs::hideBin(process.argv)` and returns an `Arguments` object representing

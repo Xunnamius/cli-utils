@@ -10,7 +10,7 @@
 
 > **makeStandardConfigureExecutionContext**(`options`): `Promise`\<[`ConfigureExecutionContext`](../../type-aliases/ConfigureExecutionContext.md)\<[`StandardExecutionContext`](../../extensions/type-aliases/StandardExecutionContext.md)\>\>
 
-Defined in: [src/configure.ts:45](https://github.com/Xunnamius/cli-utils/blob/db90a9246019c35815e35a939ad044a617c9f935/src/configure.ts#L45)
+Defined in: [src/configure.ts:45](https://github.com/Xunnamius/cli-utils/blob/9f931815fdc9c2ac298ecaacf937edd135e18759/src/configure.ts#L45)
 
 Returns a [ConfigureExecutionContext](../../type-aliases/ConfigureExecutionContext.md) instance considered standard
 across [Xunnamius](https://github.com/Xunnamius)'s CLI projects.
@@ -27,9 +27,9 @@ across [Xunnamius](https://github.com/Xunnamius)'s CLI projects.
 
 ## Call Signature
 
-> **makeStandardConfigureExecutionContext**(`options`): `Promise`\<[`ConfigureExecutionContext`](../../type-aliases/ConfigureExecutionContext.md)\<\{ `[key: string]`: `unknown`;  `commands`: `Map`\<`string`, \{ `metadata`: [`ProgramMetadata`](../../type-aliases/ProgramMetadata.md); `programs`: [`Programs`](../../type-aliases/Programs.md); \}\>; `debug`: `ExtendedDebugger`; `standardDebug`: `ExtendedDebugger`; `standardLog`: `ExtendedLogger`; `state`: `object` & `object`; `taskManager`: `ListrManager`\<`any`\>; \}\>\>
+> **makeStandardConfigureExecutionContext**(`options`): `Promise`\<[`ConfigureExecutionContext`](../../type-aliases/ConfigureExecutionContext.md)\<\{[`key`: `string`]: `unknown`; `commands`: `Map`\<`string`, \{ `metadata`: [`ProgramMetadata`](../../type-aliases/ProgramMetadata.md); `programs`: [`Programs`](../../type-aliases/Programs.md); \}\>; `debug`: `ExtendedDebugger`; `standardDebug`: `ExtendedDebugger`; `standardLog`: `ExtendedLogger`; `state`: `object` & `object`; `taskManager`: `ListrManager`\<`any`\>; \}\>\>
 
-Defined in: [src/configure.ts:48](https://github.com/Xunnamius/cli-utils/blob/db90a9246019c35815e35a939ad044a617c9f935/src/configure.ts#L48)
+Defined in: [src/configure.ts:48](https://github.com/Xunnamius/cli-utils/blob/9f931815fdc9c2ac298ecaacf937edd135e18759/src/configure.ts#L48)
 
 Returns a [ConfigureExecutionContext](../../type-aliases/ConfigureExecutionContext.md) instance considered standard
 across [Xunnamius](https://github.com/Xunnamius)'s CLI projects.
@@ -42,13 +42,13 @@ across [Xunnamius](https://github.com/Xunnamius)'s CLI projects.
 
 ### Returns
 
-`Promise`\<[`ConfigureExecutionContext`](../../type-aliases/ConfigureExecutionContext.md)\<\{ `[key: string]`: `unknown`;  `commands`: `Map`\<`string`, \{ `metadata`: [`ProgramMetadata`](../../type-aliases/ProgramMetadata.md); `programs`: [`Programs`](../../type-aliases/Programs.md); \}\>; `debug`: `ExtendedDebugger`; `standardDebug`: `ExtendedDebugger`; `standardLog`: `ExtendedLogger`; `state`: `object` & `object`; `taskManager`: `ListrManager`\<`any`\>; \}\>\>
+`Promise`\<[`ConfigureExecutionContext`](../../type-aliases/ConfigureExecutionContext.md)\<\{[`key`: `string`]: `unknown`; `commands`: `Map`\<`string`, \{ `metadata`: [`ProgramMetadata`](../../type-aliases/ProgramMetadata.md); `programs`: [`Programs`](../../type-aliases/Programs.md); \}\>; `debug`: `ExtendedDebugger`; `standardDebug`: `ExtendedDebugger`; `standardLog`: `ExtendedLogger`; `state`: `object` & `object`; `taskManager`: `ListrManager`\<`any`\>; \}\>\>
 
 ## Call Signature
 
 > **makeStandardConfigureExecutionContext**(`options`): `Promise`\<[`ConfigureExecutionContext`](../../type-aliases/ConfigureExecutionContext.md)\<[`StandardExecutionContext`](../../extensions/type-aliases/StandardExecutionContext.md)\>\>
 
-Defined in: [src/configure.ts:55](https://github.com/Xunnamius/cli-utils/blob/db90a9246019c35815e35a939ad044a617c9f935/src/configure.ts#L55)
+Defined in: [src/configure.ts:55](https://github.com/Xunnamius/cli-utils/blob/9f931815fdc9c2ac298ecaacf937edd135e18759/src/configure.ts#L55)
 
 Returns a [ConfigureExecutionContext](../../type-aliases/ConfigureExecutionContext.md) instance considered standard
 across [Xunnamius](https://github.com/Xunnamius)'s CLI projects.

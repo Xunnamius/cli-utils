@@ -16,6 +16,8 @@ A collection of possible error and warning messages.
 
 ### BadType()
 
+> **BadType**(`name`, `expected`, `actual`): `string`
+
 #### Parameters
 
 ##### name
@@ -36,6 +38,8 @@ A collection of possible error and warning messages.
 
 ### OptionMustBeNonNegative()
 
+> **OptionMustBeNonNegative**(`name`): `string`
+
 #### Parameters
 
 ##### name
@@ -48,6 +52,8 @@ A collection of possible error and warning messages.
 
 ### OptionMustNotBeFalsy()
 
+> **OptionMustNotBeFalsy**(`name`): `string`
+
 #### Parameters
 
 ##### name
@@ -59,6 +65,8 @@ A collection of possible error and warning messages.
 `string`
 
 ### OptionRequiresMinArgs()
+
+> **OptionRequiresMinArgs**(`name`, `adjective?`): `string`
 
 #### Parameters
 
@@ -76,6 +84,8 @@ A collection of possible error and warning messages.
 
 ### OptionRequiresNoConflicts()
 
+> **OptionRequiresNoConflicts**(`name`, `tuple`): `string`
+
 #### Parameters
 
 ##### name
@@ -92,6 +102,8 @@ A collection of possible error and warning messages.
 
 ### OptionRequiresUniqueArgs()
 
+> **OptionRequiresUniqueArgs**(`name`): `string`
+
 #### Parameters
 
 ##### name
@@ -103,6 +115,8 @@ A collection of possible error and warning messages.
 `string`
 
 ### OptionValueMustBeAlone()
+
+> **OptionValueMustBeAlone**(`option`, `noun`): `string`
 
 #### Parameters
 
@@ -119,6 +133,8 @@ A collection of possible error and warning messages.
 `string`
 
 ### OptionValueMustBeAloneWhenBaseline()
+
+> **OptionValueMustBeAloneWhenBaseline**(`option`, `noun`): `string`
 
 #### Parameters
 

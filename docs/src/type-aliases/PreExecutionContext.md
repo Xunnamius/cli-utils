@@ -8,7 +8,7 @@
 
 > **PreExecutionContext**\<`CustomContext`\> = `CustomContext` & `object`
 
-Defined in: node\_modules/@black-flag/core/dist/src/types/program.d.ts:200
+Defined in: node\_modules/@black-flag/core/dist/src/types/program.d.ts:202
 
 Represents the pre-execution context that is the result of calling
 `configureProgram`.

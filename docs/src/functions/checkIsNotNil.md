@@ -20,7 +20,7 @@ A Black Flag check that passes when an argument value is not falsy.
 
 ## Returns
 
-`Function`
+> (`currentArg`): `string` \| `true`
 
 ### Parameters
 

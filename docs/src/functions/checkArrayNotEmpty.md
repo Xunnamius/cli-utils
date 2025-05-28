@@ -6,7 +6,7 @@
 
 # Function: checkArrayNotEmpty()
 
-> **checkArrayNotEmpty**(`argName`, `adjective`?): (`currentArg`) => `string` \| `true`
+> **checkArrayNotEmpty**(`argName`, `adjective?`): (`currentArg`) => `string` \| `true`
 
 Defined in: node\_modules/@black-flag/checks/dist/packages/checks/src/index.d.ts:16
 
@@ -25,7 +25,7 @@ is a non-empty non-nullish value and the array itself is non-empty.
 
 ## Returns
 
-`Function`
+> (`currentArg`): `string` \| `true`
 
 ### Parameters
 

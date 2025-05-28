@@ -8,7 +8,7 @@
 
 > **isCommandNotImplementedError**(`parameter`): `parameter is CommandNotImplementedError`
 
-Defined in: node\_modules/@black-flag/core/dist/src/error.d.ts:16
+Defined in: node\_modules/@black-flag/core/dist/src/error.d.ts:22
 
 Type guard for [CommandNotImplementedError](../classes/CommandNotImplementedError.md).
 

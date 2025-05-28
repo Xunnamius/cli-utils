@@ -25,7 +25,7 @@ A Black Flag check that passes when at most only one element from each
 
 ## Returns
 
-`Function`
+> (`currentArg`): `string` \| `true`
 
 ### Parameters
 

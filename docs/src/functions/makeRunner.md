@@ -49,7 +49,7 @@ actual thrown error, set `makeRunner`'s `errorHandlingBehavior` option to
 
 ## Returns
 
-`Function`
+> (...`args`): [`RunProgramReturnType`](../type-aliases/RunProgramReturnType.md)\<`CustomCliArguments`\>
 
 ### Parameters
 

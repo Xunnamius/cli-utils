@@ -8,7 +8,7 @@
 
 > **ExecutionContext** = `object`
 
-Defined in: node\_modules/@black-flag/core/dist/src/types/program.d.ts:234
+Defined in: node\_modules/@black-flag/core/dist/src/types/program.d.ts:236
 
 Represents a globally-accessible shared context object singleton.
 
@@ -22,7 +22,7 @@ Represents a globally-accessible shared context object singleton.
 
 > **commands**: `Map`\<`string`, \{ `metadata`: [`ProgramMetadata`](ProgramMetadata.md); `programs`: [`Programs`](Programs.md); \}\>
 
-Defined in: node\_modules/@black-flag/core/dist/src/types/program.d.ts:249
+Defined in: node\_modules/@black-flag/core/dist/src/types/program.d.ts:251
 
 A Map consisting of auto-discovered [Program](Program.md) instances and their
 associated [ProgramMetadata](ProgramMetadata.md) as singular object values with their
@@ -43,7 +43,7 @@ This property is used internally by Black Flag.
 
 > **debug**: `ExtendedDebugger`
 
-Defined in: node\_modules/@black-flag/core/dist/src/types/program.d.ts:258
+Defined in: node\_modules/@black-flag/core/dist/src/types/program.d.ts:260
 
 The `ExtendedDebugger` for the current runtime level.
 
@@ -55,7 +55,7 @@ This property is used internally by Black Flag.
 
 > **state**: `object`
 
-Defined in: node\_modules/@black-flag/core/dist/src/types/program.d.ts:264
+Defined in: node\_modules/@black-flag/core/dist/src/types/program.d.ts:266
 
 The current state of the execution environment.
 
@@ -292,7 +292,7 @@ invariant satisfaction.**
 
 #### showHelpOnFail
 
-> **showHelpOnFail**: `boolean` \| `"full"` \| `"short"` \| \{ `outputStyle`: `"full"` \| `"short"`; `showFor`: `Record`\<`"yargs"` \| `"cli"` \| `"other"`, `boolean`\>; \}
+> **showHelpOnFail**: `boolean` \| `"full"` \| `"short"` \| \{ `outputStyle?`: `"full"` \| `"short"`; `showFor?`: `Record`\<`"yargs"` \| `"cli"` \| `"other"`, `boolean`\>; \}
 
 If `true` or a string, Black Flag will send help text to stderr when any
 error occurs. If `false`, no help text will be sent to stderr when an
@@ -337,7 +337,7 @@ implementation or implements a handler that throws
 
 `"short"`
 
-\{ `outputStyle`: `"full"` \| `"short"`; `showFor`: `Record`\<`"yargs"` \| `"cli"` \| `"other"`, `boolean`\>; \}
+\{ `outputStyle?`: `"full"` \| `"short"`; `showFor?`: `Record`\<`"yargs"` \| `"cli"` \| `"other"`, `boolean`\>; \}
 
 ##### Default
 

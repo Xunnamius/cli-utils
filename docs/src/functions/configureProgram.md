@@ -6,7 +6,7 @@
 
 # Function: configureProgram()
 
-> **configureProgram**(`commandModulesPath`, `configurationHooks`?): `Promise`\<[`PreExecutionContext`](../type-aliases/PreExecutionContext.md)\>
+> **configureProgram**(`commandModulesPath`, `configurationHooks?`): `Promise`\<[`PreExecutionContext`](../type-aliases/PreExecutionContext.md)\>
 
 Defined in: node\_modules/@black-flag/core/dist/src/index.d.ts:100
 

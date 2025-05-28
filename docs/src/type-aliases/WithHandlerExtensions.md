@@ -6,7 +6,7 @@
 
 # Type Alias: WithHandlerExtensions()\<CustomCliArguments, CustomExecutionContext\>
 
-> **WithHandlerExtensions**\<`CustomCliArguments`, `CustomExecutionContext`\> = (`customHandler`?) => [`Configuration`](Configuration.md)\<`CustomCliArguments`, `CustomExecutionContext`\>\[`"handler"`\]
+> **WithHandlerExtensions**\<`CustomCliArguments`, `CustomExecutionContext`\> = (`customHandler?`) => [`Configuration`](Configuration.md)\<`CustomCliArguments`, `CustomExecutionContext`\>\[`"handler"`\]
 
 Defined in: node\_modules/@black-flag/extensions/dist/packages/extensions/src/index.d.ts:392
 

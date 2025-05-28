@@ -8,7 +8,7 @@
 
 > **isCliError**(`parameter`): `parameter is CliError`
 
-Defined in: node\_modules/@black-flag/core/dist/src/error.d.ts:8
+Defined in: node\_modules/@black-flag/core/dist/src/error.d.ts:14
 
 Type guard for [CliError](../classes/CliError.md).
 

@@ -8,7 +8,7 @@
 
 > **ChildConfiguration**\<`CustomCliArguments`, `CustomExecutionContext`\> = `Partial`\<[`Configuration`](Configuration.md)\<`CustomCliArguments`, `CustomExecutionContext`\>\>
 
-Defined in: node\_modules/@black-flag/core/dist/src/types/module.d.ts:137
+Defined in: node\_modules/@black-flag/core/dist/src/types/module.d.ts:131
 
 A partial extension to the [Configuration](Configuration.md) interface for child
 configurations. This type was designed for use in external ESM/CJS module

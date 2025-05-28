@@ -8,7 +8,7 @@
 
 > **HelperProgram**\<`CustomCliArguments`, `CustomExecutionContext`\> = `Omit`\<[`Program`](Program.md)\<`CustomCliArguments`, `CustomExecutionContext`\>, `"demand"` \| `"demandCommand"` \| `"command"`\>
 
-Defined in: node\_modules/@black-flag/core/dist/src/types/program.d.ts:72
+Defined in: node\_modules/@black-flag/core/dist/src/types/program.d.ts:74
 
 Represents an "helper" [Program](Program.md) instance.
 

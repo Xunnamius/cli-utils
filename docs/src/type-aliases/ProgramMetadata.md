@@ -8,7 +8,7 @@
 
 > **ProgramMetadata** = `object`
 
-Defined in: node\_modules/@black-flag/core/dist/src/types/program.d.ts:98
+Defined in: node\_modules/@black-flag/core/dist/src/types/program.d.ts:100
 
 Represents the meta information about a discovered command and its
 corresponding [Configuration](Configuration.md) object/file.
@@ -19,7 +19,7 @@ corresponding [Configuration](Configuration.md) object/file.
 
 > **filename**: `string`
 
-Defined in: node\_modules/@black-flag/core/dist/src/types/program.d.ts:121
+Defined in: node\_modules/@black-flag/core/dist/src/types/program.d.ts:123
 
 The basename of `filepath`.
 
@@ -29,7 +29,7 @@ The basename of `filepath`.
 
 > **filenameWithoutExtension**: `string`
 
-Defined in: node\_modules/@black-flag/core/dist/src/types/program.d.ts:125
+Defined in: node\_modules/@black-flag/core/dist/src/types/program.d.ts:127
 
 The basename of `filepath` with the trailing extension trimmed.
 
@@ -39,7 +39,7 @@ The basename of `filepath` with the trailing extension trimmed.
 
 > **filepath**: `string`
 
-Defined in: node\_modules/@black-flag/core/dist/src/types/program.d.ts:117
+Defined in: node\_modules/@black-flag/core/dist/src/types/program.d.ts:119
 
 Absolute filesystem path to the loaded configuration file.
 
@@ -49,7 +49,7 @@ Absolute filesystem path to the loaded configuration file.
 
 > **fullUsageText**: `string`
 
-Defined in: node\_modules/@black-flag/core/dist/src/types/program.d.ts:160
+Defined in: node\_modules/@black-flag/core/dist/src/types/program.d.ts:162
 
 The full usage text computed from the command's `usage` value with all
 special tokens (e.g. "$0") replaced.
@@ -60,7 +60,7 @@ special tokens (e.g. "$0") replaced.
 
 > **hasChildren**: `boolean`
 
-Defined in: node\_modules/@black-flag/core/dist/src/types/program.d.ts:155
+Defined in: node\_modules/@black-flag/core/dist/src/types/program.d.ts:157
 
 If `true`, this command is a "pure parent" or "parent-child" that has at
 least one child command.
@@ -71,7 +71,7 @@ least one child command.
 
 > **isImplemented**: `boolean`
 
-Defined in: node\_modules/@black-flag/core/dist/src/types/program.d.ts:150
+Defined in: node\_modules/@black-flag/core/dist/src/types/program.d.ts:152
 
 If `true`, this command exported a `handler` function. Black Flag therefore
 considers this command as "not unimplemented".
@@ -85,7 +85,7 @@ context-specific error.
 
 > **parentDirName**: `string`
 
-Defined in: node\_modules/@black-flag/core/dist/src/types/program.d.ts:129
+Defined in: node\_modules/@black-flag/core/dist/src/types/program.d.ts:131
 
 The basename of the direct parent directory containing `filepath`.
 
@@ -95,7 +95,7 @@ The basename of the direct parent directory containing `filepath`.
 
 > **reservedCommandNames**: `string`[]
 
-Defined in: node\_modules/@black-flag/core/dist/src/types/program.d.ts:142
+Defined in: node\_modules/@black-flag/core/dist/src/types/program.d.ts:144
 
 The names "reserved" by this command. When a name is reserved by a command,
 no other sibling command (i.e. a command with the same parent command) can
@@ -114,7 +114,7 @@ discovery.
 
 > **type**: [`ProgramType`](ProgramType.md)
 
-Defined in: node\_modules/@black-flag/core/dist/src/types/program.d.ts:113
+Defined in: node\_modules/@black-flag/core/dist/src/types/program.d.ts:115
 
 The "type" of [Configuration](Configuration.md) that was loaded, indicating which
 interface to expect when interacting with `configuration`. The

@@ -53,9 +53,9 @@ Note: when a command file is interpreted as a [RootConfiguration](RootConfigurat
 
 ### builder
 
-> **builder**: \{\} \| (`blackFlag`, `helpOrVersionSet`, `argv`?) => `undefined` \| [`EffectorProgram`](EffectorProgram.md)\<`CustomCliArguments`, `CustomExecutionContext`\> \| \{\} \| `_Program`
+> **builder**: \{[`key`: `string`]: `Options`; \} \| (`blackFlag`, `helpOrVersionSet`, `argv?`) => `undefined` \| `void` \| `object` \| \{[`key`: `string`]: `Options`; \}
 
-Defined in: node\_modules/@black-flag/core/dist/src/types/module.d.ts:47
+Defined in: node\_modules/@black-flag/core/dist/src/types/module.d.ts:40
 
 An object containing yargs options configuration or a function that will
 receive the current Black Flag program. Unlike with vanilla yargs, you do
@@ -64,17 +64,10 @@ equivalent. If you return something other than the `blackFlag` parameter,
 such as an object of options, it will be passed to `yargs::options` for
 you.
 
-Note 1: **if `builder` is a function, it cannot be async or return a
+Note: **if `builder` is a function, it cannot be async or return a
 promise** due to a yargs bug present at time of writing. However, a
 Configuration module can export an async function, so hoist any
 async logic out of the builder function to work around this bug for now.
-
-Note 2: if positional arguments are given and your command accepts them
-(i.e. provided via [Configuration.command](#command) and configured via
-`yargs::positional`), they are only accessible from `argv?._` (`builder`'s
-third parameter). This is because positional arguments, while fully
-supported by Black Flag, **are parsed and validated _after_ `builder` is
-first invoked** and so aren't available until a little later.
 
 #### Default
 
@@ -88,7 +81,7 @@ first invoked** and so aren't available until a little later.
 
 > **command**: `"$0"` \| `` `$0 ${string}` ``
 
-Defined in: node\_modules/@black-flag/core/dist/src/types/module.d.ts:64
+Defined in: node\_modules/@black-flag/core/dist/src/types/module.d.ts:57
 
 The command as interpreted by yargs. Must always begin with `$0`. May
 contain positional arguments declared using the [`yargs::command`
@@ -111,7 +104,7 @@ using positional arguments. If you want to change your command's name, use
 
 > **deprecated**: `string` \| `boolean`
 
-Defined in: node\_modules/@black-flag/core/dist/src/types/module.d.ts:72
+Defined in: node\_modules/@black-flag/core/dist/src/types/module.d.ts:65
 
 If truthy, the command will be considered "deprecated" by yargs. If
 `deprecated` is a string, it will additionally be treated as a deprecation
@@ -129,7 +122,7 @@ false
 
 > **description**: `string` \| `false`
 
-Defined in: node\_modules/@black-flag/core/dist/src/types/module.d.ts:79
+Defined in: node\_modules/@black-flag/core/dist/src/types/module.d.ts:72
 
 The description for the command in help text. If `false`, the command will
 be considered "hidden" by yargs.
@@ -146,7 +139,7 @@ be considered "hidden" by yargs.
 
 > **handler**: (`argv`) => `Promisable`\<`void`\>
 
-Defined in: node\_modules/@black-flag/core/dist/src/types/module.d.ts:89
+Defined in: node\_modules/@black-flag/core/dist/src/types/module.d.ts:82
 
 A function called when this command is invoked. It will receive an object
 of parsed arguments.
@@ -176,7 +169,7 @@ undefined
 
 > **name**: `string`
 
-Defined in: node\_modules/@black-flag/core/dist/src/types/module.d.ts:99
+Defined in: node\_modules/@black-flag/core/dist/src/types/module.d.ts:92
 
 The name of the command. Any spaces will be replaced with hyphens.
 Including a character that yargs does not consider valid for a
@@ -192,14 +185,15 @@ filename without extension is "index".
 
 > **usage**: `string`
 
-Defined in: node\_modules/@black-flag/core/dist/src/types/module.d.ts:118
+Defined in: node\_modules/@black-flag/core/dist/src/types/module.d.ts:112
 
 Set a usage message shown at the top of the command's help text.
 
-Depending on the value of `ExecutionContext::state.showHelpOnFail`, either
-the "short" first line of usage text will be output during errors or the
-"full" usage string. Either way, whenever help text is explicitly requested
-(e.g. `--help` is given), the full usage string will be output.
+Depending on the value of
+[ExecutionContext.state.showHelpOnFail](https://github.com/Xunnamius/black-flag/blob/main/docs/api/src/exports/util/type-aliases/ExecutionContext.md#showhelponfail),
+either the "short" first line of usage text will be output during errors or
+the "full" usage string. Either way, whenever help text is explicitly
+requested (e.g. `--help` is given), the full usage string will be output.
 
 Several replacements are made to the `usage` string before it is output. In
 order:

@@ -8,7 +8,7 @@
 
 > **CliErrorOptions** = `object`
 
-Defined in: node\_modules/@black-flag/core/dist/src/error.d.ts:20
+Defined in: node\_modules/@black-flag/core/dist/src/error.d.ts:26
 
 Options available when constructing a new `CliError` object.
 
@@ -18,7 +18,7 @@ Options available when constructing a new `CliError` object.
 
 > `optional` **cause**: `ErrorOptions`\[`"cause"`\]
 
-Defined in: node\_modules/@black-flag/core/dist/src/error.d.ts:88
+Defined in: node\_modules/@black-flag/core/dist/src/error.d.ts:95
 
 By default, if an `Error` object is passed to `CliError`, that
 `Error` instance will be passed through as `CliError.cause` and that
@@ -33,7 +33,7 @@ Use this option to override this default behavior and instead set
 
 > `optional` **dangerouslyFatal**: `boolean`
 
-Defined in: node\_modules/@black-flag/core/dist/src/error.d.ts:79
+Defined in: node\_modules/@black-flag/core/dist/src/error.d.ts:86
 
 This option is similar in intent to Yargs's `exitProcess()` function,
 except applied more granularly.
@@ -70,7 +70,7 @@ false
 
 > `optional` **showHelp**: `Extract`\<[`ExecutionContext`](ExecutionContext.md)\[`"state"`\]\[`"showHelpOnFail"`\], `object`\>\[`"outputStyle"`\] \| `"default"` \| `boolean`
 
-Defined in: node\_modules/@black-flag/core/dist/src/error.d.ts:52
+Defined in: node\_modules/@black-flag/core/dist/src/error.d.ts:59
 
 If `showHelp` is set to a string that isn't `"default"`, help text will be
 sent to stderr. Note that help text is always sent _before this exception
@@ -81,12 +81,13 @@ sent to stderr, including the entire `usage` string. If set to `"short"`
 (or `true`), the same help text will be sent to stderr except only the
 first line of usage will be included. In either case, help text will be
 sent to stderr regardless of the value of
-`ExecutionContext::state.showHelpOnFail`.
+[ExecutionContext.state.showHelpOnFail](https://github.com/Xunnamius/black-flag/blob/main/docs/api/src/exports/util/type-aliases/ExecutionContext.md#showhelponfail).
 
 Alternatively, if set to `"default"`, the value of
-`ExecutionContext::state.showHelpOnFail` will be used. And if set to
-`false`, no help text will be sent to stderr due to this error regardless
-of the value of `ExecutionContext::state.showHelpOnFail`.
+[ExecutionContext.state.showHelpOnFail](https://github.com/Xunnamius/black-flag/blob/main/docs/api/src/exports/util/type-aliases/ExecutionContext.md#showhelponfail)
+will be used. And if set to `false`, no help text will be sent to stderr
+due to this error regardless of the value of
+[ExecutionContext.state.showHelpOnFail](https://github.com/Xunnamius/black-flag/blob/main/docs/api/src/exports/util/type-aliases/ExecutionContext.md#showhelponfail).
 
 Note that, regardless of this `showHelp`, help text is always output when a
 parent command is invoked that (1) has one or more child commands and (2)
@@ -105,7 +106,7 @@ lacks its own handler implementation or implements a handler that throws
 
 > `optional` **suggestedExitCode**: `number`
 
-Defined in: node\_modules/@black-flag/core/dist/src/error.d.ts:27
+Defined in: node\_modules/@black-flag/core/dist/src/error.d.ts:33
 
 The exit code that will be returned when the application exits, given
 nothing else goes wrong in the interim.

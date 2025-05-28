@@ -8,7 +8,7 @@
 
 > `const` **BfErrorMessage**: `object`
 
-Defined in: node\_modules/@black-flag/core/dist/src/error.d.ts:157
+Defined in: node\_modules/@black-flag/core/dist/src/error.d.ts:164
 
 A collection of possible error and warning messages emitted by Black Flag.
 
@@ -24,6 +24,8 @@ A collection of possible error and warning messages emitted by Black Flag.
 
 ### BadConfigurationPath()
 
+> **BadConfigurationPath**(`path`): `string`
+
 #### Parameters
 
 ##### path
@@ -36,11 +38,15 @@ A collection of possible error and warning messages emitted by Black Flag.
 
 ### BadParameterCombination()
 
+> **BadParameterCombination**(): `string`
+
 #### Returns
 
 `string`
 
 ### BuilderCalledOnInvalidPass()
+
+> **BuilderCalledOnInvalidPass**(`pass`): `string`
 
 #### Parameters
 
@@ -54,6 +60,8 @@ A collection of possible error and warning messages emitted by Black Flag.
 
 ### BuilderCannotBeAsync()
 
+> **BuilderCannotBeAsync**(`commandName`): `string`
+
 #### Parameters
 
 ##### commandName
@@ -66,17 +74,23 @@ A collection of possible error and warning messages emitted by Black Flag.
 
 ### CannotExecuteMultipleTimes()
 
+> **CannotExecuteMultipleTimes**(): `string`
+
 #### Returns
 
 `string`
 
 ### CommandNotImplemented()
 
+> **CommandNotImplemented**(): `string`
+
 #### Returns
 
 `string`
 
 ### ConfigLoadFailure()
+
+> **ConfigLoadFailure**(`path`): `string`
 
 #### Parameters
 
@@ -89,6 +103,8 @@ A collection of possible error and warning messages emitted by Black Flag.
 `string`
 
 ### DuplicateCommandName()
+
+> **DuplicateCommandName**(`parentFullName`, `name1`, `type1`, `name2`, `type2`): `string`
 
 #### Parameters
 
@@ -118,6 +134,8 @@ A collection of possible error and warning messages emitted by Black Flag.
 
 ### FrameworkError()
 
+> **FrameworkError**(`error`): `string`
+
 #### Parameters
 
 ##### error
@@ -130,17 +148,23 @@ A collection of possible error and warning messages emitted by Black Flag.
 
 ### Generic()
 
+> **Generic**(): `string`
+
 #### Returns
 
 `string`
 
 ### GracefulEarlyExit()
 
+> **GracefulEarlyExit**(): `string`
+
 #### Returns
 
 `string`
 
 ### InvalidCharacters()
+
+> **InvalidCharacters**(`str`, `violation`): `string`
 
 #### Parameters
 
@@ -158,6 +182,8 @@ A collection of possible error and warning messages emitted by Black Flag.
 
 ### InvalidCommandExportBadPositionals()
 
+> **InvalidCommandExportBadPositionals**(`name`): `string`
+
 #### Parameters
 
 ##### name
@@ -169,6 +195,8 @@ A collection of possible error and warning messages emitted by Black Flag.
 `string`
 
 ### InvalidCommandExportBadStart()
+
+> **InvalidCommandExportBadStart**(`name`): `string`
 
 #### Parameters
 
@@ -182,11 +210,15 @@ A collection of possible error and warning messages emitted by Black Flag.
 
 ### InvalidConfigureArgumentsReturnType()
 
+> **InvalidConfigureArgumentsReturnType**(): `string`
+
 #### Returns
 
 `string`
 
 ### InvalidConfigureExecutionContextReturnType()
+
+> **InvalidConfigureExecutionContextReturnType**(): `string`
 
 #### Returns
 
@@ -194,11 +226,15 @@ A collection of possible error and warning messages emitted by Black Flag.
 
 ### InvalidConfigureExecutionEpilogueReturnType()
 
+> **InvalidConfigureExecutionEpilogueReturnType**(): `string`
+
 #### Returns
 
 `string`
 
 ### InvalidExecutionContextBadField()
+
+> **InvalidExecutionContextBadField**(`fieldName`): `string`
 
 #### Parameters
 
@@ -212,11 +248,15 @@ A collection of possible error and warning messages emitted by Black Flag.
 
 ### InvalidSubCommandInvocation()
 
+> **InvalidSubCommandInvocation**(): `string`
+
 #### Returns
 
 `string`
 
 ### InvocationNotAllowed()
+
+> **InvocationNotAllowed**(`name`): `string`
 
 #### Parameters
 
@@ -230,6 +270,8 @@ A collection of possible error and warning messages emitted by Black Flag.
 
 ### NoConfigurationLoaded()
 
+> **NoConfigurationLoaded**(`path`): `string`
+
 #### Parameters
 
 ##### path
@@ -242,11 +284,15 @@ A collection of possible error and warning messages emitted by Black Flag.
 
 ### PathIsNotDirectory()
 
+> **PathIsNotDirectory**(): `string`
+
 #### Returns
 
 `string`
 
 ### UseParseAsyncInstead()
+
+> **UseParseAsyncInstead**(): `string`
 
 #### Returns
 
