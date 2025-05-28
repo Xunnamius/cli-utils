@@ -8,7 +8,7 @@
 
 > **StandardCommonCliArguments** = `object`
 
-Defined in: [src/extensions.ts:93](https://github.com/Xunnamius/cli-utils/blob/c2bd84444676e846413a4f1d49cbf19f837df182/src/extensions.ts#L93)
+Defined in: [src/extensions.ts:93](https://github.com/Xunnamius/cli-utils/blob/dd8d74def9fbb70e45b008f545cfdb5eac2fb4d4/src/extensions.ts#L93)
 
 These properties will be available in the `argv` object of any command that
 uses [withStandardBuilder](../functions/withStandardBuilder.md) to construct its `builder`.
@@ -26,7 +26,7 @@ are considered standard common CLI arguments by this package.
 
 > **hush**: `boolean`
 
-Defined in: [src/extensions.ts:94](https://github.com/Xunnamius/cli-utils/blob/c2bd84444676e846413a4f1d49cbf19f837df182/src/extensions.ts#L94)
+Defined in: [src/extensions.ts:94](https://github.com/Xunnamius/cli-utils/blob/dd8d74def9fbb70e45b008f545cfdb5eac2fb4d4/src/extensions.ts#L94)
 
 ***
 
@@ -34,7 +34,7 @@ Defined in: [src/extensions.ts:94](https://github.com/Xunnamius/cli-utils/blob/c
 
 > **quiet**: `boolean`
 
-Defined in: [src/extensions.ts:95](https://github.com/Xunnamius/cli-utils/blob/c2bd84444676e846413a4f1d49cbf19f837df182/src/extensions.ts#L95)
+Defined in: [src/extensions.ts:95](https://github.com/Xunnamius/cli-utils/blob/dd8d74def9fbb70e45b008f545cfdb5eac2fb4d4/src/extensions.ts#L95)
 
 ***
 
@@ -42,4 +42,4 @@ Defined in: [src/extensions.ts:95](https://github.com/Xunnamius/cli-utils/blob/c
 
 > **silent**: `boolean`
 
-Defined in: [src/extensions.ts:96](https://github.com/Xunnamius/cli-utils/blob/c2bd84444676e846413a4f1d49cbf19f837df182/src/extensions.ts#L96)
+Defined in: [src/extensions.ts:96](https://github.com/Xunnamius/cli-utils/blob/dd8d74def9fbb70e45b008f545cfdb5eac2fb4d4/src/extensions.ts#L96)

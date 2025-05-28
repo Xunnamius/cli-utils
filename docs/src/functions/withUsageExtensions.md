@@ -6,96 +6,94 @@
 
 # Function: withUsageExtensions()
 
-> **withUsageExtensions**(`__namedParameters?`): `string`
+## Call Signature
 
-Defined in: node\_modules/@black-flag/extensions/dist/packages/extensions/src/index.d.ts:455
+> **withUsageExtensions**(`altDescription?`): `string`
+
+Defined in: node\_modules/@black-flag/extensions/dist/packages/extensions/src/index.d.ts:502
 
 Generate command usage text consistently yet flexibly.
 
 Defaults to: `Usage: $000\n\n${altDescription}` where `altDescription` is
 `"$1."`.
 
-## Parameters
-
-### \_\_namedParameters?
+### Parameters
 
 #### altDescription?
 
 `string`
 
-The result of calling this function defaults to: `Usage:
-$000\n\n${altDescription}`.
+### Returns
 
-**Default**
+`string`
 
-```ts
-"$1."
-```
+## Call Signature
 
-#### appendPeriod?
+> **withUsageExtensions**(`altDescription?`, `config?`): `string`
 
-`boolean`
+Defined in: node\_modules/@black-flag/extensions/dist/packages/extensions/src/index.d.ts:503
 
-Whether a period will be appended to the resultant string or not. A
-period is only appended if one is not already appended.
+Generate command usage text consistently yet flexibly.
 
-**Default**
+Defaults to: `Usage: $000\n\n${altDescription}` where `altDescription` is
+`"$1."`.
 
-```ts
-true
-```
+### Parameters
 
-#### includeOptions?
+#### altDescription?
 
-`boolean`
+`string`
 
-Whether the string `' [...options]'` will be appended to the first line
-of usage text (after `includeSubCommand`).
+#### config?
 
-**Default**
+`Omit`\<[`WithUsageExtensionsConfig`](../type-aliases/WithUsageExtensionsConfig.md), `"altDescription"`\>
 
-```ts
-options.prependNewlines
-```
+### Returns
 
-#### includeSubCommand?
+`string`
 
-`boolean` \| `"required"`
+## Call Signature
 
-Whether some variation of the string `' [subcommand]'` will be appended
-to the first line of usage text (before `includeOptions`). Set to `true`
-or `required` when generating usage for a command with subcommands.
+> **withUsageExtensions**(`config?`): `string`
 
-**Default**
+Defined in: node\_modules/@black-flag/extensions/dist/packages/extensions/src/index.d.ts:504
 
-```ts
-false
-```
+Generate command usage text consistently yet flexibly.
 
-#### prependNewlines?
+Defaults to: `Usage: $000\n\n${altDescription}` where `altDescription` is
+`"$1."`.
 
-`boolean`
+### Parameters
 
-Whether newlines will be prepended to `altDescription` or not.
+#### config?
 
-**Default**
+[`WithUsageExtensionsConfig`](../type-aliases/WithUsageExtensionsConfig.md)
 
-```ts
-true
-```
+### Returns
 
-#### trim?
+`string`
 
-`boolean`
+## Call Signature
 
-Whether `altDescription` will be `trim()`'d or not.
+> **withUsageExtensions**(`config?`, `moreConfig?`): `string`
 
-**Default**
+Defined in: node\_modules/@black-flag/extensions/dist/packages/extensions/src/index.d.ts:505
 
-```ts
-true
-```
+Generate command usage text consistently yet flexibly.
 
-## Returns
+Defaults to: `Usage: $000\n\n${altDescription}` where `altDescription` is
+`"$1."`.
+
+### Parameters
+
+#### config?
+
+`string` | [`WithUsageExtensionsConfig`](../type-aliases/WithUsageExtensionsConfig.md)
+
+#### moreConfig?
+
+`Omit`\<[`WithUsageExtensionsConfig`](../type-aliases/WithUsageExtensionsConfig.md), `"altDescription"`\>
+
+### Returns
 
 `string`

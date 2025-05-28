@@ -70,6 +70,7 @@
 - [WithBuilderExtensionsConfig](type-aliases/WithBuilderExtensionsConfig.md)
 - [WithBuilderExtensionsReturnType](type-aliases/WithBuilderExtensionsReturnType.md)
 - [WithHandlerExtensions](type-aliases/WithHandlerExtensions.md)
+- [WithUsageExtensionsConfig](type-aliases/WithUsageExtensionsConfig.md)
 
 ## Variables
 

@@ -10,7 +10,7 @@
 
 > **makeStandardConfigureExecutionContext**(`options`): `Promise`\<[`ConfigureExecutionContext`](../../type-aliases/ConfigureExecutionContext.md)\<[`StandardExecutionContext`](../../extensions/type-aliases/StandardExecutionContext.md)\>\>
 
-Defined in: [src/configure.ts:45](https://github.com/Xunnamius/cli-utils/blob/c2bd84444676e846413a4f1d49cbf19f837df182/src/configure.ts#L45)
+Defined in: [src/configure.ts:45](https://github.com/Xunnamius/cli-utils/blob/dd8d74def9fbb70e45b008f545cfdb5eac2fb4d4/src/configure.ts#L45)
 
 Returns a [ConfigureExecutionContext](../../type-aliases/ConfigureExecutionContext.md) instance considered standard
 across [Xunnamius](https://github.com/Xunnamius)'s CLI projects.
@@ -29,7 +29,7 @@ across [Xunnamius](https://github.com/Xunnamius)'s CLI projects.
 
 > **makeStandardConfigureExecutionContext**(`options`): `Promise`\<[`ConfigureExecutionContext`](../../type-aliases/ConfigureExecutionContext.md)\<\{[`key`: `string`]: `unknown`; `commands`: `Map`\<`string`, \{ `metadata`: [`ProgramMetadata`](../../type-aliases/ProgramMetadata.md); `programs`: [`Programs`](../../type-aliases/Programs.md); \}\>; `debug`: `ExtendedDebugger`; `standardDebug`: `ExtendedDebugger`; `standardLog`: `ExtendedLogger`; `state`: `object` & `object`; `taskManager`: `ListrManager`\<`any`\>; \}\>\>
 
-Defined in: [src/configure.ts:48](https://github.com/Xunnamius/cli-utils/blob/c2bd84444676e846413a4f1d49cbf19f837df182/src/configure.ts#L48)
+Defined in: [src/configure.ts:48](https://github.com/Xunnamius/cli-utils/blob/dd8d74def9fbb70e45b008f545cfdb5eac2fb4d4/src/configure.ts#L48)
 
 Returns a [ConfigureExecutionContext](../../type-aliases/ConfigureExecutionContext.md) instance considered standard
 across [Xunnamius](https://github.com/Xunnamius)'s CLI projects.
@@ -48,7 +48,7 @@ across [Xunnamius](https://github.com/Xunnamius)'s CLI projects.
 
 > **makeStandardConfigureExecutionContext**(`options`): `Promise`\<[`ConfigureExecutionContext`](../../type-aliases/ConfigureExecutionContext.md)\<[`StandardExecutionContext`](../../extensions/type-aliases/StandardExecutionContext.md)\>\>
 
-Defined in: [src/configure.ts:55](https://github.com/Xunnamius/cli-utils/blob/c2bd84444676e846413a4f1d49cbf19f837df182/src/configure.ts#L55)
+Defined in: [src/configure.ts:55](https://github.com/Xunnamius/cli-utils/blob/dd8d74def9fbb70e45b008f545cfdb5eac2fb4d4/src/configure.ts#L55)
 
 Returns a [ConfigureExecutionContext](../../type-aliases/ConfigureExecutionContext.md) instance considered standard
 across [Xunnamius](https://github.com/Xunnamius)'s CLI projects.
