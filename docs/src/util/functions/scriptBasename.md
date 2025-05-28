@@ -8,7 +8,7 @@
 
 > **scriptBasename**(`scriptFullName`): `string`
 
-Defined in: [src/util.ts:38](https://github.com/Xunnamius/cli-utils/blob/9f931815fdc9c2ac298ecaacf937edd135e18759/src/util.ts#L38)
+Defined in: [src/util.ts:38](https://github.com/Xunnamius/cli-utils/blob/c2bd84444676e846413a4f1d49cbf19f837df182/src/util.ts#L38)
 
 Takes a scriptName and returns its "base name," i.e. the trailing name
 component.

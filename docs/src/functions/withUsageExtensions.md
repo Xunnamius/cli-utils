@@ -6,22 +6,31 @@
 
 # Function: withUsageExtensions()
 
-> **withUsageExtensions**(`altDescription?`, `__namedParameters?`): `string`
+> **withUsageExtensions**(`__namedParameters?`): `string`
 
 Defined in: node\_modules/@black-flag/extensions/dist/packages/extensions/src/index.d.ts:455
 
 Generate command usage text consistently yet flexibly.
 
 Defaults to: `Usage: $000\n\n${altDescription}` where `altDescription` is
-`$1.`
+`"$1."`.
 
 ## Parameters
 
-### altDescription?
+### \_\_namedParameters?
+
+#### altDescription?
 
 `string`
 
-### \_\_namedParameters?
+The result of calling this function defaults to: `Usage:
+$000\n\n${altDescription}`.
+
+**Default**
+
+```ts
+"$1."
+```
 
 #### appendPeriod?
 

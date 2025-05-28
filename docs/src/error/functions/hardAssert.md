@@ -10,7 +10,7 @@
 
 > **hardAssert**(`message`): `never`
 
-Defined in: [src/error.ts:81](https://github.com/Xunnamius/cli-utils/blob/9f931815fdc9c2ac298ecaacf937edd135e18759/src/error.ts#L81)
+Defined in: [src/error.ts:81](https://github.com/Xunnamius/cli-utils/blob/c2bd84444676e846413a4f1d49cbf19f837df182/src/error.ts#L81)
 
 Throw a so-called "FrameworkError" with the given string message, which
 causes Black Flag to exit with the [FrameworkExitCode.AssertionFailed](../../enumerations/FrameworkExitCode.md#assertionfailed)
@@ -33,7 +33,7 @@ about.
 
 > **hardAssert**(`value`, `message`): `asserts value`
 
-Defined in: [src/error.ts:90](https://github.com/Xunnamius/cli-utils/blob/9f931815fdc9c2ac298ecaacf937edd135e18759/src/error.ts#L90)
+Defined in: [src/error.ts:90](https://github.com/Xunnamius/cli-utils/blob/c2bd84444676e846413a4f1d49cbf19f837df182/src/error.ts#L90)
 
 If `value` is falsy, throw a so-called "FrameworkError" with the given string
 message, which causes Black Flag to exit with the
