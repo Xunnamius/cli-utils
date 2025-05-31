@@ -8,7 +8,7 @@
 
 > `const` **standardCommonCliArgumentsKeys**: (`"hush"` \| `"quiet"` \| `"silent"`)[]
 
-Defined in: [src/extensions.ts:140](https://github.com/Xunnamius/cli-utils/blob/dd8d74def9fbb70e45b008f545cfdb5eac2fb4d4/src/extensions.ts#L140)
+Defined in: [src/extensions.ts:140](https://github.com/Xunnamius/cli-utils/blob/4651d8a64e12770f9bb7348a2bc13993c2d9b1c8/src/extensions.ts#L140)
 
 This is an array of the keys in [standardCommonCliArguments](standardCommonCliArguments.md), each of
 which have a one-to-one relation with a key of

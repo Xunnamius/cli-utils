@@ -4,20 +4,26 @@
 
 [@-xun/cli](../../README.md) / [src](../README.md) / ConfigurationHooks
 
-# Type Alias: ConfigurationHooks
+# Type Alias: ConfigurationHooks\<CustomContext\>
 
-> **ConfigurationHooks** = `object`
+> **ConfigurationHooks**\<`CustomContext`\> = `object`
 
 Defined in: node\_modules/@black-flag/core/dist/src/types/configure.d.ts:88
 
 An object containing zero or more configuration hooks. See each hook type
 definition for details.
 
+## Type Parameters
+
+### CustomContext
+
+`CustomContext` *extends* [`ExecutionContext`](ExecutionContext.md) = [`ExecutionContext`](ExecutionContext.md)
+
 ## Properties
 
 ### configureArguments?
 
-> `optional` **configureArguments**: [`ConfigureArguments`](ConfigureArguments.md)
+> `optional` **configureArguments**: [`ConfigureArguments`](ConfigureArguments.md)\<`CustomContext`\>
 
 Defined in: node\_modules/@black-flag/core/dist/src/types/configure.d.ts:135
 
@@ -36,7 +42,7 @@ text to stderr regardless of error type.
 
 ### configureErrorHandlingEpilogue?
 
-> `optional` **configureErrorHandlingEpilogue**: [`ConfigureErrorHandlingEpilogue`](ConfigureErrorHandlingEpilogue.md)
+> `optional` **configureErrorHandlingEpilogue**: [`ConfigureErrorHandlingEpilogue`](ConfigureErrorHandlingEpilogue.md)\<`CustomContext`\>
 
 Defined in: node\_modules/@black-flag/core/dist/src/types/configure.d.ts:163
 
@@ -56,7 +62,7 @@ reports an argument parsing/validation error.
 
 ### configureExecutionContext?
 
-> `optional` **configureExecutionContext**: [`ConfigureExecutionContext`](ConfigureExecutionContext.md)
+> `optional` **configureExecutionContext**: [`ConfigureExecutionContext`](ConfigureExecutionContext.md)\<`CustomContext`\>
 
 Defined in: node\_modules/@black-flag/core/dist/src/types/configure.d.ts:103
 
@@ -77,7 +83,7 @@ regardless of error type.
 
 ### configureExecutionEpilogue?
 
-> `optional` **configureExecutionEpilogue**: [`ConfigureExecutionEpilogue`](ConfigureExecutionEpilogue.md)
+> `optional` **configureExecutionEpilogue**: [`ConfigureExecutionEpilogue`](ConfigureExecutionEpilogue.md)\<`CustomContext`\>
 
 Defined in: node\_modules/@black-flag/core/dist/src/types/configure.d.ts:149
 
@@ -97,7 +103,7 @@ text to stderr regardless of error type.
 
 ### configureExecutionPrologue?
 
-> `optional` **configureExecutionPrologue**: [`ConfigureExecutionPrologue`](ConfigureExecutionPrologue.md)
+> `optional` **configureExecutionPrologue**: [`ConfigureExecutionPrologue`](ConfigureExecutionPrologue.md)\<`CustomContext`\>
 
 Defined in: node\_modules/@black-flag/core/dist/src/types/configure.d.ts:122
 

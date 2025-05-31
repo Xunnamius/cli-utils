@@ -1,6 +1,6 @@
 {
   "name": "@-xun/cli",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "description": "Opinionated utilities for building CLIs on top of Black Flag",
   "keywords": [],
   "homepage": "https://github.com/Xunnamius/cli-utils#readme",

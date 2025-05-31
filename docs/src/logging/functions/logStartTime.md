@@ -8,7 +8,7 @@
 
 > **logStartTime**(`__namedParameters`): `void`
 
-Defined in: [src/logging.ts:28](https://github.com/Xunnamius/cli-utils/blob/dd8d74def9fbb70e45b008f545cfdb5eac2fb4d4/src/logging.ts#L28)
+Defined in: [src/logging.ts:28](https://github.com/Xunnamius/cli-utils/blob/4651d8a64e12770f9bb7348a2bc13993c2d9b1c8/src/logging.ts#L28)
 
 Prints a timestamp indicating the beginning of execution.
 
