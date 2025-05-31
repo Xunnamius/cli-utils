@@ -33,6 +33,11 @@ export type MakeStandardConfigureExecutionContextOptions = {
   /**
    * If `true`, support for Listr2 tasks will be enabled for this program.
    *
+   * Note that `taskManager` is created by calling rejoinder's
+   * `createListrManager()` with no arguments. To provide custom overrides, you
+   * must call this function manually and reassign `ExecutionContext`'s
+   * `taskManager` accordingly.
+   *
    * @default false
    */
   withListr2Support?: boolean;
