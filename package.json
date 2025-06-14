@@ -102,7 +102,7 @@
   },
   "dependencies": {
     "@-xun/project-types": "^2.0.1",
-    "@black-flag/checks": "^2.0.0",
+    "@black-flag/checks": "^2.0.1",
     "@black-flag/core": "^3.0.1",
     "@black-flag/extensions": "^3.1.0",
     "core-js": "^3.43.0",
