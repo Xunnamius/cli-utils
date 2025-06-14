@@ -6,7 +6,7 @@
 
 # Enumeration: LogTag
 
-Defined in: [src/logging.ts:19](https://github.com/Xunnamius/cli-utils/blob/4651d8a64e12770f9bb7348a2bc13993c2d9b1c8/src/logging.ts#L19)
+Defined in: [src/logging.ts:19](https://github.com/Xunnamius/cli-utils/blob/6bb867abfa52659ebcf7604aaf7635e72a00bf51/src/logging.ts#L19)
 
 Well-known ExtendedLogger tags for filtering output automatically
 depending on program state.
@@ -17,7 +17,7 @@ depending on program state.
 
 > **IF\_NOT\_HUSHED**: `"lens-cli:if-not-hushed"`
 
-Defined in: [src/logging.ts:22](https://github.com/Xunnamius/cli-utils/blob/4651d8a64e12770f9bb7348a2bc13993c2d9b1c8/src/logging.ts#L22)
+Defined in: [src/logging.ts:22](https://github.com/Xunnamius/cli-utils/blob/6bb867abfa52659ebcf7604aaf7635e72a00bf51/src/logging.ts#L22)
 
 ***
 
@@ -25,7 +25,7 @@ Defined in: [src/logging.ts:22](https://github.com/Xunnamius/cli-utils/blob/4651
 
 > **IF\_NOT\_QUIETED**: `"lens-cli:if-not-quieted"`
 
-Defined in: [src/logging.ts:21](https://github.com/Xunnamius/cli-utils/blob/4651d8a64e12770f9bb7348a2bc13993c2d9b1c8/src/logging.ts#L21)
+Defined in: [src/logging.ts:21](https://github.com/Xunnamius/cli-utils/blob/6bb867abfa52659ebcf7604aaf7635e72a00bf51/src/logging.ts#L21)
 
 ***
 
@@ -33,4 +33,4 @@ Defined in: [src/logging.ts:21](https://github.com/Xunnamius/cli-utils/blob/4651
 
 > **IF\_NOT\_SILENCED**: `"lens-cli:if-not-silenced"`
 
-Defined in: [src/logging.ts:20](https://github.com/Xunnamius/cli-utils/blob/4651d8a64e12770f9bb7348a2bc13993c2d9b1c8/src/logging.ts#L20)
+Defined in: [src/logging.ts:20](https://github.com/Xunnamius/cli-utils/blob/6bb867abfa52659ebcf7604aaf7635e72a00bf51/src/logging.ts#L20)

@@ -8,6 +8,6 @@
 
 > `const` **standardSuccessMessage**: `"✅ Succeeded!"` = `'✅ Succeeded!'`
 
-Defined in: [src/logging.ts:13](https://github.com/Xunnamius/cli-utils/blob/4651d8a64e12770f9bb7348a2bc13993c2d9b1c8/src/logging.ts#L13)
+Defined in: [src/logging.ts:13](https://github.com/Xunnamius/cli-utils/blob/6bb867abfa52659ebcf7604aaf7635e72a00bf51/src/logging.ts#L13)
 
 The success message commands should output when a command succeeds.
