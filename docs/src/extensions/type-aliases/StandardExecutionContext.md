@@ -8,7 +8,7 @@
 
 > **StandardExecutionContext** = [`ExecutionContext`](../../type-aliases/ExecutionContext.md) & `object`
 
-Defined in: [src/extensions.ts:29](https://github.com/Xunnamius/cli-utils/blob/6bb867abfa52659ebcf7604aaf7635e72a00bf51/src/extensions.ts#L29)
+Defined in: [src/extensions.ts:29](https://github.com/Xunnamius/cli-utils/blob/3e95f8ce42185c7633feda8038393f1d5d6e79dd/src/extensions.ts#L29)
 
 This [ExecutionContext](../../type-aliases/ExecutionContext.md) subtype contains state related to
 [standardCommonCliArguments](../variables/standardCommonCliArguments.md), both of which are required for the proper
