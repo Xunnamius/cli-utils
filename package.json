@@ -101,6 +101,7 @@
     "test:packages:all:unit": "symbiote test --env NODE_NO_WARNINGS=1 --tests unit type --scope unlimited --coverage"
   },
   "dependencies": {
+    "@-xun/error": "^1.1.4",
     "@-xun/project-types": "^2.0.1",
     "@black-flag/checks": "^2.0.1",
     "@black-flag/core": "^3.0.2",
