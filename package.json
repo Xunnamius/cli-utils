@@ -117,7 +117,7 @@
     "listr2": "^9.0.0"
   },
   "peerDependencies": {
-    "rejoinder-listr2": ">=2"
+    "rejoinder-listr2": "^2.0.1"
   },
   "peerDependenciesMeta": {
     "rejoinder-listr2": {
