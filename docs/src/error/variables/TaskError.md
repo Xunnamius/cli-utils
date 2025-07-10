@@ -8,4 +8,4 @@
 
 > **TaskError**: `SpecificErrorClassConstructor`\<`TaskError`\> & `NamedErrorConstructorStaticProperties`\<`TaskError`\>
 
-Defined in: [src/error.ts:7](https://github.com/Xunnamius/cli-utils/blob/c0def9bfc356e611437328d29969b8140f590f52/src/error.ts#L7)
+Defined in: [src/error.ts:7](https://github.com/Xunnamius/cli-utils/blob/00e0e41bdc381cca00e28f0fc2615d6c59c8e10f/src/error.ts#L7)

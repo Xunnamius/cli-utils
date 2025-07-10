@@ -8,7 +8,7 @@
 
 > **MakeStandardConfigureExecutionContextOptions** = `object`
 
-Defined in: [src/configure.ts:22](https://github.com/Xunnamius/cli-utils/blob/c0def9bfc356e611437328d29969b8140f590f52/src/configure.ts#L22)
+Defined in: [src/configure.ts:22](https://github.com/Xunnamius/cli-utils/blob/00e0e41bdc381cca00e28f0fc2615d6c59c8e10f/src/configure.ts#L22)
 
 ## See
 
@@ -20,7 +20,7 @@ Defined in: [src/configure.ts:22](https://github.com/Xunnamius/cli-utils/blob/c0
 
 > **rootDebugLogger**: `ExtendedDebugger`
 
-Defined in: [src/configure.ts:32](https://github.com/Xunnamius/cli-utils/blob/c0def9bfc356e611437328d29969b8140f590f52/src/configure.ts#L32)
+Defined in: [src/configure.ts:32](https://github.com/Xunnamius/cli-utils/blob/00e0e41bdc381cca00e28f0fc2615d6c59c8e10f/src/configure.ts#L32)
 
 The generic logging function used whenever the CLI wants to send text to
 stderr.
@@ -31,7 +31,7 @@ stderr.
 
 > **rootGenericLogger**: `ExtendedLogger`
 
-Defined in: [src/configure.ts:27](https://github.com/Xunnamius/cli-utils/blob/c0def9bfc356e611437328d29969b8140f590f52/src/configure.ts#L27)
+Defined in: [src/configure.ts:27](https://github.com/Xunnamius/cli-utils/blob/00e0e41bdc381cca00e28f0fc2615d6c59c8e10f/src/configure.ts#L27)
 
 The generic logging function used whenever the CLI wants to send text to
 stdout.
@@ -42,7 +42,7 @@ stdout.
 
 > `optional` **withListr2Support**: `boolean`
 
-Defined in: [src/configure.ts:43](https://github.com/Xunnamius/cli-utils/blob/c0def9bfc356e611437328d29969b8140f590f52/src/configure.ts#L43)
+Defined in: [src/configure.ts:43](https://github.com/Xunnamius/cli-utils/blob/00e0e41bdc381cca00e28f0fc2615d6c59c8e10f/src/configure.ts#L43)
 
 If `true`, support for Listr2 tasks will be enabled for this program.
 
