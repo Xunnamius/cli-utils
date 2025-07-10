@@ -1,16 +1,22 @@
+import { makeNamedError } from '@-xun/error';
 import { CliError, FrameworkExitCode } from '@black-flag/core';
 import { BfeErrorMessage } from '@black-flag/extensions';
 
 import { toSentenceCase } from 'universe:util.ts';
 
+export const { TaskError } = makeNamedError(
+  class TaskError extends Error {
+    constructor(...args: Required<ConstructorParameters<typeof Error>>) {
+      super(toSentenceCase(args[0]), args[1]);
+    }
+  },
+  'TaskError'
+);
+
 /**
  * An `Error` class where the first letter of the message is capitalized.
  */
-export class TaskError extends Error {
-  constructor(...args: Required<ConstructorParameters<typeof Error>>) {
-    super(toSentenceCase(args[0]), args[1]);
-  }
-}
+export type TaskError = InstanceType<typeof TaskError>;
 
 /**
  * A collection of possible error and warning messages.
