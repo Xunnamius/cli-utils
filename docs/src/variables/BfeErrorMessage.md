@@ -14,14 +14,6 @@ A collection of possible error and warning messages.
 
 ## Type declaration
 
-### GuruMeditation()
-
-> **GuruMeditation**: () => `string`
-
-#### Returns
-
-`string`
-
 ### BadConfigurationPath()
 
 > **BadConfigurationPath**(`path`): `string`
@@ -283,6 +275,14 @@ A collection of possible error and warning messages.
 ### GracefulEarlyExit()
 
 > **GracefulEarlyExit**(): `string`
+
+#### Returns
+
+`string`
+
+### GuruMeditation()
+
+> **GuruMeditation**(): `string`
 
 #### Returns
 

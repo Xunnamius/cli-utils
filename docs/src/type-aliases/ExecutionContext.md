@@ -316,10 +316,10 @@ across all instances.
 
 2. On which errors help text will be displayed. By default, help text is
    only displayed when yargs itself throws (e.g. an "unknown argument"
-   error), but not when a [CliError](../classes/CliError.md) or other kind of error is
+   error), but not when a [CliError](CliError.md) or other kind of error is
    thrown. This can be overridden globally by configuring
-   `showHelpOnFail.showFor`, or locally by individual [CliError](../classes/CliError.md)
-   instances (via [CliError.showHelp](../classes/CliError.md#showhelp)).
+   `showHelpOnFail.showFor`, or locally by individual [CliError](CliError.md)
+   instances (via CliError.showHelp).
 
 Note that, regardless of this property, the full usage string is always
 output when the `--help` flag (or the equivalent) is explicitly given.
@@ -327,7 +327,7 @@ output when the `--help` flag (or the equivalent) is explicitly given.
 Similarly, help text is always output when a parent command is invoked
 that (1) has one or more child commands and (2) lacks its own handler
 implementation or implements a handler that throws
-[CommandNotImplementedError](../classes/CommandNotImplementedError.md).
+[CommandNotImplementedError](CommandNotImplementedError.md).
 
 ##### Type declaration
 

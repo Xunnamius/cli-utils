@@ -8,7 +8,7 @@
 
 > **toFirstLowerCase**(`str`): `string`
 
-Defined in: [src/util.ts:27](https://github.com/Xunnamius/cli-utils/blob/3e95f8ce42185c7633feda8038393f1d5d6e79dd/src/util.ts#L27)
+Defined in: [src/util.ts:27](https://github.com/Xunnamius/cli-utils/blob/c0def9bfc356e611437328d29969b8140f590f52/src/util.ts#L27)
 
 Lower-cases the first letter of `str` if the first and second letter is also
 lowercase.

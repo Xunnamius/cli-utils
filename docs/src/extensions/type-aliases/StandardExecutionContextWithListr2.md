@@ -8,7 +8,7 @@
 
 > **StandardExecutionContextWithListr2** = `Merge`\<[`StandardExecutionContext`](StandardExecutionContext.md), \{ `taskManager`: `ListrManager`; \}\>
 
-Defined in: [src/extensions.ts:72](https://github.com/Xunnamius/cli-utils/blob/3e95f8ce42185c7633feda8038393f1d5d6e79dd/src/extensions.ts#L72)
+Defined in: [src/extensions.ts:72](https://github.com/Xunnamius/cli-utils/blob/c0def9bfc356e611437328d29969b8140f590f52/src/extensions.ts#L72)
 
 This [ExecutionContext](../../type-aliases/ExecutionContext.md) subtype contains state related to
 [standardCommonCliArguments](../variables/standardCommonCliArguments.md), both of which are required for the proper

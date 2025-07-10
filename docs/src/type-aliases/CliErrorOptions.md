@@ -8,7 +8,7 @@
 
 > **CliErrorOptions** = `object`
 
-Defined in: node\_modules/@black-flag/core/dist/src/error.d.ts:26
+Defined in: node\_modules/@black-flag/core/dist/src/error.d.ts:6
 
 Options available when constructing a new `CliError` object.
 
@@ -18,7 +18,7 @@ Options available when constructing a new `CliError` object.
 
 > `optional` **cause**: `ErrorOptions`\[`"cause"`\]
 
-Defined in: node\_modules/@black-flag/core/dist/src/error.d.ts:95
+Defined in: node\_modules/@black-flag/core/dist/src/error.d.ts:75
 
 By default, if an `Error` object is passed to `CliError`, that
 `Error` instance will be passed through as `CliError.cause` and that
@@ -33,7 +33,7 @@ Use this option to override this default behavior and instead set
 
 > `optional` **dangerouslyFatal**: `boolean`
 
-Defined in: node\_modules/@black-flag/core/dist/src/error.d.ts:86
+Defined in: node\_modules/@black-flag/core/dist/src/error.d.ts:66
 
 This option is similar in intent to Yargs's `exitProcess()` function,
 except applied more granularly.
@@ -70,7 +70,7 @@ false
 
 > `optional` **showHelp**: `Extract`\<[`ExecutionContext`](ExecutionContext.md)\[`"state"`\]\[`"showHelpOnFail"`\], `object`\>\[`"outputStyle"`\] \| `"default"` \| `boolean`
 
-Defined in: node\_modules/@black-flag/core/dist/src/error.d.ts:59
+Defined in: node\_modules/@black-flag/core/dist/src/error.d.ts:39
 
 If `showHelp` is set to a string that isn't `"default"`, help text will be
 sent to stderr. Note that help text is always sent _before this exception
@@ -92,7 +92,7 @@ due to this error regardless of the value of
 Note that, regardless of this `showHelp`, help text is always output when a
 parent command is invoked that (1) has one or more child commands and (2)
 lacks its own handler implementation or implements a handler that throws
-[CommandNotImplementedError](../classes/CommandNotImplementedError.md).
+[CommandNotImplementedError](../variables/CommandNotImplementedError.md).
 
 #### Default
 
@@ -106,7 +106,7 @@ lacks its own handler implementation or implements a handler that throws
 
 > `optional` **suggestedExitCode**: `number`
 
-Defined in: node\_modules/@black-flag/core/dist/src/error.d.ts:33
+Defined in: node\_modules/@black-flag/core/dist/src/error.d.ts:13
 
 The exit code that will be returned when the application exits, given
 nothing else goes wrong in the interim.

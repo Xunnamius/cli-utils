@@ -10,16 +10,10 @@
 
 - [FrameworkExitCode](enumerations/FrameworkExitCode.md)
 
-## Classes
-
-- [AssertionFailedError](classes/AssertionFailedError.md)
-- [CliError](classes/CliError.md)
-- [CommandNotImplementedError](classes/CommandNotImplementedError.md)
-- [GracefulEarlyExitError](classes/GracefulEarlyExitError.md)
-
 ## Type Aliases
 
 - [Arguments](type-aliases/Arguments.md)
+- [AssertionFailedError](type-aliases/AssertionFailedError.md)
 - [AsStrictExecutionContext](type-aliases/AsStrictExecutionContext.md)
 - [BfBuilderFunction](type-aliases/BfBuilderFunction.md)
 - [BfBuilderObject](type-aliases/BfBuilderObject.md)
@@ -38,7 +32,9 @@
 - [BfeSubOptionOfExtensionValue](type-aliases/BfeSubOptionOfExtensionValue.md)
 - [BfGenericBuilderObjectValue](type-aliases/BfGenericBuilderObjectValue.md)
 - [ChildConfiguration](type-aliases/ChildConfiguration.md)
+- [CliError](type-aliases/CliError.md)
 - [CliErrorOptions](type-aliases/CliErrorOptions.md)
+- [CommandNotImplementedError](type-aliases/CommandNotImplementedError.md)
 - [Configuration](type-aliases/Configuration.md)
 - [ConfigurationHooks](type-aliases/ConfigurationHooks.md)
 - [ConfigureArguments](type-aliases/ConfigureArguments.md)
@@ -52,6 +48,7 @@
 - [Executor](type-aliases/Executor.md)
 - [FactoriedRunProgramParameters](type-aliases/FactoriedRunProgramParameters.md)
 - [FrameworkArguments](type-aliases/FrameworkArguments.md)
+- [GracefulEarlyExitError](type-aliases/GracefulEarlyExitError.md)
 - [HelperProgram](type-aliases/HelperProgram.md)
 - [ImportedConfigurationModule](type-aliases/ImportedConfigurationModule.md)
 - [MakeRunnerOptions](type-aliases/MakeRunnerOptions.md)
@@ -76,14 +73,21 @@
 
 - [$artificiallyInvoked](variables/$artificiallyInvoked.md)
 - [$executionContext](variables/$executionContext.md)
+- [AssertionFailedError](variables/AssertionFailedError.md)
 - [BfcErrorMessage](variables/BfcErrorMessage.md)
 - [BfeErrorMessage](variables/BfeErrorMessage.md)
 - [BfErrorMessage](variables/BfErrorMessage.md)
+- [CliError](variables/CliError.md)
+- [CommandNotImplementedError](variables/CommandNotImplementedError.md)
 - [defaultHelpOptionName](variables/defaultHelpOptionName.md)
 - [defaultHelpTextDescription](variables/defaultHelpTextDescription.md)
 - [defaultUsageText](variables/defaultUsageText.md)
 - [defaultVersionOptionName](variables/defaultVersionOptionName.md)
 - [defaultVersionTextDescription](variables/defaultVersionTextDescription.md)
+- [GracefulEarlyExitError](variables/GracefulEarlyExitError.md)
+- [isCliError](variables/isCliError.md)
+- [isCommandNotImplementedError](variables/isCommandNotImplementedError.md)
+- [isGracefulEarlyExitError](variables/isGracefulEarlyExitError.md)
 - [nullArguments$0](variables/nullArguments$0.md)
 
 ## Functions
@@ -100,9 +104,6 @@
 - [hideBin](functions/hideBin.md)
 - [isArguments](functions/isArguments.md)
 - [isAssertionSystemError](functions/isAssertionSystemError.md)
-- [isCliError](functions/isCliError.md)
-- [isCommandNotImplementedError](functions/isCommandNotImplementedError.md)
-- [isGracefulEarlyExitError](functions/isGracefulEarlyExitError.md)
 - [isNullArguments](functions/isNullArguments.md)
 - [isPreExecutionContext](functions/isPreExecutionContext.md)
 - [makeRunner](functions/makeRunner.md)

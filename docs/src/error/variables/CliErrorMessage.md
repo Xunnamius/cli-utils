@@ -8,7 +8,7 @@
 
 > `const` **CliErrorMessage**: `object`
 
-Defined in: [src/error.ts:19](https://github.com/Xunnamius/cli-utils/blob/3e95f8ce42185c7633feda8038393f1d5d6e79dd/src/error.ts#L19)
+Defined in: [src/error.ts:25](https://github.com/Xunnamius/cli-utils/blob/c0def9bfc356e611437328d29969b8140f590f52/src/error.ts#L25)
 
 A collection of possible error and warning messages.
 

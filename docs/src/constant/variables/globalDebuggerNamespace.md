@@ -8,6 +8,6 @@
 
 > `const` **globalDebuggerNamespace**: `"xcli"` = `'xcli'`
 
-Defined in: [src/constant.ts:4](https://github.com/Xunnamius/cli-utils/blob/3e95f8ce42185c7633feda8038393f1d5d6e79dd/src/constant.ts#L4)
+Defined in: [src/constant.ts:4](https://github.com/Xunnamius/cli-utils/blob/c0def9bfc356e611437328d29969b8140f590f52/src/constant.ts#L4)
 
 The project-wide namespace that appears in debugger output.

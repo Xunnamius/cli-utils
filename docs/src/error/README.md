@@ -6,13 +6,14 @@
 
 # src/error
 
-## Classes
+## Type Aliases
 
-- [TaskError](classes/TaskError.md)
+- [TaskError](type-aliases/TaskError.md)
 
 ## Variables
 
 - [CliErrorMessage](variables/CliErrorMessage.md)
+- [TaskError](variables/TaskError.md)
 
 ## Functions
 

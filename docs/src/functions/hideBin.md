@@ -8,7 +8,7 @@
 
 > **hideBin**(`argv`): `string`[]
 
-Defined in: node\_modules/@black-flag/core/dist/src/exports/util.d.ts:10
+Defined in: node\_modules/@black-flag/core/dist/src/exports/util.d.ts:21
 
 ## Parameters
 
