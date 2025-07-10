@@ -113,7 +113,7 @@
   "devDependencies": {
     "@-xun/fs": "^2.0.0",
     "@-xun/run": "^1.1.0",
-    "@-xun/symbiote": "^4.6.2",
+    "@-xun/symbiote": "^4.6.3",
     "listr2": "^9.0.0"
   },
   "peerDependencies": {
