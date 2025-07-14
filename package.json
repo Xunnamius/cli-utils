@@ -114,7 +114,7 @@
     "@-xun/fs": "^2.0.0",
     "@-xun/run": "^1.1.0",
     "@-xun/symbiote": "^4.11.1",
-    "listr2": "^9.0.0"
+    "listr2": "^9.0.1"
   },
   "peerDependencies": {
     "rejoinder-listr2": ">=2"
