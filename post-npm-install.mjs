@@ -19,7 +19,7 @@ log('Installing optional peer dependency: %O', rejoinderListr2);
 
 const { exitCode } = await runNoRejectOnBadExit(
   'npm',
-  ['install', '--force', rejoinderListr2],
+  ['install', '--force', '--no-save', rejoinderListr2],
   { cwd: root }
 );
 
